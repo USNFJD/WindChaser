@@ -1,0 +1,22 @@
+{
+  "run_id": "probe-daadc66fc6db488c9c0eb940f59fb6bb",
+  "host_apk_sha256": "96d022c48d15e86f64367da74da7886ea932a79dce41a1fc940ad910c2325ab1",
+  "review_date": "2026-10-23",
+  "reviewer": "Codex visual inspection",
+  "dialog_within_left_card": true,
+  "second_activity_within_left_card": true,
+  "left_text": "left123",
+  "right_text": "right456",
+  "both_counters_final": 2,
+  "final_left_tick": 28,
+  "final_right_tick": 26,
+  "software_keyboard_shown": false,
+  "original_apps_verified": false,
+  "whole_screen_scaling_verified": false,
+  "screenshots": [
+    "probe-dialog.png",
+    "probe-second-activity.png",
+    "probe-input-right.png",
+    "probe-final.png"
+  ]
+}

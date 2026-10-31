@@ -1,0 +1,1 @@
+package android.net;public class Uri {public String text;private Uri(String s){text=s;}public static Uri parse(String s){return new Uri(s);}}

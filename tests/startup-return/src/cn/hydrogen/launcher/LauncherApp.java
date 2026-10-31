@@ -1,0 +1,1 @@
+package cn.hydrogen.launcher;public class LauncherApp {public static void record(String s,Throwable e){fixture.Env.logs.add(s);}}

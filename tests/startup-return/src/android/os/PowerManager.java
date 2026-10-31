@@ -1,0 +1,1 @@
+package android.os;public class PowerManager {public boolean on=true;public boolean isScreenOn(){return on;}}

@@ -1,0 +1,57 @@
+PASS actual signed final APK identity accepted
+
+PASS null context rejected
+
+PASS wrong context package rejected
+
+PASS wrong package metadata rejected
+
+PASS different version code rejected
+
+PASS different version name rejected
+
+PASS missing signatures rejected
+
+PASS empty signature list rejected
+
+PASS extra signer rejected
+
+PASS null signer rejected
+
+PASS wrong certificate rejected
+
+PASS revision 7 rejected
+
+PASS revision 8 rejected
+
+PASS revision 9 rejected
+
+PASS revision 11 rejected
+
+PASS revision 100 rejected
+
+PASS missing revision rejected
+
+PASS wrong bridge protocol rejected
+
+PASS missing bridge protocol rejected
+
+PASS wrong base version rejected
+
+PASS wrong base digest rejected
+
+PASS missing asset rejected
+
+PASS invalid JSON rejected
+
+PASS empty marker rejected
+
+PASS oversized asset rejected
+
+PASS metadata exception rejected
+
+PASS valid identity still accepted after failures
+
+RESULT: 27 checks passed; production Java on JVM test stubs; not Android engine execution.
+
+

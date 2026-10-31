@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <permission android:name="cn.windchaser.unified.permission.STARTUP_READY" android:protectionLevel="signature" />
+    <uses-permission android:name="cn.windchaser.unified.permission.STARTUP_READY" />
+    <permission android:name="cn.windchaser.unified.permission.INTERNAL_BROADCAST" android:protectionLevel="signature" />
+    <uses-permission android:name="cn.windchaser.unified.permission.INTERNAL_BROADCAST" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.REORDER_TASKS" />
+    <uses-permission android:name="android.permission.GET_TASKS" android:maxSdkVersion="20" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-feature android:name="android.hardware.touchscreen" android:required="false" />
+    <uses-feature android:name="android.hardware.bluetooth" android:required="false" />
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <application android:name=".UnifiedApplication" android:label="追风桌面" android:icon="@drawable/ic_launcher"
+        android:theme="@style/AppTheme" android:allowBackup="false" android:supportsRtl="false"
+        android:hardwareAccelerated="@bool/hardware_acceleration" android:largeHeap="true">
+        <activity android:theme="@style/AppTheme" android:name=".MainActivity" android:exported="true" android:launchMode="singleTask"
+            android:screenOrientation="landscape" android:stateNotNeeded="false"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustNothing"
+            android:configChanges="orientation|screenSize|keyboardHidden">
+        </activity>
+        <activity android:theme="@style/LauncherStartupTheme" android:name=".UnifiedBootstrapActivity" android:exported="true" android:screenOrientation="landscape" android:launchMode="singleTask" android:configChanges="orientation|screenSize|keyboardHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.HOME" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SettingsActivity" android:exported="false" android:screenOrientation="landscape" />
+        <activity android:name=".FileCenterActivity" android:label="@string/file_center" android:icon="@drawable/ic_file_center" android:exported="false" android:screenOrientation="landscape" />
+        <activity android:name=".DeviceInfoActivity" android:label="@string/device_info" android:icon="@drawable/ic_device_info" android:exported="false" android:screenOrientation="landscape" />
+        <activity android:name=".WeatherSettingsActivity" android:exported="false" android:screenOrientation="landscape" />
+        <activity android:name=".DiagnosticsActivity" android:exported="false" android:screenOrientation="landscape" />
+        <activity android:name=".ContainerActivity" android:exported="false" android:screenOrientation="landscape" />
+        <service android:name=".FloatingMusicService" android:exported="false" />
+        <service android:name=".FileTransferService" android:exported="false" />
+        <service android:name=".CompanionService" android:exported="false" android:stopWithTask="false" />
+        <service android:name=".UnifiedInitService" android:exported="false" android:stopWithTask="false" />
+        <service android:name=".StartupSequenceService" android:exported="false" android:stopWithTask="false" />
+        <service android:name=".MapWindowGuardService" android:exported="false" android:process=":mapguard" android:stopWithTask="false" />
+        <receiver android:name=".BootReceiver" android:exported="true">
+            <intent-filter><action android:name="android.intent.action.BOOT_COMPLETED" /></intent-filter>
+        </receiver>
+        <provider android:name=".StartupWindowProvider" android:authorities="cn.windchaser.unified.startup_windows" android:exported="false" />
+        <provider android:name=".ExportProvider" android:authorities="cn.windchaser.unified.exports"
+            android:exported="false" android:grantUriPermissions="true" />
+        <provider android:name=".LocalFileProvider" android:authorities="cn.windchaser.unified.files"
+            android:exported="false" android:grantUriPermissions="true" />
+        <receiver android:name=".DesktopReturnReceiver" android:exported="true" android:permission="cn.windchaser.unified.permission.STARTUP_READY"/>
+    </application>
+</manifest>

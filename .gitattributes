@@ -1,0 +1,8 @@
+* text=auto eol=lf
+gradlew text eol=lf
+*.sh text eol=lf
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.jar binary
+*.mp4 binary

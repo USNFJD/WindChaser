@@ -1,0 +1,1 @@
+package cn.hydrogen.launcher;public class MainActivity extends android.app.Activity {public int visiblePage(){return 1;}}

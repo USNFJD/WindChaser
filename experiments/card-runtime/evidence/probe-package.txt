@@ -1,0 +1,846 @@
+Activity Resolver Table:
+  Non-Data Actions:
+      android.intent.action.MAIN:
+        a927af10 cn.hydrogen.cardlab/.LabActivity filter a927b078
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.LAUNCHER"
+        a9299f80 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P00$Standard00 filter a92ae398
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92e8f60 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P00$SingleInstance00 filter a9295ce0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a91d0a08 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P00$SingleInstance01 filter a91d0b60
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a91f7990 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P00$SingleInstance02 filter a91fcab8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92416b0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P00$SingleInstance03 filter a92a1308
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92d4930 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P00$SingleTask00 filter a92d4a68
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a927c630 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P00$SingleTask01 filter a925a010
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9263568 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P00$SingleTask02 filter a92636b8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9266608 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P00$SingleTask03 filter a925f3e0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9291250 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P00$SingleTop00 filter a92ae648
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92ae7f8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P00$SingleTop01 filter a92a2e28
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92a5168 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P00$SingleTop02 filter a92d3778
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9250370 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P00$SingleTop03 filter a92504a0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92a6920 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P00$Standard00 filter a92c2678
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92c27e0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P00$SingleInstance00 filter a92d30c0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a926c068 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P00$SingleInstance01 filter a9290e70
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92b3d88 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P00$SingleInstance02 filter a92b3ee8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92d0ce8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P00$SingleInstance03 filter a923b0c8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a923e908 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P00$SingleTask00 filter a924efc0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a923e9d0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P00$SingleTask01 filter a923e9f8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a929c3a8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P00$SingleTask02 filter a929c4e8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a927d6a0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P00$SingleTask03 filter a928d4c8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92c28d8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P00$SingleTop00 filter a92c2a30
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a91ce770 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P00$SingleTop01 filter a92d3270
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a917f8e0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P00$SingleTop02 filter a917fa38
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a91fd7c0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P00$SingleTop03 filter a9291650
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a91fd948 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P01$Standard00 filter a924de20
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9247510 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P01$SingleInstance00 filter a9268558
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9268730 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P01$SingleInstance01 filter a925ed70
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a91fd218 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P01$SingleInstance02 filter a91fd4d8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a920f230 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P01$SingleInstance03 filter a929f460
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a929f610 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P01$SingleTask00 filter a92d6808
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a91cf360 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P01$SingleTask01 filter a924ab10
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a924b5c0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P01$SingleTask02 filter a92557f0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92559c8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P01$SingleTask03 filter a9291ca0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92af9e0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P01$SingleTop00 filter a9295a70
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9180ad8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P01$SingleTop01 filter a9265f28
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92660c0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P01$SingleTop02 filter a92afd38
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a91eded0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P01$SingleTop03 filter a9236300
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92c31b8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P01$Standard00 filter a925ac90
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a925ae28 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P01$SingleInstance00 filter a923dd90
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a91fff88 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P01$SingleInstance01 filter a923a880
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a923aa40 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P01$SingleInstance02 filter a928d1f0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a928e1c8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P01$SingleInstance03 filter a9258f10
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92590e8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P01$SingleTask00 filter a92591b0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92966d0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P01$SingleTask01 filter a927e420
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a927e5f8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P01$SingleTask02 filter a92b4ba0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92df550 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P01$SingleTask03 filter a92d8188
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92d8348 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P01$SingleTop00 filter a917f118
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a927b698 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P01$SingleTop01 filter a927b910
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a91803a0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P01$SingleTop02 filter a9252528
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9252700 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P01$SingleTop03 filter a926bdd8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92d74b0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P02$Standard00 filter a91f6a98
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a91f6c70 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P02$SingleInstance00 filter a92ac788
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92822c8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P02$SingleInstance01 filter a92ac0e0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92ac2b8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P02$SingleInstance02 filter a92a9220
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92a93f8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P02$SingleInstance03 filter a925f958
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a929be20 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P02$SingleTask00 filter a929c0a8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92de020 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P02$SingleTask01 filter a923abb8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a923af08 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P02$SingleTask02 filter a9229280
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9180678 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P02$SingleTask03 filter a91808e8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a924d3d0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P02$SingleTop00 filter a924d650
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92aabe0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P02$SingleTop01 filter a92fb9f0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92fbbb0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P02$SingleTop02 filter a9228548
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9228708 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P02$SingleTop03 filter a9248848
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9248a20 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P02$Standard00 filter a922a580
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a922a758 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P02$SingleInstance00 filter a92392f8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92394d0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P02$SingleInstance01 filter a92394f8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9256d48 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P02$SingleInstance02 filter a9256fe0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a927cb30 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P02$SingleInstance03 filter a927cdc8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a929eff0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P02$SingleTask00 filter a929f280
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9290a38 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P02$SingleTask01 filter a928f6b8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a928f850 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P02$SingleTask02 filter a927ef88
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a927f148 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P02$SingleTask03 filter a927dfb8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a927e150 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P02$SingleTop00 filter a92a95e8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92a97c0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P02$SingleTop01 filter a9226c90
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9226e50 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P02$SingleTop02 filter a9229f88
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a922a160 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P02$SingleTop03 filter a9237d00
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92ab050 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P03$Standard00 filter a92ab338
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92d0f78 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P03$SingleInstance00 filter a92d1208
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92e8070 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P03$SingleInstance01 filter a92e8300
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a928f2e8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P03$SingleInstance02 filter a928f578
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9238208 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P03$SingleInstance03 filter a9238498
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9239fb0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P03$SingleTask00 filter a923a238
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9256918 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P03$SingleTask01 filter a9256ba0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9290488 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P03$SingleTask02 filter a9290710
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a927d038 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P03$SingleTask03 filter a927d2c0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92d4160 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P03$SingleTop00 filter a92d43e0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a927d968 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P03$SingleTop01 filter a927dbd0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a927dda8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P03$SingleTop02 filter a92ad790
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92ad928 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P03$SingleTop03 filter a92adba8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a929d7a0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P03$Standard00 filter a929da30
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a917f3d8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P03$SingleInstance00 filter a917f670
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9291df8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P03$SingleInstance01 filter a9292090
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9292268 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P03$SingleInstance02 filter a9269b48
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9269d20 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P03$SingleInstance03 filter a9182120
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a91822b8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P03$SingleTask00 filter a9182548
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a928d7a8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P03$SingleTask01 filter a928da38
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a928dc10 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P03$SingleTask02 filter a91813b0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9181588 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P03$SingleTask03 filter a9281c30
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9281e08 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P03$SingleTop00 filter a9282098
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a917fcf0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P03$SingleTop01 filter a917ff80
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a923b258 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P03$SingleTop02 filter a923b4d0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a923b6a8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P03$SingleTop03 filter a92b12e0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92acdd8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P04$Standard00 filter a9297ac8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9297c78 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P04$SingleInstance00 filter a9297f08
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92de2c0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P04$SingleInstance01 filter a92de550
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92de728 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P04$SingleInstance02 filter a929c830
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a929ca08 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P04$SingleInstance03 filter a929cc98
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92a4668 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P04$SingleTask00 filter a92a48f0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92a4ac8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P04$SingleTask01 filter a922b2b0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a922b460 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P04$SingleTask02 filter a922b6e8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92d1900 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P04$SingleTask03 filter a92d1b88
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92d1d60 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P04$SingleTop00 filter a924a138
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a924a2e0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P04$SingleTop01 filter a924a560
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a924a738 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P04$SingleTop02 filter a924bb28
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a924bd00 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P04$SingleTop03 filter a924bf80
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9228a80 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P04$Standard00 filter a9228d10
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9228ee8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P04$SingleInstance00 filter a917e870
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a917ea48 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P04$SingleInstance01 filter a917ece0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9229690 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P04$SingleInstance02 filter a9229928
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9229b00 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P04$SingleInstance03 filter a9239608
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92397b8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P04$SingleTask00 filter a9239a48
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9239c20 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P04$SingleTask01 filter a922a990
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a922ab68 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P04$SingleTask02 filter a922adf8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a922afd0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P04$SingleTask03 filter a92ab8b0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92aba88 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P04$SingleTop00 filter a92abd18
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a91cf700 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P04$SingleTop01 filter a91cf990
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a91cfb68 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P04$SingleTop02 filter a91cfdf8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92e85e0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P04$SingleTop03 filter a92e8870
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92814a0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P05$Standard00 filter a92817d0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92819a8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P05$SingleInstance00 filter a929e4e8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a929e6c0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P05$SingleInstance01 filter a929e950
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a929eb28 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P05$SingleInstance02 filter a929edb8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a928e8f0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P05$SingleInstance03 filter a928eb80
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a928ed58 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P05$SingleTask00 filter a928efe0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a924e220 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P05$SingleTask01 filter a924e4a8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a924e680 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P05$SingleTask02 filter a924e908
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a924eae0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P05$SingleTask03 filter a929a160
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a929a2f8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P05$SingleTop00 filter a929a578
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a929a750 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P05$SingleTop01 filter a929a9d0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a929aba8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P05$SingleTop02 filter a92ef058
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92ef230 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P05$SingleTop03 filter a92ef4b0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92ef688 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P05$Standard00 filter a92ef918
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92efaf0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P05$SingleInstance00 filter a92efd88
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92be8b8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P05$SingleInstance01 filter a92beb50
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92bed28 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P05$SingleInstance02 filter a92befc0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92bf198 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P05$SingleInstance03 filter a92bf430
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9280198 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P05$SingleTask00 filter a9280428
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9280600 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P05$SingleTask01 filter a9280890
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9280a68 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P05$SingleTask02 filter a9280cf8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9280ed0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P05$SingleTask03 filter a929b050
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a929b228 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P05$SingleTop00 filter a929b4b8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a929b690 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P05$SingleTop01 filter a929b920
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a929baf8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P05$SingleTop02 filter a92f6218
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92f63c8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P05$SingleTop03 filter a92f6658
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92f6ed0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P06$Standard00 filter a92490d0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9249290 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P06$SingleInstance00 filter a9249520
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92496f8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P06$SingleInstance01 filter a9249988
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9249b60 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P06$SingleInstance02 filter a9249df0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9249fc8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P06$SingleInstance03 filter a92b5140
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92b5318 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P06$SingleTask00 filter a92b55a0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92b5778 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P06$SingleTask01 filter a92b5a00
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92b5bd8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P06$SingleTask02 filter a92b5e60
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92b6038 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P06$SingleTask03 filter a92b62c0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9253e98 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P06$SingleTop00 filter a9254118
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92542f0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P06$SingleTop01 filter a9254570
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9254748 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P06$SingleTop02 filter a92549c8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9254ba0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P06$SingleTop03 filter a9254e20
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9254ff8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P06$Standard00 filter a9255288
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9255460 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P06$SingleInstance00 filter a9293b88
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9293d60 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P06$SingleInstance01 filter a9293ff8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92941d0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P06$SingleInstance02 filter a9294468
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9294640 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P06$SingleInstance03 filter a92948d8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9294ab0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P06$SingleTask00 filter a9294d40
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9294f18 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P06$SingleTask01 filter a92951a8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9295350 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P06$SingleTask02 filter a92f3e20
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92f3ff8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P06$SingleTask03 filter a92f4288
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92f4460 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P06$SingleTop00 filter a92f46f0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92f48c8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P06$SingleTop01 filter a92f4b58
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92f4d30 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P06$SingleTop02 filter a92f4fc0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92f5198 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P06$SingleTop03 filter a92f5428
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92f5ca0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P07$Standard00 filter a92f5fd0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92f61a8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P07$SingleInstance00 filter a92bf810
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92bf9e8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P07$SingleInstance01 filter a92bfc78
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92bfe50 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P07$SingleInstance02 filter a92c00e0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92c02b8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P07$SingleInstance03 filter a92c0548
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92c0720 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P07$SingleTask00 filter a92c09a8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92c0b80 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P07$SingleTask01 filter a92c0e08
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92c0fe0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P07$SingleTask02 filter a92c1268
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92c1440 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P07$SingleTask03 filter a92c16c8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92c18a0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P07$SingleTop00 filter a92c1b20
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92c1cf8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P07$SingleTop01 filter a92c1f78
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92c2150 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P07$SingleTop02 filter a92f0c58
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92f0e30 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P07$SingleTop03 filter a92f10b0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92f1288 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P07$Standard00 filter a92f1518
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92f16f0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P07$SingleInstance00 filter a92f1988
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92f1b60 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P07$SingleInstance01 filter a92f1df8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92f1fd0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P07$SingleInstance02 filter a92f2268
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92f2440 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P07$SingleInstance03 filter a92f26d8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92f28b0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P07$SingleTask00 filter a92f2b40
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92f31e8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P07$SingleTask01 filter a92f3478
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92f3650 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P07$SingleTask02 filter a92f38e0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92e4a68 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P07$SingleTask03 filter a92e4cf8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92e4ed0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P07$SingleTop00 filter a92e5160
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92e5338 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P07$SingleTop01 filter a92e55c8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92e57a0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P07$SingleTop02 filter a92e5a30
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92e5c08 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P07$SingleTop03 filter a92e5e98
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92e67a8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P08$Standard00 filter a92e6ad8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92e6cb0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P08$SingleInstance00 filter a92e6f40
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92e7118 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P08$SingleInstance01 filter a92e73a8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92e7580 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P08$SingleInstance02 filter a92e7810
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92e79e8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P08$SingleInstance03 filter a92e7c78
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92f7640 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P08$SingleTask00 filter a92f78c8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92f7aa0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P08$SingleTask01 filter a92f7d28
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92f7f00 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P08$SingleTask02 filter a92f8188
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92f8360 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P08$SingleTask03 filter a92f85e8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92f87c0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P08$SingleTop00 filter a92f8a40
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92f8c18 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P08$SingleTop01 filter a92f8e98
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92f9070 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P08$SingleTop02 filter a92f92f0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92f94c8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P08$SingleTop03 filter a92f9748
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92f9920 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P08$Standard00 filter a92f9bb0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92f9d88 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P08$SingleInstance00 filter a92fa020
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92fa1f8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P08$SingleInstance01 filter a92fa490
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92fa668 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P08$SingleInstance02 filter a92fa900
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92faad8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P08$SingleInstance03 filter a92fad70
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92faf48 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P08$SingleTask00 filter a92fb1d8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92fb3b0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P08$SingleTask01 filter a92ea040
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92ea1e8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P08$SingleTask02 filter a92ea478
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92ea650 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P08$SingleTask03 filter a92ea8e0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92eaab8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P08$SingleTop00 filter a92ead48
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92eaf20 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P08$SingleTop01 filter a92eb1b0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92eb388 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P08$SingleTop02 filter a92eb618
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92eb7f0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P08$SingleTop03 filter a92eba80
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+      com.morgoo.droidplugin.ACTION_SHORTCUT_PROXY:
+        a9296b08 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ShortcutProxyActivity filter a9257308
+          Action: "com.morgoo.droidplugin.ACTION_SHORTCUT_PROXY"
+          Category: "android.intent.category.DEFAULT"
+
+Service Resolver Table:
+  Non-Data Actions:
+      android.intent.action.MAIN:
+        a9211d30 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ServiceStub$StubP00$P00 filter a9211e18
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9292c98 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ServiceStub$StubP01$P00 filter a92a0aa8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9237ed8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ServiceStub$StubP02$P00 filter a9238d00
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92b14b8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ServiceStub$StubP03$P00 filter a92b1710
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92e8a48 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ServiceStub$StubP04$P00 filter a92e8ca0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92f6830 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ServiceStub$StubP05$P00 filter a92f6a88
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92f5600 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ServiceStub$StubP06$P00 filter a92f5858
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92e6070 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ServiceStub$StubP07$P00 filter a92e62c8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92ebc58 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ServiceStub$StubP08$P00 filter a92ebeb0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+
+Permissions:
+  Permission [cn.hydrogen.cardlab.CONTROL] (a92ee7c8):
+    sourcePackage=cn.hydrogen.cardlab
+    uid=10054 gids=[] type=0 prot=signature
+    packageSetting=PackageSetting{a903e800 cn.hydrogen.cardlab/10054}
+    perm=Permission{a92a4e58 cn.hydrogen.cardlab.CONTROL}
+
+Registered ContentProviders:
+  cn.hydrogen.cardlab/com.morgoo.droidplugin.PluginServiceProvider:
+    Provider{a9286c58 cn.hydrogen.cardlab/com.morgoo.droidplugin.PluginServiceProvider}
+  cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ContentProviderStub$StubP08:
+    Provider{a92ebff0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ContentProviderStub$StubP08}
+  cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ContentProviderStub$StubP07:
+    Provider{a92e64a0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ContentProviderStub$StubP07}
+  cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ContentProviderStub$StubP06:
+    Provider{a92f5998 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ContentProviderStub$StubP06}
+  cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ContentProviderStub$StubP05:
+    Provider{a92f6bc8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ContentProviderStub$StubP05}
+  cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ContentProviderStub$StubP04:
+    Provider{a9281198 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ContentProviderStub$StubP04}
+  cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ContentProviderStub$StubP03:
+    Provider{a92acad0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ContentProviderStub$StubP03}
+  cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ContentProviderStub$StubP02:
+    Provider{a9238e40 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ContentProviderStub$StubP02}
+  cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ContentProviderStub$StubP01:
+    Provider{a92a0bd0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ContentProviderStub$StubP01}
+  cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ContentProviderStub$StubP00:
+    Provider{a91ce418 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ContentProviderStub$StubP00}
+  cn.hydrogen.cardlab/.CardBridge:
+    Provider{a92af408 cn.hydrogen.cardlab/.CardBridge}
+
+ContentProvider Authorities:
+  [cn.hydrogen.cardlab.plugin.servicemanager]:
+    Provider{a9286c58 cn.hydrogen.cardlab/com.morgoo.droidplugin.PluginServiceProvider}
+      applicationInfo=ApplicationInfo{a92776b0 cn.hydrogen.cardlab}
+  [cn.hydrogen.cardlab.droidplugin_stub_P00]:
+    Provider{a91ce418 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ContentProviderStub$StubP00}
+      applicationInfo=ApplicationInfo{a92776b0 cn.hydrogen.cardlab}
+  [cn.hydrogen.cardlab.droidplugin_stub_P02]:
+    Provider{a9238e40 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ContentProviderStub$StubP02}
+      applicationInfo=ApplicationInfo{a92776b0 cn.hydrogen.cardlab}
+  [cn.hydrogen.cardlab.droidplugin_stub_P01]:
+    Provider{a92a0bd0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ContentProviderStub$StubP01}
+      applicationInfo=ApplicationInfo{a92776b0 cn.hydrogen.cardlab}
+  [cn.hydrogen.cardlab.droidplugin_stub_P04]:
+    Provider{a9281198 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ContentProviderStub$StubP04}
+      applicationInfo=ApplicationInfo{a92776b0 cn.hydrogen.cardlab}
+  [cn.hydrogen.cardlab.droidplugin_stub_P03]:
+    Provider{a92acad0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ContentProviderStub$StubP03}
+      applicationInfo=ApplicationInfo{a92776b0 cn.hydrogen.cardlab}
+  [cn.hydrogen.cardlab.droidplugin_stub_P05]:
+    Provider{a92f6bc8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ContentProviderStub$StubP05}
+      applicationInfo=ApplicationInfo{a92776b0 cn.hydrogen.cardlab}
+  [cn.hydrogen.cardlab.droidplugin_stub_P06]:
+    Provider{a92f5998 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ContentProviderStub$StubP06}
+      applicationInfo=ApplicationInfo{a92776b0 cn.hydrogen.cardlab}
+  [cn.hydrogen.cardlab.droidplugin_stub_P07]:
+    Provider{a92e64a0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ContentProviderStub$StubP07}
+      applicationInfo=ApplicationInfo{a92776b0 cn.hydrogen.cardlab}
+  [cn.hydrogen.cardlab.droidplugin_stub_P08]:
+    Provider{a92ebff0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ContentProviderStub$StubP08}
+      applicationInfo=ApplicationInfo{a92776b0 cn.hydrogen.cardlab}
+  [cn.hydrogen.cardlab.bridge]:
+    Provider{a92af408 cn.hydrogen.cardlab/.CardBridge}
+      applicationInfo=ApplicationInfo{a92776b0 cn.hydrogen.cardlab}
+
+Key Set Manager:
+  [cn.hydrogen.cardlab]
+      Signing KeySets: 6
+
+Packages:
+  Package [cn.hydrogen.cardlab] (a903e800):
+    userId=10054 gids=[3003, 1028, 1015]
+    pkg=Package{a92695c8 cn.hydrogen.cardlab}
+    codePath=/data/app/cn.hydrogen.cardlab-1.apk
+    resourcePath=/data/app/cn.hydrogen.cardlab-1.apk
+    nativeLibraryPath=/data/app-lib/cn.hydrogen.cardlab-1
+    versionCode=1 targetSdk=22
+    versionName=0.1-experiment
+    applicationInfo=ApplicationInfo{a92776b0 cn.hydrogen.cardlab}
+    flags=[ DEBUGGABLE HAS_CODE ALLOW_CLEAR_USER_DATA ]
+    dataDir=/data/data/cn.hydrogen.cardlab
+    supportsScreens=[small, medium, large, xlarge, resizeable, anyDensity]
+    timeStamp=2026-10-23 00:22:46
+    firstInstallTime=2026-10-22 23:49:03
+    lastUpdateTime=2026-10-23 00:22:46
+    signatures=PackageSignatures{a903e8c8 [a903bb70]}
+    permissionsFixed=true haveGids=true installStatus=1
+    pkgFlags=[ DEBUGGABLE HAS_CODE ALLOW_CLEAR_USER_DATA ]
+    User 0:  installed=true blocked=false stopped=false notLaunched=false enabled=0
+    grantedPermissions:
+      android.permission.REORDER_TASKS
+      android.permission.READ_EXTERNAL_STORAGE
+      android.permission.WRITE_EXTERNAL_STORAGE
+      android.permission.INTERNET
+      android.permission.ACCESS_FINE_LOCATION
+      android.permission.ACCESS_WIFI_STATE
+      android.permission.ACCESS_COARSE_LOCATION
+      cn.hydrogen.cardlab.CONTROL
+      android.permission.WAKE_LOCK
+      android.permission.ACCESS_NETWORK_STATE
+      android.permission.MODIFY_AUDIO_SETTINGS

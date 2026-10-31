@@ -1,0 +1,1 @@
+import android.content.Intent;public class a20 {public static int calls,type,mode;public static boolean fail;private final Intent request;public a20(Intent value){request=value;}public void c(){if(fail)throw new IllegalStateException("injected protocol failure");calls++;type=request.getIntExtra("EXTRA_TYPE",-1);mode=request.getIntExtra("EXTRA_OPERA",-1);}}

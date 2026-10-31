@@ -1,0 +1,22 @@
+plugins { id 'com.android.application' }
+android {
+    namespace 'cn.hydrogen.cardlab'
+    compileSdk 35
+    defaultConfig {
+        applicationId 'cn.hydrogen.cardlab'
+        minSdk 19
+        targetSdk 22
+        versionCode 1
+        versionName '0.1-experiment'
+    }
+    compileOptions { sourceCompatibility JavaVersion.VERSION_1_8; targetCompatibility JavaVersion.VERSION_1_8 }
+    sourceSets { main { assets.srcDir 'build/generated/probeAssets' } }
+}
+dependencies { implementation project(':runtime') }
+def stageProbes = tasks.register('stageProbes', Copy) {
+    dependsOn ':probeLeft:assembleDebug', ':probeRight:assembleDebug'
+    from('../probeLeft/build/outputs/apk/debug') { include '*-debug.apk'; rename { 'probe-left.apk' } }
+    from('../probeRight/build/outputs/apk/debug') { include '*-debug.apk'; rename { 'probe-right.apk' } }
+    into layout.buildDirectory.dir('generated/probeAssets')
+}
+tasks.named('preBuild').configure { dependsOn stageProbes }

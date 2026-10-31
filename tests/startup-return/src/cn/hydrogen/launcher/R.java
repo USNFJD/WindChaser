@@ -1,0 +1,1 @@
+package cn.hydrogen.launcher;public class R {public static class drawable {public static int ic_launcher=1;}}

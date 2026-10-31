@@ -1,0 +1,1 @@
+package cn.windchaser.mapbridge;public class MapCardBridge {public static boolean ready;public static int reads;public static boolean interfaceReady(){reads++;return ready;}}

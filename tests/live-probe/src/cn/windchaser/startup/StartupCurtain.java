@@ -1,0 +1,1 @@
+package cn.windchaser.startup;public class StartupCurtain {static boolean needsMapSetup(){return false;}}

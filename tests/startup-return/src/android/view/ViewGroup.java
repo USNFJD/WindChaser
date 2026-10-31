@@ -1,0 +1,1 @@
+package android.view;public class ViewGroup extends View implements ViewParent {public int getChildCount(){return 0;}public View getChildAt(int i){return null;}}

@@ -1,0 +1,17 @@
+API19 theme radius: real drawable pixels and launcher views; no commercial engine acceptance.
+
+PASS all panel areas preserve default shape and respond from square to large corners
+
+PASS eight real dashboard surfaces update in place and stay stable on repeated theme application
+
+PASS radius reset and backup restore update already-created card backgrounds
+
+PASS settings content background refreshes without recreating its scroll view
+
+PASS launcher menu window follows corners while keeping its surface opacity
+
+PASS remote widget backgrounds and contents remain excluded
+
+PASS existing floating music card follows preference changes and closes cleanly
+
+RADIUS_RESULT passed=7 failed=0

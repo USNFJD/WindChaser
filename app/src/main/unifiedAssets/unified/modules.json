@@ -1,0 +1,26 @@
+{
+  "schema": 1,
+  "host": "cn.windchaser.unified",
+  "modules": [
+    {
+      "file": "AmapAuto-6.5.0.601323-WindChaser-R1.apk",
+      "name": "高德地图",
+      "package": "com.autonavi.amapauto",
+      "versionCode": 15000001,
+      "versionName": "6.5.0.601323",
+      "bytes": 82304725,
+      "sha256": "74e5d7a6725da499da6c4404b34d472a40753afa00ef0d4598b8df1b53801166",
+      "certificate": "8b4f8e84026a5ac5ad75b4a0f34d21bd81957e4fb38dd80b7fe0c1537e66e7d8"
+    },
+    {
+      "file": "QQMusicCar-2.1.1.1-WindChaser-R1.apk",
+      "name": "QQ音乐",
+      "package": "com.tencent.qqmusiccar",
+      "versionCode": 48,
+      "versionName": "2.1.1.1",
+      "bytes": 20033995,
+      "sha256": "b5fd58b92118224fa8b182f21868b6a4450c378e82b6c6c6c1241faa912d4f85",
+      "certificate": "8b4f8e84026a5ac5ad75b4a0f34d21bd81957e4fb38dd80b7fe0c1537e66e7d8"
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+package android.util;public class Log {public static int w(String t,String s){return w(t,s,null);}public static int i(String t,String m){fixture.Env.logs.add(m);return 0;}public static int w(String t,String m,Throwable e){fixture.Env.logs.add(m);return 0;}}

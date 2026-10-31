@@ -1,0 +1,21 @@
+{
+  "platform": "JVM Android test stubs, not Android/commercial engine execution",
+  "scenarios": [
+    {
+      "scenario": "probe-shared-success",
+      "output": "PASS probe-shared-success checks=9 (production helpers on JVM Android stubs)\r\n"
+    },
+    {
+      "scenario": "probe-shared-timeout",
+      "output": "PASS probe-shared-timeout checks=7 (production helpers on JVM Android stubs)\r\n"
+    },
+    {
+      "scenario": "probe-bounded-waiters",
+      "output": "PASS probe-bounded-waiters checks=6 (production helpers on JVM Android stubs)\r\n"
+    },
+    {
+      "scenario": "map-method-reuse",
+      "output": "PASS map-method-reuse checks=3 (production helpers on JVM Android stubs)\r\n"
+    }
+  ]
+}

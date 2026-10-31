@@ -1,0 +1,1 @@
+package android.content;public class Context {private final Context app;public Context(){app=this;}public Context(Context application){app=application;}public Context getApplicationContext(){return app;}}

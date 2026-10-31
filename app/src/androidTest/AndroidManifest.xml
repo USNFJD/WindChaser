@@ -1,0 +1,23 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="cn.hydrogen.launcher.permission.STARTUP_READY" />
+    <application>
+        <uses-library android:name="android.test.runner" android:required="true" />
+        <uses-library android:name="android.test.mock" android:required="false" />
+        <service android:name="cn.hydrogen.launcher.GuardTokenService" android:exported="true" android:process=":guardtoken" />
+        <activity android:name="cn.hydrogen.launcher.TestWarmActivity" android:exported="true">
+            <intent-filter><action android:name="android.intent.action.MAIN" /><category android:name="android.intent.category.LAUNCHER" /></intent-filter>
+        </activity>
+        <activity android:name="cn.hydrogen.launcher.TestUnlockActivity" android:exported="true" />
+        <activity android:name="cn.hydrogen.launcher.TestInsetsActivity" android:exported="true" android:screenOrientation="landscape" />
+        <activity android:name="cn.hydrogen.launcher.ReverseCameraActivity" android:exported="true" android:screenOrientation="landscape" />
+        <activity android:name="com.autonavi.amapauto.MainMapActivity" android:exported="true" android:launchMode="singleTask" android:screenOrientation="landscape" />
+        <activity android:name="cn.hydrogen.launcher.AmapSurfaceProbe" android:exported="true" android:screenOrientation="landscape" />
+        <receiver android:name="cn.hydrogen.launcher.ProbeWidget" android:exported="true">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/probe_widget" />
+        </receiver>
+    </application>
+</manifest>

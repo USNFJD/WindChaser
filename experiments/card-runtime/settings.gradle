@@ -1,0 +1,5 @@
+pluginManagement { repositories { google(); mavenCentral(); gradlePluginPortal() } }
+dependencyResolutionManagement { repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS); repositories { google(); mavenCentral() } }
+rootProject.name = 'HydrogenCardRuntimeLab'
+include ':runtime', ':host', ':probeLeft', ':probeRight'
+project(':runtime').projectDir = file('upstream/project/Libraries/DroidPlugin')

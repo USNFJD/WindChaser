@@ -1,0 +1,1 @@
+package android.content;public class Context{public static final String ACTIVITY_SERVICE="activity";public Object manager;public Intent started;public Object getSystemService(String name){return manager;}public void startActivity(Intent intent){started=intent;}}

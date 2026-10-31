@@ -1,0 +1,1 @@
+package android.app;public class AlarmManager {public static final int ELAPSED_REALTIME=3;public void setExact(int type,long due,PendingIntent p){}public void set(int type,long due,PendingIntent p){}public void cancel(PendingIntent p){p.cancel();}}

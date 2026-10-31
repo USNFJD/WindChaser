@@ -1,0 +1,42 @@
+package cn.hydrogen.launcher;
+
+import android.app.*;
+import android.content.*;
+import android.content.pm.ResolveInfo;
+import android.graphics.*;
+import android.os.*;
+import android.view.*;
+import android.widget.*;
+import java.io.*;
+import java.lang.reflect.Field;
+import java.util.*;
+
+/** API19 device reads, sparse kernel fixtures, real grid navigation and startup marking. */
+final class DeviceInfoFlow {
+    private final Instrumentation test;
+    DeviceInfoFlow(Instrumentation test){this.test=test;}
+    private final StringBuilder report=new StringBuilder();private int passed,failed;private MainActivity home;private Activity info;
+    private interface Task{void run()throws Exception;}
+    private void require(boolean ok,String why){if(!ok)throw new AssertionError(why);}
+    private void check(String name,Task task){try{task.run();passed++;report.append("PASS ");}catch(Throwable error){failed++;report.append("FAIL ").append(error).append(' ');}report.append(name).append('\n');}
+    private void write(File file,String text)throws Exception{File parent=file.getParentFile();require(parent.isDirectory()||parent.mkdirs(),"fixture folder");try(OutputStream out=new FileOutputStream(file)){out.write(text.getBytes("UTF-8"));}}
+    private void remove(File file){File[] children=file.listFiles();if(children!=null)for(File child:children)remove(child);file.delete();}
+    private Object field(Object object,String key)throws Exception{Field f=object.getClass().getDeclaredField(key);f.setAccessible(true);return f.get(object);}
+    private View find(View view,String label){if(label.equals(view.getContentDescription()))return view;if(view instanceof ViewGroup)for(int i=0;i<((ViewGroup)view).getChildCount();i++){View result=find(((ViewGroup)view).getChildAt(i),label);if(result!=null)return result;}return null;}
+    void run(){
+        Config config=new Config(test.getTargetContext());Map<String,?> backup=new HashMap<>(config.p.getAll());File fixture=new File(test.getTargetContext().getCacheDir(),"device-info-"+UUID.randomUUID());
+        try{
+            check("offline and heterogeneous cores use the highest hardware frequency",()->{write(new File(fixture,"present"),"0-7");write(new File(fixture,"cpu0/cpufreq/cpuinfo_max_freq"),"800000");write(new File(fixture,"cpu4/cpufreq/cpuinfo_max_freq"),"1500000");write(new File(fixture,"cpufreq/policy6/cpuinfo_max_freq"),"2000000");DeviceInfo.Cpu cpu=DeviceInfo.cpu(fixture,"Hardware : Test Chip\nprocessor : 0");require(cpu.cores==8&&cpu.maxKhz==2000000&&!cpu.frequencyCap,"offline cores or fastest cluster lost");});
+            check("hidden kernel data is shown as unknown; capped frequency is distinguished",()->{File hidden=new File(fixture,"hidden");DeviceInfo.Cpu absent=DeviceInfo.cpu(hidden,"");require(absent.availableOnly&&absent.maxKhz==0&&DeviceInfo.frequency(absent.maxKhz).equals(DeviceInfo.UNKNOWN),"invented hardware");write(new File(hidden,"present"),"0-1");write(new File(hidden,"cpu1/cpufreq/scaling_max_freq"),"1200000");DeviceInfo.Cpu cap=DeviceInfo.cpu(hidden,"");require(cap.cores==2&&cap.frequencyCap&&cap.maxKhz==1200000,"cap claimed as hardware maximum");});
+            check("real RAM and storage can be read without new permissions or root",()->{ActivityManager.MemoryInfo memory=DeviceInfo.memory(test.getTargetContext());require(memory.totalMem>0&&memory.availMem>0&&memory.availMem<=memory.totalMem,"invalid live memory");require(!DeviceInfo.storage(Environment.getDataDirectory()).equals(DeviceInfo.UNKNOWN),"internal storage unavailable");});
+            check("only automatic sequence gets a fresh single-use startup intent copy",()->{Intent original=new Intent().setComponent(new ComponentName("com.tencent.qqmusiccar","com.tencent.qqmusiccar.app.activity.AppStarterActivity"));Intent automatic=StartupSequenceService.automaticIntent(original);require(!original.hasExtra("windchaser.startup.custom_splash")&&automatic.getBooleanExtra("windchaser.startup.custom_splash",false),"manual intent mutated");long remaining=automatic.getLongExtra("windchaser.startup.splash_deadline",0)-SystemClock.elapsedRealtime();require(remaining>0&&remaining<=60000,"unbounded marker");final Intent[] seen={null};Context context=new ContextWrapper(test.getTargetContext()){@Override public void startActivity(Intent intent){seen[0]=intent;}};Ui.launch(context,original.getComponent().flattenToString());require(seen[0]!=null&&!seen[0].hasExtra("windchaser.startup.custom_splash"),"ordinary icon received custom mode");});
+            config.put("autoRecoverApps",false);config.put("pageAnimation",false);config.put("homePage",2);
+            home=(MainActivity)test.startActivitySync(new Intent(test.getTargetContext(),MainActivity.class).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK));test.waitForIdleSync();Thread.sleep(800);
+            check("built-in device icon is unique and opens from the actual app grid",()->{List<ResolveInfo> apps=Ui.apps(test.getTargetContext());int count=0;for(ResolveInfo app:apps)if(app.activityInfo.name.equals(DeviceInfoActivity.class.getName()))count++;require(count==1&&apps.get(1).activityInfo.name.equals(DeviceInfoActivity.class.getName()),"missing or duplicate default icon");Instrumentation.ActivityMonitor monitor=test.addMonitor(DeviceInfoActivity.class.getName(),null,false);test.runOnMainSync(()->{home.showPage(MainActivity.APPS);try{GridView grid=(GridView)field(home,"grid");for(int i=0;i<grid.getAdapter().getCount();i++){ResolveInfo item=(ResolveInfo)grid.getAdapter().getItem(i);if(item.activityInfo.name.equals(DeviceInfoActivity.class.getName())){grid.performItemClick(grid.getChildAt(i),i,grid.getAdapter().getItemId(i));break;}}}catch(Exception e){throw new RuntimeException(e);}});info=test.waitForMonitorWithTimeout(monitor,5000);test.removeMonitor(monitor);require(info instanceof DeviceInfoActivity,"icon did not navigate");for(int n=0;n<50&&field(info,"snapshot")==null;n++)Thread.sleep(100);require(field(info,"snapshot")!=null,"device information did not load");test.waitForIdleSync();});
+            check("information page uses real Android version, RAM, theme and a scrollable layout",()->{require(info!=null,"page unavailable");TextView total=(TextView)field(info,"ramTotal");require(total.getText().toString().equals(DeviceInfo.capacity(DeviceInfo.memory(test.getTargetContext()).totalMem)),"RAM display disagrees with Android");require(find(info.getWindow().getDecorView(),"车机信息默认背景")!=null,"default background missing");ScrollView scroll=(ScrollView)find(info.getWindow().getDecorView(),"车机信息内容");require(scroll!=null&&scroll.getChildAt(0).getHeight()>scroll.getHeight(),"all details must scroll");Bitmap[] image={null};test.runOnMainSync(()->{View root=info.getWindow().getDecorView();image[0]=Bitmap.createBitmap(root.getWidth(),root.getHeight(),Bitmap.Config.ARGB_8888);root.draw(new Canvas(image[0]));});try(OutputStream out=new FileOutputStream(new File(test.getTargetContext().getFilesDir(),"device-info-api19.png"))){image[0].compress(Bitmap.CompressFormat.PNG,100,out);}image[0].recycle();});
+            check("return from device information preserves the launcher app page",()->{require(info!=null,"page unavailable");test.runOnMainSync(info::onBackPressed);test.waitForIdleSync();require(!home.isFinishing()&&home.visiblePage()==MainActivity.APPS,"launcher page lost");});
+        }catch(Throwable error){failed++;report.append("FAIL suite ").append(error).append('\n');}
+        finally{if(info!=null&&!info.isFinishing())test.runOnMainSync(info::finish);if(home!=null)test.runOnMainSync(home::finish);SharedPreferences.Editor restore=config.p.edit().clear();for(Map.Entry<String,?> entry:backup.entrySet()){Object value=entry.getValue();if(value instanceof Boolean)restore.putBoolean(entry.getKey(),(Boolean)value);else if(value instanceof Integer)restore.putInt(entry.getKey(),(Integer)value);else if(value instanceof Long)restore.putLong(entry.getKey(),(Long)value);else if(value instanceof String)restore.putString(entry.getKey(),(String)value);else if(value instanceof Float)restore.putFloat(entry.getKey(),(Float)value);}restore.commit();remove(fixture);}
+        report.append("DEVICE_INFO_RESULT passed=").append(passed).append(" failed=").append(failed).append('\n');Bundle result=new Bundle();result.putString("stream",report.toString());test.finish(failed==0?Activity.RESULT_OK:Activity.RESULT_CANCELED,result);
+    }
+}

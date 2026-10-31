@@ -1,0 +1,1 @@
+package android.widget;import android.view.View;import android.content.Context;public class ImageView extends View {public enum ScaleType {FIT_XY,FIT_CENTER}public ScaleType scale=ScaleType.FIT_XY;public ImageView(Context c){super(c);}public void setScaleType(ScaleType value){scale=value;}}

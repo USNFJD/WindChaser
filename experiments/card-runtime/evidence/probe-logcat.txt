@@ -1,0 +1,46 @@
+RUN probe-daadc66fc6db488c9c0eb940f59fb6bb
+10-23 00:22:47.641 I/CardLab ( 2078): PARENT uid=10054 token=android.view.ViewRootImpl$W@a9008b68 left=[21, 89, 614, 568] right=[645, 89, 614, 568]
+10-23 00:22:48.711 I/CardLab ( 2078): PARENT uid=10054 token=android.view.ViewRootImpl$W@a9008b68 left=[21, 89, 614, 568] right=[645, 89, 614, 568]
+10-23 00:22:48.711 I/CardLab ( 2078): APK cn.hydrogen.probe.left SHA256=b38143c406c5c40e93c6d2e8595f234d97458847fd711497e88b1293d449eff9
+10-23 00:22:48.711 I/CardLab ( 2078): 导入 cn.hydrogen.probe.left
+10-23 00:22:48.731 I/CardLab ( 2078): IMPORT cn.hydrogen.probe.left result=1
+10-23 00:22:48.901 I/CardLab ( 2116): REGISTER cn.hydrogen.probe.left activity=cn.hydrogen.probe.ProbeActivity token=android.os.BinderProxy@a8facc10 uid=10054
+10-23 00:22:48.911 I/CardProbe( 2116): cn.hydrogen.probe.left CREATE uid=10054
+10-23 00:22:48.911 I/CardProbe( 2116): cn.hydrogen.probe.left RESUME
+10-23 00:22:48.911 I/CardLab ( 2116): BOUND cn.hydrogen.probe.left bounds=[21, 89, 614, 568]
+10-23 00:22:49.571 I/CardLab ( 2078): PARENT uid=10054 token=android.view.ViewRootImpl$W@a9008b68 left=[21, 89, 614, 568] right=[645, 89, 614, 568]
+10-23 00:22:49.571 I/CardLab ( 2078): APK cn.hydrogen.probe.right SHA256=41b88cbfac73cbc97ce9d6911394ade59449c6cc564e1ac592444254f9c5bd9b
+10-23 00:22:49.571 I/CardLab ( 2078): 导入 cn.hydrogen.probe.right
+10-23 00:22:49.581 I/CardLab ( 2078): IMPORT cn.hydrogen.probe.right result=1
+10-23 00:22:49.641 I/CardProbe( 2116): cn.hydrogen.probe.left PAUSE
+10-23 00:22:49.791 I/CardLab ( 2150): REGISTER cn.hydrogen.probe.right activity=cn.hydrogen.probe.ProbeActivity token=android.os.BinderProxy@a8fad400 uid=10054
+10-23 00:22:49.801 I/CardProbe( 2150): cn.hydrogen.probe.right CREATE uid=10054
+10-23 00:22:49.801 I/CardProbe( 2150): cn.hydrogen.probe.right RESUME
+10-23 00:22:49.821 I/CardLab ( 2150): BOUND cn.hydrogen.probe.right bounds=[645, 89, 614, 568]
+10-23 00:22:51.241 I/CardProbe( 2150): cn.hydrogen.probe.right PAUSE
+10-23 00:22:51.251 I/CardProbe( 2116): cn.hydrogen.probe.left RESUME
+10-23 00:22:51.261 I/CardProbe( 2116): cn.hydrogen.probe.left counter=1
+10-23 00:22:52.081 I/CardProbe( 2116): cn.hydrogen.probe.left PAUSE
+10-23 00:22:52.081 I/CardProbe( 2150): cn.hydrogen.probe.right RESUME
+10-23 00:22:52.091 I/CardProbe( 2150): cn.hydrogen.probe.right counter=1
+10-23 00:22:52.921 I/CardProbe( 2150): cn.hydrogen.probe.right PAUSE
+10-23 00:22:52.931 I/CardProbe( 2116): cn.hydrogen.probe.left RESUME
+10-23 00:22:52.941 I/CardProbe( 2116): cn.hydrogen.probe.left counter=2
+10-23 00:22:54.041 I/CardProbe( 2116): cn.hydrogen.probe.left PAUSE
+10-23 00:22:54.061 I/CardLab ( 2116): REGISTER cn.hydrogen.probe.left activity=cn.hydrogen.probe.DetailActivity token=android.os.BinderProxy@a9015b38 uid=10054
+10-23 00:22:55.021 I/CardProbe( 2116): cn.hydrogen.probe.left RESUME
+10-23 00:22:55.711 I/CardProbe( 2116): cn.hydrogen.probe.left PAUSE
+10-23 00:22:55.711 I/CardProbe( 2150): cn.hydrogen.probe.right RESUME
+10-23 00:22:55.711 I/CardProbe( 2150): cn.hydrogen.probe.right counter=2
+10-23 00:22:56.541 I/CardProbe( 2150): cn.hydrogen.probe.right PAUSE
+10-23 00:22:56.541 I/CardProbe( 2116): cn.hydrogen.probe.left RESUME
+10-23 00:22:59.811 I/CardProbe( 2116): cn.hydrogen.probe.left PAUSE
+10-23 00:22:59.811 I/CardProbe( 2150): cn.hydrogen.probe.right RESUME
+10-23 00:23:01.521 I/CardProbe( 2150): cn.hydrogen.probe.right PAUSE
+10-23 00:23:01.521 I/CardProbe( 2116): cn.hydrogen.probe.left TOUCH action=0 count=1 x=292.0 y=117.0
+10-23 00:23:01.521 I/CardProbe( 2116): cn.hydrogen.probe.left RESUME
+10-23 00:23:01.521 I/CardProbe( 2116): cn.hydrogen.probe.left TOUCH action=1 count=1 x=292.0 y=117.0
+10-23 00:23:02.271 I/CardProbe( 2116): cn.hydrogen.probe.left PAUSE
+10-23 00:23:02.271 I/CardProbe( 2150): cn.hydrogen.probe.right TOUCH action=0 count=1 x=293.0 y=117.0
+10-23 00:23:02.271 I/CardProbe( 2150): cn.hydrogen.probe.right RESUME
+10-23 00:23:02.271 I/CardProbe( 2150): cn.hydrogen.probe.right TOUCH action=1 count=1 x=293.0 y=117.0

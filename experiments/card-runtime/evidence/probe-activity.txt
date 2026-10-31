@@ -1,0 +1,152 @@
+ACTIVITY MANAGER ACTIVITIES (dumpsys activity activities)
+  Stack #1:
+    Task id #4
+    * TaskRecord{a9255768 #4 A=cn.hydrogen.cardlab.task.P02 U=0 sz=1}
+      numActivities=1 rootWasReset=false userId=0 mTaskType=0 numFullscreen=0 mOnTopOfHome=false
+      affinity=cn.hydrogen.cardlab.task.P02
+      intent={flg=0x10800000 cmp=cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P02$Standard00}
+      realActivity=cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P02$Standard00
+      Activities=[ActivityRecord{a92680d8 u0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P02$Standard00 t4}]
+      askedCompatMode=false
+      lastThumbnail=null lastDescription=null
+      lastActiveTime=108031 (inactive for 0s)
+      * Hist #0: ActivityRecord{a92680d8 u0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P02$Standard00 t4}
+          packageName=cn.hydrogen.cardlab processName=cn.hydrogen.cardlab:PluginP02
+          launchedFromUid=10054 launchedFromPackage=cn.hydrogen.cardlab userId=0
+          app=ProcessRecord{a928f8f8 2150:cn.hydrogen.cardlab:PluginP02/u0a54}
+          Intent { flg=0x10800000 cmp=cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P02$Standard00 (has extras) }
+          frontOfTask=true task=TaskRecord{a9255768 #4 A=cn.hydrogen.cardlab.task.P02 U=0 sz=1}
+          taskAffinity=cn.hydrogen.cardlab.task.P02
+          realActivity=cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P02$Standard00
+          baseDir=/data/app/cn.hydrogen.cardlab-1.apk
+          dataDir=/data/data/cn.hydrogen.cardlab
+          stateNotNeeded=false componentSpecified=true mActivityType=0
+          compat={160dpi always-compat} labelRes=0x7f020001 icon=0x0 theme=0x7f030000
+          config={1.0 310mcc260mnc en_US ldltr sw720dp w1280dp h647dp 160dpi lrg long land finger qwerty/v/v tball/v s.6}
+          launchFailed=false launchCount=0 lastLaunchTime=-13s596ms
+          haveState=false icicle=null
+          state=RESUMED stopped=false delayedResume=false finishing=false
+          keysPaused=false inHistory=true visible=true sleeping=false idle=true
+          fullscreen=false noDisplay=false immersive=false launchMode=0
+          frozenBeforeDestroy=false thumbnailNeeded=false forceNewConfig=false
+          mActivityType=APPLICATION_ACTIVITY_TYPE
+          thumbHolder: a9255768 bm=null desc=null
+          waitingVisible=false nowVisible=true lastVisibleTime=-13s96ms
+    Task id #3
+    * TaskRecord{a9290dd8 #3 A=cn.hydrogen.cardlab.task.P01 U=0 sz=1}
+      numActivities=1 rootWasReset=false userId=0 mTaskType=0 numFullscreen=0 mOnTopOfHome=false
+      affinity=cn.hydrogen.cardlab.task.P01
+      intent={flg=0x10800000 cmp=cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P01$Standard00}
+      realActivity=cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P01$Standard00
+      Activities=[ActivityRecord{a90e82c0 u0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P01$Standard00 t3}]
+      askedCompatMode=false
+      lastThumbnail=android.graphics.Bitmap@a9302a78 lastDescription=null
+      lastActiveTime=108008 (inactive for 1s)
+      * Hist #0: ActivityRecord{a90e82c0 u0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P01$Standard00 t3}
+          packageName=cn.hydrogen.cardlab processName=cn.hydrogen.cardlab:PluginP01
+          launchedFromUid=10054 launchedFromPackage=cn.hydrogen.cardlab userId=0
+          app=ProcessRecord{a926a6e8 2116:cn.hydrogen.cardlab:PluginP01/u0a54}
+          Intent { flg=0x10800000 cmp=cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P01$Standard00 (has extras) }
+          frontOfTask=true task=TaskRecord{a9290dd8 #3 A=cn.hydrogen.cardlab.task.P01 U=0 sz=1}
+          taskAffinity=cn.hydrogen.cardlab.task.P01
+          realActivity=cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P01$Standard00
+          baseDir=/data/app/cn.hydrogen.cardlab-1.apk
+          dataDir=/data/data/cn.hydrogen.cardlab
+          stateNotNeeded=false componentSpecified=true mActivityType=0
+          compat={160dpi always-compat} labelRes=0x7f020001 icon=0x0 theme=0x7f030000
+          config={1.0 310mcc260mnc en_US ldltr sw720dp w1280dp h647dp 160dpi lrg long land finger qwerty/v/v tball/v s.6}
+          launchFailed=false launchCount=0 lastLaunchTime=-14s456ms
+          haveState=true icicle=Bundle[mParcelledData.dataSize=204]
+          state=STOPPED stopped=true delayedResume=false finishing=false
+          keysPaused=false inHistory=true visible=true sleeping=false idle=true
+          fullscreen=false noDisplay=false immersive=false launchMode=0
+          frozenBeforeDestroy=false thumbnailNeeded=false forceNewConfig=false
+          mActivityType=APPLICATION_ACTIVITY_TYPE
+          thumbHolder: a9290dd8 bm=android.graphics.Bitmap@a9302a78 desc=null
+          waitingVisible=false nowVisible=true lastVisibleTime=-13s930ms
+    Task id #2
+    * TaskRecord{a92d6ec0 #2 A=cn.hydrogen.cardlab U=0 sz=1}
+      numActivities=1 rootWasReset=false userId=0 mTaskType=0 numFullscreen=1 mOnTopOfHome=true
+      affinity=cn.hydrogen.cardlab
+      intent={flg=0x10000000 cmp=cn.hydrogen.cardlab/.LabActivity}
+      realActivity=cn.hydrogen.cardlab/.LabActivity
+      Activities=[ActivityRecord{a907df40 u0 cn.hydrogen.cardlab/.LabActivity t2}]
+      askedCompatMode=false
+      lastThumbnail=android.graphics.Bitmap@a934fce0 lastDescription=null
+      lastActiveTime=94514 (inactive for 14s)
+      * Hist #0: ActivityRecord{a907df40 u0 cn.hydrogen.cardlab/.LabActivity t2}
+          packageName=cn.hydrogen.cardlab processName=cn.hydrogen.cardlab
+          launchedFromUid=2000 launchedFromPackage=null userId=0
+          app=ProcessRecord{a925b248 2078:cn.hydrogen.cardlab/u0a54}
+          Intent { flg=0x10000000 cmp=cn.hydrogen.cardlab/.LabActivity (has extras) }
+          frontOfTask=true task=TaskRecord{a92d6ec0 #2 A=cn.hydrogen.cardlab U=0 sz=1}
+          taskAffinity=cn.hydrogen.cardlab
+          realActivity=cn.hydrogen.cardlab/.LabActivity
+          baseDir=/data/app/cn.hydrogen.cardlab-1.apk
+          dataDir=/data/data/cn.hydrogen.cardlab
+          stateNotNeeded=false componentSpecified=true mActivityType=0
+          compat={160dpi always-compat} labelRes=0x0 icon=0x0 theme=0x10300f1
+          config={1.0 310mcc260mnc en_US ldltr sw720dp w1280dp h647dp 160dpi lrg long land finger qwerty/v/v tball/v s.6}
+          launchFailed=false launchCount=0 lastLaunchTime=-15s763ms
+          haveState=true icicle=Bundle[mParcelledData.dataSize=204]
+          state=STOPPED stopped=true delayedResume=false finishing=false
+          keysPaused=false inHistory=true visible=true sleeping=false idle=true
+          fullscreen=true noDisplay=false immersive=false launchMode=0
+          frozenBeforeDestroy=false thumbnailNeeded=false forceNewConfig=false
+          mActivityType=APPLICATION_ACTIVITY_TYPE
+          thumbHolder: a92d6ec0 bm=android.graphics.Bitmap@a934fce0 desc=null
+          waitingVisible=false nowVisible=true lastVisibleTime=-14s763ms
+
+    Running activities (most recent first):
+      TaskRecord{a9255768 #4 A=cn.hydrogen.cardlab.task.P02 U=0 sz=1}
+        Run #2: ActivityRecord{a92680d8 u0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P02$Standard00 t4}
+      TaskRecord{a9290dd8 #3 A=cn.hydrogen.cardlab.task.P01 U=0 sz=1}
+        Run #1: ActivityRecord{a90e82c0 u0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P01$Standard00 t3}
+      TaskRecord{a92d6ec0 #2 A=cn.hydrogen.cardlab U=0 sz=1}
+        Run #0: ActivityRecord{a907df40 u0 cn.hydrogen.cardlab/.LabActivity t2}
+
+    mResumedActivity: ActivityRecord{a92680d8 u0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P02$Standard00 t4}
+    mLastPausedActivity: ActivityRecord{a90e82c0 u0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P01$Standard00 t3}
+
+  mFocusedActivity: ActivityRecord{a92680d8 u0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P02$Standard00 t4}
+  mDismissKeyguardOnNextActivity=false
+  mFocusedStack=ActivityStack{a9233ba8 stackId=1, 3 tasks} mStackState=STACK_STATE_HOME_IN_BACK
+  mSleepTimeout=false
+  mCurTaskId=4
+  mUserStackInFront={}
+
+  Recent tasks:
+  * Recent #0: TaskRecord{a9255768 #4 A=cn.hydrogen.cardlab.task.P02 U=0 sz=1}
+    numActivities=1 rootWasReset=false userId=0 mTaskType=0 numFullscreen=0 mOnTopOfHome=false
+    affinity=cn.hydrogen.cardlab.task.P02
+    intent={flg=0x10800000 cmp=cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P02$Standard00}
+    realActivity=cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P02$Standard00
+    Activities=[ActivityRecord{a92680d8 u0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P02$Standard00 t4}]
+    askedCompatMode=false
+    lastThumbnail=null lastDescription=null
+    lastActiveTime=108031 (inactive for 0s)
+  * Recent #1: TaskRecord{a9290dd8 #3 A=cn.hydrogen.cardlab.task.P01 U=0 sz=1}
+    numActivities=1 rootWasReset=false userId=0 mTaskType=0 numFullscreen=0 mOnTopOfHome=false
+    affinity=cn.hydrogen.cardlab.task.P01
+    intent={flg=0x10800000 cmp=cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P01$Standard00}
+    realActivity=cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P01$Standard00
+    Activities=[ActivityRecord{a90e82c0 u0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P01$Standard00 t3}]
+    askedCompatMode=false
+    lastThumbnail=android.graphics.Bitmap@a9302a78 lastDescription=null
+    lastActiveTime=108008 (inactive for 1s)
+  * Recent #2: TaskRecord{a92d6ec0 #2 A=cn.hydrogen.cardlab U=0 sz=1}
+    numActivities=1 rootWasReset=false userId=0 mTaskType=0 numFullscreen=1 mOnTopOfHome=true
+    affinity=cn.hydrogen.cardlab
+    intent={flg=0x10000000 cmp=cn.hydrogen.cardlab/.LabActivity}
+    realActivity=cn.hydrogen.cardlab/.LabActivity
+    Activities=[ActivityRecord{a907df40 u0 cn.hydrogen.cardlab/.LabActivity t2}]
+    askedCompatMode=false
+    lastThumbnail=android.graphics.Bitmap@a934fce0 lastDescription=null
+    lastActiveTime=94514 (inactive for 14s)
+  * Recent #3: TaskRecord{a9235378 #1 I=android/com.android.internal.app.ResolverActivity U=0 sz=0}
+    intent={act=android.intent.action.MAIN cat=[android.intent.category.HOME] flg=0x10800000 cmp=android/com.android.internal.app.ResolverActivity}
+    realActivity=android/com.android.internal.app.ResolverActivity
+    Activities=[]
+    askedCompatMode=false
+    lastThumbnail=android.graphics.Bitmap@a9300360 lastDescription=null
+    lastActiveTime=93224 (inactive for 15s)

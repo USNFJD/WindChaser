@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-26",
+  "hiddenapibypass": {
+    "version": "6.1",
+    "license": "Apache-2.0",
+    "url": "https://repo.maven.apache.org/maven2/org/lsposed/hiddenapibypass/hiddenapibypass/6.1/hiddenapibypass-6.1.aar",
+    "sha256": "e3161dd21c97a4540b1698a33f7062aeaa1450008e1e2176070e5380f7a6324c",
+    "source": "https://github.com/LSPosed/AndroidHiddenApiBypass",
+    "reference_commit": "4efc64fcada7df15e7b5ba068e774343b760270d"
+  },
+  "DroidPlugin": {
+    "upstream_commit": "c6ebf652e0f73aa0e5746766e117e51efaf41dbd",
+    "license": "LGPL-3.0-or-later",
+    "modified_source": "experiments/card-runtime/upstream/project/Libraries/DroidPlugin"
+  }
+}
