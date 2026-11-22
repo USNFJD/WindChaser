@@ -1,0 +1,1 @@
+package android.os;public final class Process {public static String name="cn.hydrogen.launcher";public static int myPid(){return 1234;}}

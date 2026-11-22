@@ -1,0 +1,1 @@
+package cn.hydrogen.launcher;public class MainActivity{public int task,page=1;public boolean finishing;MainActivity(int id){task=id;}public boolean isFinishing(){return finishing;}public int getTaskId(){return task;}}

@@ -1,0 +1,149 @@
+{
+  "platform": "JVM Android test stubs, not Android or commercial engine execution",
+  "scenarios": [
+    {
+      "scenario": "chain",
+      "output": "PASS map is first target\r\nPASS first map stage cannot return HOME before QQ\r\nPASS map remains while original artwork is visible\r\nPASS map fallback not armed at app launch\r\nPASS map waits through artwork-end plus 499ms\r\nPASS map advances to QQ at artwork-end plus 500ms despite render cover\r\nPASS map primary delay stays 500ms\r\nPASS final QQ stage may return HOME\r\nPASS internal QQ activity keeps automatic session\r\nPASS QQ ready returns HOME without added delay\r\nPASS complete cold-start order is map then QQ then HOME\r\nPASS successful return cancels later foreground retries\r\nPASS HOME acknowledgement clears persisted session\r\nRESULT chain checks=13 PASS (production sources on JVM test stubs)\r\n"
+    },
+    {
+      "scenario": "map-first-restart-delays",
+      "output": "PASS map is first target\r\nPASS target delays follow map and QQ roles\r\nPASS persisted delays follow target packages\r\nPASS map completion restores service and starts QQ once\r\nPASS service reconstruction preserves each application's delay\r\nPASS second service reconstruction returns HOME without relaunches\r\nRESULT map-first-restart-delays checks=6 PASS (production sources on JVM test stubs)\r\n"
+    },
+    {
+      "scenario": "single-map",
+      "output": "PASS map is first target\r\nPASS map remains final when QQ is not configured\r\nPASS single map retains 500ms primary delay\r\nPASS single map restores service and returns HOME\r\nPASS single map restoration keeps map fallback role\r\nRESULT single-map checks=5 PASS (production sources on JVM test stubs)\r\n"
+    },
+    {
+      "scenario": "single-qq",
+      "output": "PASS QQ alone uses music delay even at index zero\r\nPASS QQ alone restores service and immediately returns HOME\r\nPASS single QQ recovery never uses map delay\r\nRESULT single-qq checks=3 PASS (production sources on JVM test stubs)\r\n"
+    },
+    {
+      "scenario": "map-timer",
+      "output": "PASS map is first target\r\nPASS no completion signal while map artwork visible\r\nPASS primary completion attempted at artwork-end plus 500ms\r\nPASS map timer does not fire before 2350ms from artwork end\r\nPASS map timer advances to QQ exactly at artwork-end plus 2350ms\r\nPASS map timer origin is artwork end\r\nRESULT map-timer checks=6 PASS (production sources on JVM test stubs)\r\n"
+    },
+    {
+      "scenario": "qq-timer",
+      "output": "PASS map is first target\r\nPASS map completion advances to QQ once\r\nPASS QQ primary ready signal sent\r\nPASS QQ timer not early\r\nPASS QQ fallback returns HOME at artwork-end plus 650ms\r\nRESULT qq-timer checks=5 PASS (production sources on JVM test stubs)\r\n"
+    },
+    {
+      "scenario": "service-restart",
+      "output": "PASS map is first target\r\nPASS PendingIntent restores killed launcher service and advances to QQ after map delay\r\nPASS persisted startup step restored\r\nPASS restore does not restart map\r\nRESULT service-restart checks=4 PASS (production sources on JVM test stubs)\r\n"
+    },
+    {
+      "scenario": "qq-service-restart",
+      "output": "PASS map is first target\r\nPASS map completion advances to QQ once\r\nPASS QQ completion restores service and returns HOME\r\nPASS QQ is not relaunched during restore\r\nRESULT qq-service-restart checks=4 PASS (production sources on JVM test stubs)\r\n"
+    },
+    {
+      "scenario": "foreign-foreground",
+      "output": "PASS map is first target\r\nPASS timer and startup timeout leave foreign foreground untouched\r\nPASS post-artwork retry skipped after leaving app\r\nRESULT foreign-foreground checks=3 PASS (production sources on JVM test stubs)\r\n"
+    },
+    {
+      "scenario": "screen-off",
+      "output": "PASS map is first target\r\nPASS screen-off cancels timer even after screen wakes\r\nPASS screen-off prevents re-delivery\r\nRESULT screen-off checks=3 PASS (production sources on JVM test stubs)\r\n"
+    },
+    {
+      "scenario": "manual",
+      "output": "PASS normal manual launch never returns automatically\r\nPASS normal launch has no automatic session\r\nRESULT manual checks=2 PASS (production sources on JVM test stubs)\r\n"
+    },
+    {
+      "scenario": "direct-no-callback",
+      "output": "PASS final app can return after map delay without Messenger or ticket\r\nRESULT direct-no-callback checks=1 PASS (production sources on JVM test stubs)\r\n"
+    },
+    {
+      "scenario": "warm-map",
+      "output": "PASS map is first target\r\nPASS warm map without new artwork observes delay before QQ\r\nRESULT warm-map checks=2 PASS (production sources on JVM test stubs)\r\n"
+    },
+    {
+      "scenario": "kitkat-focus-gap",
+      "output": "PASS map is first target\r\nPASS KitKat top-package check covers focus callback gap after delay\r\nRESULT kitkat-focus-gap checks=2 PASS (production sources on JVM test stubs)\r\n"
+    },
+    {
+      "scenario": "bad-token",
+      "output": "PASS map is first target\r\nPASS wrong token cannot advance session\r\nRESULT bad-token checks=2 PASS (production sources on JVM test stubs)\r\n"
+    },
+    {
+      "scenario": "duplicates",
+      "output": "PASS map is first target\r\nPASS duplicate map completion cannot skip QQ or restart it\r\nRESULT duplicates checks=2 PASS (production sources on JVM test stubs)\r\n"
+    },
+    {
+      "scenario": "cover-regression",
+      "output": "PASS map returns after 500ms without waiting for native render cover\r\nRESULT cover-regression checks=1 PASS (production sources on JVM test stubs)\r\n"
+    },
+    {
+      "scenario": "manual-cancels-timer",
+      "output": "PASS map is first target\r\nPASS ordinary manual entry cancels previous automatic fallback\r\nRESULT manual-cancels-timer checks=2 PASS (production sources on JVM test stubs)\r\n"
+    },
+    {
+      "scenario": "cancelled-ticket",
+      "output": "PASS map is first target\r\nPASS cancelled session ticket prevents fallback from pulling HOME\r\nRESULT cancelled-ticket checks=2 PASS (production sources on JVM test stubs)\r\n"
+    },
+    {
+      "scenario": "map-delay-boundary",
+      "output": "PASS map is first target\r\nPASS long animation does not start primary or fallback return\r\nPASS no completion at map animation end\r\nPASS no map completion before 500ms\r\nPASS one primary notification at exactly 500ms\r\nPASS delay origin is animation end rather than app launch\r\nRESULT map-delay-boundary checks=6 PASS (production sources on JVM test stubs)\r\n"
+    },
+    {
+      "scenario": "map-repeat-events",
+      "output": "PASS map is first target\r\nPASS repeated map events cannot return before 500ms\r\nPASS repeated ready events do not reset or duplicate the delay\r\nRESULT map-repeat-events checks=3 PASS (production sources on JVM test stubs)\r\n"
+    },
+    {
+      "scenario": "map-delay-foreign",
+      "output": "PASS map is first target\r\nPASS foreign foreground during 500ms delay prevents primary and fallback return\r\nRESULT map-delay-foreign checks=2 PASS (production sources on JVM test stubs)\r\n"
+    },
+    {
+      "scenario": "map-delay-screen-off",
+      "output": "PASS map is first target\r\nPASS screen off during 500ms cancels delayed return and fallback\r\nRESULT map-delay-screen-off checks=2 PASS (production sources on JVM test stubs)\r\n"
+    },
+    {
+      "scenario": "map-delay-manual",
+      "output": "PASS map is first target\r\nPASS manual entry during 500ms cancels old automatic return\r\nRESULT map-delay-manual checks=2 PASS (production sources on JVM test stubs)\r\n"
+    },
+    {
+      "scenario": "map-delay-cancelled-ticket",
+      "output": "PASS map is first target\r\nPASS revoked ticket during 500ms prevents delayed direct HOME return\r\nRESULT map-delay-cancelled-ticket checks=2 PASS (production sources on JVM test stubs)\r\n"
+    },
+    {
+      "scenario": "qq-third-timer",
+      "output": "PASS map is first target\r\nPASS map completion advances to QQ once\r\nPASS QQ primary attempt remains immediate\r\nPASS QQ first fallback is not before 650ms\r\nPASS QQ first fallback stays at 650ms\r\nPASS QQ has no extra attempts before absolute 3000ms\r\nPASS QQ final fallback returns HOME at exactly 3000ms\r\nPASS QQ final fallback clock starts at animation end\r\nPASS QQ has exactly three attempts\r\nRESULT qq-third-timer checks=9 PASS (production sources on JVM test stubs)\r\n"
+    },
+    {
+      "scenario": "map-third-timer",
+      "output": "PASS map is first target\r\nPASS map long animation never starts fallback clock early\r\nPASS map primary still waits 500ms\r\nPASS map primary attempts at 500ms\r\nPASS map first fallback is not before absolute 2350ms\r\nPASS map first fallback remains at 2350ms\r\nPASS map has no extra attempts before absolute 10000ms\r\nPASS map final fallback returns at exactly 10000ms\r\nPASS map final fallback clock starts at animation end\r\nPASS map has exactly three attempts\r\nRESULT map-third-timer checks=10 PASS (production sources on JVM test stubs)\r\n"
+    },
+    {
+      "scenario": "third-foreign",
+      "output": "PASS map is first target\r\nPASS both initial map attempts injected as blocked\r\nPASS simulate stale positive window focus while reverse camera is top\r\nPASS third fallback and launcher watchdog leave actual foreign foreground untouched\r\nRESULT third-foreign checks=4 PASS (production sources on JVM test stubs)\r\n"
+    },
+    {
+      "scenario": "third-screen-off",
+      "output": "PASS map is first target\r\nPASS screen off cancels the ten-second final fallback even after wakeup\r\nRESULT third-screen-off checks=2 PASS (production sources on JVM test stubs)\r\n"
+    },
+    {
+      "scenario": "third-manual",
+      "output": "PASS map is first target\r\nPASS manual entry cancels final fallback from old automatic session\r\nRESULT third-manual checks=2 PASS (production sources on JVM test stubs)\r\n"
+    },
+    {
+      "scenario": "third-cancelled-ticket",
+      "output": "PASS map is first target\r\nPASS revoked session prevents direct HOME return at ten-second final fallback\r\nRESULT third-cancelled-ticket checks=2 PASS (production sources on JVM test stubs)\r\n"
+    },
+    {
+      "scenario": "late-map-splash",
+      "output": "PASS map is first target\r\nPASS late real artwork cancels warm-start primary and fallback guesses\r\nPASS late artwork still gets full 500ms after actual end\r\nPASS late real artwork establishes new exact return origin\r\nRESULT late-map-splash checks=4 PASS (production sources on JVM test stubs)\r\n"
+    },
+    {
+      "scenario": "map-third-exhaustion",
+      "output": "PASS map is first target\r\nPASS three map attempts even when all completion transports fail\r\nPASS exhausted local session stops after final attempt\r\nPASS later ready callbacks cannot rearm an exhausted map session\r\nRESULT map-third-exhaustion checks=4 PASS (production sources on JVM test stubs)\r\n"
+    },
+    {
+      "scenario": "qq-third-exhaustion",
+      "output": "PASS map is first target\r\nPASS map completion advances to QQ once\r\nPASS three QQ attempts even when all completion transports fail\r\nPASS exhausted QQ session stops at final attempt\r\nPASS later QQ callbacks cannot rearm an exhausted session\r\nRESULT qq-third-exhaustion checks=5 PASS (production sources on JVM test stubs)\r\n"
+    },
+    {
+      "scenario": "qq-third-service-restart",
+      "output": "PASS map is first target\r\nPASS map completion advances to QQ once\r\nPASS QQ reaches final retry after two blocked attempts\r\nPASS QQ final retry restores killed launcher service and returns HOME\r\nPASS QQ final retry never relaunches completed QQ activity\r\nRESULT qq-third-service-restart checks=5 PASS (production sources on JVM test stubs)\r\n"
+    },
+    {
+      "scenario": "map-third-service-restart",
+      "output": "PASS map is first target\r\nPASS map reaches final retry after two blocked attempts\r\nPASS map final retry restores killed launcher service and starts QQ\r\nPASS map final retry never relaunches map\r\nRESULT map-third-service-restart checks=4 PASS (production sources on JVM test stubs)\r\n"
+    }
+  ]
+}

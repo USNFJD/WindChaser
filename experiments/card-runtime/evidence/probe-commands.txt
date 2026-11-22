@@ -1,0 +1,1938 @@
+$ adb shell id
+uid=0(root) gid=0(root)
+
+$ adb shell su 2000 id
+uid=2000(shell) gid=2000(shell)
+
+$ adb shell su 2000 getprop ro.build.version.sdk
+19
+
+$ adb install -r D:\SSlunw\py\CHEJI\HydrogenLauncher\experiments\card-runtime\host\build\outputs\apk\debug\host-debug.apk
+Performing Push Install
+WARNING: linker: libdvm.so has text relocations. This is wasting memory and is a security risk. Please fix.
+	pkg: /data/local/tmp/host-debug.apk
+Success
+D:\SSlunw\py\CHEJI\HydrogenLauncher\experiments\card-runtime\host\build\outputs\apk\debug\host-debug.apk: 1 file pushed, 0 skipped. 395.8 MB/s (246456 bytes in 0.001s)
+
+$ adb shell su 2000 am force-stop cn.hydrogen.cardlab
+WARNING: linker: libdvm.so has text relocations. This is wasting memory and is a security risk. Please fix.
+
+$ adb shell su 2000 am start -W -n cn.hydrogen.cardlab/.LabActivity --es run probe-daadc66fc6db488c9c0eb940f59fb6bb
+WARNING: linker: libdvm.so has text relocations. This is wasting memory and is a security risk. Please fix.
+Starting: Intent { cmp=cn.hydrogen.cardlab/.LabActivity (has extras) }
+Status: ok
+Activity: cn.hydrogen.cardlab/.LabActivity
+ThisTime: 536
+TotalTime: 536
+Complete
+
+$ adb logcat -d -v time -s CardLab:I CardProbe:I AndroidRuntime:E *:S
+--------- beginning of /dev/log/main
+--------- beginning of /dev/log/system
+10-23 00:22:47.501 I/CardLab ( 2078): RUN probe-daadc66fc6db488c9c0eb940f59fb6bb
+10-23 00:22:47.641 I/CardLab ( 2078): PARENT uid=10054 token=android.view.ViewRootImpl$W@a9008b68 left=[21, 89, 614, 568] right=[645, 89, 614, 568]
+
+$ adb shell su 2000 screencap -p /data/local/tmp/probe-daadc66fc6db488c9c0eb940f59fb6bb-probe-host.png
+
+$ adb pull /data/local/tmp/probe-daadc66fc6db488c9c0eb940f59fb6bb-probe-host.png D:\SSlunw\py\CHEJI\HydrogenLauncher\experiments\card-runtime\evidence\probe-host.png
+/data/local/tmp/probe-daadc66fc6db488c9c0eb940f59fb6bb-probe-host.png: 1 file pulled, 0 skipped. 12.4 MB/s (41096 bytes in 0.003s)
+
+$ adb shell su 2000 input tap 55 56
+WARNING: linker: libdvm.so has text relocations. This is wasting memory and is a security risk. Please fix.
+
+$ adb logcat -d -v time -s CardLab:I CardProbe:I AndroidRuntime:E *:S
+--------- beginning of /dev/log/main
+--------- beginning of /dev/log/system
+10-23 00:22:47.501 I/CardLab ( 2078): RUN probe-daadc66fc6db488c9c0eb940f59fb6bb
+10-23 00:22:47.641 I/CardLab ( 2078): PARENT uid=10054 token=android.view.ViewRootImpl$W@a9008b68 left=[21, 89, 614, 568] right=[645, 89, 614, 568]
+10-23 00:22:48.711 I/CardLab ( 2078): PARENT uid=10054 token=android.view.ViewRootImpl$W@a9008b68 left=[21, 89, 614, 568] right=[645, 89, 614, 568]
+10-23 00:22:48.711 I/CardLab ( 2078): APK cn.hydrogen.probe.left SHA256=b38143c406c5c40e93c6d2e8595f234d97458847fd711497e88b1293d449eff9
+10-23 00:22:48.711 I/CardLab ( 2078): 导入 cn.hydrogen.probe.left
+10-23 00:22:48.731 I/CardLab ( 2078): IMPORT cn.hydrogen.probe.left result=1
+10-23 00:22:48.901 I/CardLab ( 2116): REGISTER cn.hydrogen.probe.left activity=cn.hydrogen.probe.ProbeActivity token=android.os.BinderProxy@a8facc10 uid=10054
+10-23 00:22:48.911 I/CardProbe( 2116): cn.hydrogen.probe.left CREATE uid=10054
+10-23 00:22:48.911 I/CardProbe( 2116): cn.hydrogen.probe.left RESUME
+10-23 00:22:48.911 I/CardLab ( 2116): BOUND cn.hydrogen.probe.left bounds=[21, 89, 614, 568]
+
+$ adb shell su 2000 input tap 130 56
+WARNING: linker: libdvm.so has text relocations. This is wasting memory and is a security risk. Please fix.
+
+$ adb logcat -d -v time -s CardLab:I CardProbe:I AndroidRuntime:E *:S
+--------- beginning of /dev/log/main
+--------- beginning of /dev/log/system
+10-23 00:22:47.501 I/CardLab ( 2078): RUN probe-daadc66fc6db488c9c0eb940f59fb6bb
+10-23 00:22:47.641 I/CardLab ( 2078): PARENT uid=10054 token=android.view.ViewRootImpl$W@a9008b68 left=[21, 89, 614, 568] right=[645, 89, 614, 568]
+10-23 00:22:48.711 I/CardLab ( 2078): PARENT uid=10054 token=android.view.ViewRootImpl$W@a9008b68 left=[21, 89, 614, 568] right=[645, 89, 614, 568]
+10-23 00:22:48.711 I/CardLab ( 2078): APK cn.hydrogen.probe.left SHA256=b38143c406c5c40e93c6d2e8595f234d97458847fd711497e88b1293d449eff9
+10-23 00:22:48.711 I/CardLab ( 2078): 导入 cn.hydrogen.probe.left
+10-23 00:22:48.731 I/CardLab ( 2078): IMPORT cn.hydrogen.probe.left result=1
+10-23 00:22:48.901 I/CardLab ( 2116): REGISTER cn.hydrogen.probe.left activity=cn.hydrogen.probe.ProbeActivity token=android.os.BinderProxy@a8facc10 uid=10054
+10-23 00:22:48.911 I/CardProbe( 2116): cn.hydrogen.probe.left CREATE uid=10054
+10-23 00:22:48.911 I/CardProbe( 2116): cn.hydrogen.probe.left RESUME
+10-23 00:22:48.911 I/CardLab ( 2116): BOUND cn.hydrogen.probe.left bounds=[21, 89, 614, 568]
+10-23 00:22:49.571 I/CardLab ( 2078): PARENT uid=10054 token=android.view.ViewRootImpl$W@a9008b68 left=[21, 89, 614, 568] right=[645, 89, 614, 568]
+10-23 00:22:49.571 I/CardLab ( 2078): APK cn.hydrogen.probe.right SHA256=41b88cbfac73cbc97ce9d6911394ade59449c6cc564e1ac592444254f9c5bd9b
+10-23 00:22:49.571 I/CardLab ( 2078): 导入 cn.hydrogen.probe.right
+10-23 00:22:49.581 I/CardLab ( 2078): IMPORT cn.hydrogen.probe.right result=1
+10-23 00:22:49.641 I/CardProbe( 2116): cn.hydrogen.probe.left PAUSE
+10-23 00:22:49.791 I/CardLab ( 2150): REGISTER cn.hydrogen.probe.right activity=cn.hydrogen.probe.ProbeActivity token=android.os.BinderProxy@a8fad400 uid=10054
+10-23 00:22:49.801 I/CardProbe( 2150): cn.hydrogen.probe.right CREATE uid=10054
+10-23 00:22:49.801 I/CardProbe( 2150): cn.hydrogen.probe.right RESUME
+10-23 00:22:49.821 I/CardLab ( 2150): BOUND cn.hydrogen.probe.right bounds=[645, 89, 614, 568]
+
+$ adb shell su 2000 screencap -p /data/local/tmp/probe-daadc66fc6db488c9c0eb940f59fb6bb-probe-dual-before.png
+
+$ adb pull /data/local/tmp/probe-daadc66fc6db488c9c0eb940f59fb6bb-probe-dual-before.png D:\SSlunw\py\CHEJI\HydrogenLauncher\experiments\card-runtime\evidence\probe-dual-before.png
+/data/local/tmp/probe-daadc66fc6db488c9c0eb940f59fb6bb-probe-dual-before.png: 1 file pulled, 0 skipped. 38.2 MB/s (61247 bytes in 0.002s)
+
+$ adb shell su 2000 input tap 325 174
+WARNING: linker: libdvm.so has text relocations. This is wasting memory and is a security risk. Please fix.
+
+$ adb logcat -d -v time -s CardLab:I CardProbe:I AndroidRuntime:E *:S
+--------- beginning of /dev/log/main
+--------- beginning of /dev/log/system
+10-23 00:22:47.501 I/CardLab ( 2078): RUN probe-daadc66fc6db488c9c0eb940f59fb6bb
+10-23 00:22:47.641 I/CardLab ( 2078): PARENT uid=10054 token=android.view.ViewRootImpl$W@a9008b68 left=[21, 89, 614, 568] right=[645, 89, 614, 568]
+10-23 00:22:48.711 I/CardLab ( 2078): PARENT uid=10054 token=android.view.ViewRootImpl$W@a9008b68 left=[21, 89, 614, 568] right=[645, 89, 614, 568]
+10-23 00:22:48.711 I/CardLab ( 2078): APK cn.hydrogen.probe.left SHA256=b38143c406c5c40e93c6d2e8595f234d97458847fd711497e88b1293d449eff9
+10-23 00:22:48.711 I/CardLab ( 2078): 导入 cn.hydrogen.probe.left
+10-23 00:22:48.731 I/CardLab ( 2078): IMPORT cn.hydrogen.probe.left result=1
+10-23 00:22:48.901 I/CardLab ( 2116): REGISTER cn.hydrogen.probe.left activity=cn.hydrogen.probe.ProbeActivity token=android.os.BinderProxy@a8facc10 uid=10054
+10-23 00:22:48.911 I/CardProbe( 2116): cn.hydrogen.probe.left CREATE uid=10054
+10-23 00:22:48.911 I/CardProbe( 2116): cn.hydrogen.probe.left RESUME
+10-23 00:22:48.911 I/CardLab ( 2116): BOUND cn.hydrogen.probe.left bounds=[21, 89, 614, 568]
+10-23 00:22:49.571 I/CardLab ( 2078): PARENT uid=10054 token=android.view.ViewRootImpl$W@a9008b68 left=[21, 89, 614, 568] right=[645, 89, 614, 568]
+10-23 00:22:49.571 I/CardLab ( 2078): APK cn.hydrogen.probe.right SHA256=41b88cbfac73cbc97ce9d6911394ade59449c6cc564e1ac592444254f9c5bd9b
+10-23 00:22:49.571 I/CardLab ( 2078): 导入 cn.hydrogen.probe.right
+10-23 00:22:49.581 I/CardLab ( 2078): IMPORT cn.hydrogen.probe.right result=1
+10-23 00:22:49.641 I/CardProbe( 2116): cn.hydrogen.probe.left PAUSE
+10-23 00:22:49.791 I/CardLab ( 2150): REGISTER cn.hydrogen.probe.right activity=cn.hydrogen.probe.ProbeActivity token=android.os.BinderProxy@a8fad400 uid=10054
+10-23 00:22:49.801 I/CardProbe( 2150): cn.hydrogen.probe.right CREATE uid=10054
+10-23 00:22:49.801 I/CardProbe( 2150): cn.hydrogen.probe.right RESUME
+10-23 00:22:49.821 I/CardLab ( 2150): BOUND cn.hydrogen.probe.right bounds=[645, 89, 614, 568]
+10-23 00:22:51.241 I/CardProbe( 2150): cn.hydrogen.probe.right PAUSE
+10-23 00:22:51.251 I/CardProbe( 2116): cn.hydrogen.probe.left RESUME
+10-23 00:22:51.261 I/CardProbe( 2116): cn.hydrogen.probe.left counter=1
+
+$ adb shell su 2000 input tap 950 174
+WARNING: linker: libdvm.so has text relocations. This is wasting memory and is a security risk. Please fix.
+
+$ adb logcat -d -v time -s CardLab:I CardProbe:I AndroidRuntime:E *:S
+--------- beginning of /dev/log/main
+--------- beginning of /dev/log/system
+10-23 00:22:47.501 I/CardLab ( 2078): RUN probe-daadc66fc6db488c9c0eb940f59fb6bb
+10-23 00:22:47.641 I/CardLab ( 2078): PARENT uid=10054 token=android.view.ViewRootImpl$W@a9008b68 left=[21, 89, 614, 568] right=[645, 89, 614, 568]
+10-23 00:22:48.711 I/CardLab ( 2078): PARENT uid=10054 token=android.view.ViewRootImpl$W@a9008b68 left=[21, 89, 614, 568] right=[645, 89, 614, 568]
+10-23 00:22:48.711 I/CardLab ( 2078): APK cn.hydrogen.probe.left SHA256=b38143c406c5c40e93c6d2e8595f234d97458847fd711497e88b1293d449eff9
+10-23 00:22:48.711 I/CardLab ( 2078): 导入 cn.hydrogen.probe.left
+10-23 00:22:48.731 I/CardLab ( 2078): IMPORT cn.hydrogen.probe.left result=1
+10-23 00:22:48.901 I/CardLab ( 2116): REGISTER cn.hydrogen.probe.left activity=cn.hydrogen.probe.ProbeActivity token=android.os.BinderProxy@a8facc10 uid=10054
+10-23 00:22:48.911 I/CardProbe( 2116): cn.hydrogen.probe.left CREATE uid=10054
+10-23 00:22:48.911 I/CardProbe( 2116): cn.hydrogen.probe.left RESUME
+10-23 00:22:48.911 I/CardLab ( 2116): BOUND cn.hydrogen.probe.left bounds=[21, 89, 614, 568]
+10-23 00:22:49.571 I/CardLab ( 2078): PARENT uid=10054 token=android.view.ViewRootImpl$W@a9008b68 left=[21, 89, 614, 568] right=[645, 89, 614, 568]
+10-23 00:22:49.571 I/CardLab ( 2078): APK cn.hydrogen.probe.right SHA256=41b88cbfac73cbc97ce9d6911394ade59449c6cc564e1ac592444254f9c5bd9b
+10-23 00:22:49.571 I/CardLab ( 2078): 导入 cn.hydrogen.probe.right
+10-23 00:22:49.581 I/CardLab ( 2078): IMPORT cn.hydrogen.probe.right result=1
+10-23 00:22:49.641 I/CardProbe( 2116): cn.hydrogen.probe.left PAUSE
+10-23 00:22:49.791 I/CardLab ( 2150): REGISTER cn.hydrogen.probe.right activity=cn.hydrogen.probe.ProbeActivity token=android.os.BinderProxy@a8fad400 uid=10054
+10-23 00:22:49.801 I/CardProbe( 2150): cn.hydrogen.probe.right CREATE uid=10054
+10-23 00:22:49.801 I/CardProbe( 2150): cn.hydrogen.probe.right RESUME
+10-23 00:22:49.821 I/CardLab ( 2150): BOUND cn.hydrogen.probe.right bounds=[645, 89, 614, 568]
+10-23 00:22:51.241 I/CardProbe( 2150): cn.hydrogen.probe.right PAUSE
+10-23 00:22:51.251 I/CardProbe( 2116): cn.hydrogen.probe.left RESUME
+10-23 00:22:51.261 I/CardProbe( 2116): cn.hydrogen.probe.left counter=1
+10-23 00:22:52.081 I/CardProbe( 2116): cn.hydrogen.probe.left PAUSE
+10-23 00:22:52.081 I/CardProbe( 2150): cn.hydrogen.probe.right RESUME
+10-23 00:22:52.091 I/CardProbe( 2150): cn.hydrogen.probe.right counter=1
+
+$ adb shell su 2000 input tap 325 174
+WARNING: linker: libdvm.so has text relocations. This is wasting memory and is a security risk. Please fix.
+
+$ adb logcat -d -v time -s CardLab:I CardProbe:I AndroidRuntime:E *:S
+--------- beginning of /dev/log/main
+--------- beginning of /dev/log/system
+10-23 00:22:47.501 I/CardLab ( 2078): RUN probe-daadc66fc6db488c9c0eb940f59fb6bb
+10-23 00:22:47.641 I/CardLab ( 2078): PARENT uid=10054 token=android.view.ViewRootImpl$W@a9008b68 left=[21, 89, 614, 568] right=[645, 89, 614, 568]
+10-23 00:22:48.711 I/CardLab ( 2078): PARENT uid=10054 token=android.view.ViewRootImpl$W@a9008b68 left=[21, 89, 614, 568] right=[645, 89, 614, 568]
+10-23 00:22:48.711 I/CardLab ( 2078): APK cn.hydrogen.probe.left SHA256=b38143c406c5c40e93c6d2e8595f234d97458847fd711497e88b1293d449eff9
+10-23 00:22:48.711 I/CardLab ( 2078): 导入 cn.hydrogen.probe.left
+10-23 00:22:48.731 I/CardLab ( 2078): IMPORT cn.hydrogen.probe.left result=1
+10-23 00:22:48.901 I/CardLab ( 2116): REGISTER cn.hydrogen.probe.left activity=cn.hydrogen.probe.ProbeActivity token=android.os.BinderProxy@a8facc10 uid=10054
+10-23 00:22:48.911 I/CardProbe( 2116): cn.hydrogen.probe.left CREATE uid=10054
+10-23 00:22:48.911 I/CardProbe( 2116): cn.hydrogen.probe.left RESUME
+10-23 00:22:48.911 I/CardLab ( 2116): BOUND cn.hydrogen.probe.left bounds=[21, 89, 614, 568]
+10-23 00:22:49.571 I/CardLab ( 2078): PARENT uid=10054 token=android.view.ViewRootImpl$W@a9008b68 left=[21, 89, 614, 568] right=[645, 89, 614, 568]
+10-23 00:22:49.571 I/CardLab ( 2078): APK cn.hydrogen.probe.right SHA256=41b88cbfac73cbc97ce9d6911394ade59449c6cc564e1ac592444254f9c5bd9b
+10-23 00:22:49.571 I/CardLab ( 2078): 导入 cn.hydrogen.probe.right
+10-23 00:22:49.581 I/CardLab ( 2078): IMPORT cn.hydrogen.probe.right result=1
+10-23 00:22:49.641 I/CardProbe( 2116): cn.hydrogen.probe.left PAUSE
+10-23 00:22:49.791 I/CardLab ( 2150): REGISTER cn.hydrogen.probe.right activity=cn.hydrogen.probe.ProbeActivity token=android.os.BinderProxy@a8fad400 uid=10054
+10-23 00:22:49.801 I/CardProbe( 2150): cn.hydrogen.probe.right CREATE uid=10054
+10-23 00:22:49.801 I/CardProbe( 2150): cn.hydrogen.probe.right RESUME
+10-23 00:22:49.821 I/CardLab ( 2150): BOUND cn.hydrogen.probe.right bounds=[645, 89, 614, 568]
+10-23 00:22:51.241 I/CardProbe( 2150): cn.hydrogen.probe.right PAUSE
+10-23 00:22:51.251 I/CardProbe( 2116): cn.hydrogen.probe.left RESUME
+10-23 00:22:51.261 I/CardProbe( 2116): cn.hydrogen.probe.left counter=1
+10-23 00:22:52.081 I/CardProbe( 2116): cn.hydrogen.probe.left PAUSE
+10-23 00:22:52.081 I/CardProbe( 2150): cn.hydrogen.probe.right RESUME
+10-23 00:22:52.091 I/CardProbe( 2150): cn.hydrogen.probe.right counter=1
+10-23 00:22:52.921 I/CardProbe( 2150): cn.hydrogen.probe.right PAUSE
+10-23 00:22:52.931 I/CardProbe( 2116): cn.hydrogen.probe.left RESUME
+10-23 00:22:52.941 I/CardProbe( 2116): cn.hydrogen.probe.left counter=2
+
+$ adb shell su 2000 screencap -p /data/local/tmp/probe-daadc66fc6db488c9c0eb940f59fb6bb-probe-dual-interactive.png
+
+$ adb pull /data/local/tmp/probe-daadc66fc6db488c9c0eb940f59fb6bb-probe-dual-interactive.png D:\SSlunw\py\CHEJI\HydrogenLauncher\experiments\card-runtime\evidence\probe-dual-interactive.png
+/data/local/tmp/probe-daadc66fc6db488c9c0eb940f59fb6bb-probe-dual-interactive.png: 1 file pulled, 0 skipped. 33.3 MB/s (61097 bytes in 0.002s)
+
+$ adb logcat -d -v time -s CardLab:I CardProbe:I AndroidRuntime:E *:S
+--------- beginning of /dev/log/main
+--------- beginning of /dev/log/system
+10-23 00:22:47.501 I/CardLab ( 2078): RUN probe-daadc66fc6db488c9c0eb940f59fb6bb
+10-23 00:22:47.641 I/CardLab ( 2078): PARENT uid=10054 token=android.view.ViewRootImpl$W@a9008b68 left=[21, 89, 614, 568] right=[645, 89, 614, 568]
+10-23 00:22:48.711 I/CardLab ( 2078): PARENT uid=10054 token=android.view.ViewRootImpl$W@a9008b68 left=[21, 89, 614, 568] right=[645, 89, 614, 568]
+10-23 00:22:48.711 I/CardLab ( 2078): APK cn.hydrogen.probe.left SHA256=b38143c406c5c40e93c6d2e8595f234d97458847fd711497e88b1293d449eff9
+10-23 00:22:48.711 I/CardLab ( 2078): 导入 cn.hydrogen.probe.left
+10-23 00:22:48.731 I/CardLab ( 2078): IMPORT cn.hydrogen.probe.left result=1
+10-23 00:22:48.901 I/CardLab ( 2116): REGISTER cn.hydrogen.probe.left activity=cn.hydrogen.probe.ProbeActivity token=android.os.BinderProxy@a8facc10 uid=10054
+10-23 00:22:48.911 I/CardProbe( 2116): cn.hydrogen.probe.left CREATE uid=10054
+10-23 00:22:48.911 I/CardProbe( 2116): cn.hydrogen.probe.left RESUME
+10-23 00:22:48.911 I/CardLab ( 2116): BOUND cn.hydrogen.probe.left bounds=[21, 89, 614, 568]
+10-23 00:22:49.571 I/CardLab ( 2078): PARENT uid=10054 token=android.view.ViewRootImpl$W@a9008b68 left=[21, 89, 614, 568] right=[645, 89, 614, 568]
+10-23 00:22:49.571 I/CardLab ( 2078): APK cn.hydrogen.probe.right SHA256=41b88cbfac73cbc97ce9d6911394ade59449c6cc564e1ac592444254f9c5bd9b
+10-23 00:22:49.571 I/CardLab ( 2078): 导入 cn.hydrogen.probe.right
+10-23 00:22:49.581 I/CardLab ( 2078): IMPORT cn.hydrogen.probe.right result=1
+10-23 00:22:49.641 I/CardProbe( 2116): cn.hydrogen.probe.left PAUSE
+10-23 00:22:49.791 I/CardLab ( 2150): REGISTER cn.hydrogen.probe.right activity=cn.hydrogen.probe.ProbeActivity token=android.os.BinderProxy@a8fad400 uid=10054
+10-23 00:22:49.801 I/CardProbe( 2150): cn.hydrogen.probe.right CREATE uid=10054
+10-23 00:22:49.801 I/CardProbe( 2150): cn.hydrogen.probe.right RESUME
+10-23 00:22:49.821 I/CardLab ( 2150): BOUND cn.hydrogen.probe.right bounds=[645, 89, 614, 568]
+10-23 00:22:51.241 I/CardProbe( 2150): cn.hydrogen.probe.right PAUSE
+10-23 00:22:51.251 I/CardProbe( 2116): cn.hydrogen.probe.left RESUME
+10-23 00:22:51.261 I/CardProbe( 2116): cn.hydrogen.probe.left counter=1
+10-23 00:22:52.081 I/CardProbe( 2116): cn.hydrogen.probe.left PAUSE
+10-23 00:22:52.081 I/CardProbe( 2150): cn.hydrogen.probe.right RESUME
+10-23 00:22:52.091 I/CardProbe( 2150): cn.hydrogen.probe.right counter=1
+10-23 00:22:52.921 I/CardProbe( 2150): cn.hydrogen.probe.right PAUSE
+10-23 00:22:52.931 I/CardProbe( 2116): cn.hydrogen.probe.left RESUME
+10-23 00:22:52.941 I/CardProbe( 2116): cn.hydrogen.probe.left counter=2
+
+$ adb shell su 2000 input tap 325 220
+WARNING: linker: libdvm.so has text relocations. This is wasting memory and is a security risk. Please fix.
+
+$ adb logcat -d -v time -s CardLab:I CardProbe:I AndroidRuntime:E *:S
+--------- beginning of /dev/log/system
+--------- beginning of /dev/log/main
+10-23 00:22:47.501 I/CardLab ( 2078): RUN probe-daadc66fc6db488c9c0eb940f59fb6bb
+10-23 00:22:47.641 I/CardLab ( 2078): PARENT uid=10054 token=android.view.ViewRootImpl$W@a9008b68 left=[21, 89, 614, 568] right=[645, 89, 614, 568]
+10-23 00:22:48.711 I/CardLab ( 2078): PARENT uid=10054 token=android.view.ViewRootImpl$W@a9008b68 left=[21, 89, 614, 568] right=[645, 89, 614, 568]
+10-23 00:22:48.711 I/CardLab ( 2078): APK cn.hydrogen.probe.left SHA256=b38143c406c5c40e93c6d2e8595f234d97458847fd711497e88b1293d449eff9
+10-23 00:22:48.711 I/CardLab ( 2078): 导入 cn.hydrogen.probe.left
+10-23 00:22:48.731 I/CardLab ( 2078): IMPORT cn.hydrogen.probe.left result=1
+10-23 00:22:48.901 I/CardLab ( 2116): REGISTER cn.hydrogen.probe.left activity=cn.hydrogen.probe.ProbeActivity token=android.os.BinderProxy@a8facc10 uid=10054
+10-23 00:22:48.911 I/CardProbe( 2116): cn.hydrogen.probe.left CREATE uid=10054
+10-23 00:22:48.911 I/CardProbe( 2116): cn.hydrogen.probe.left RESUME
+10-23 00:22:48.911 I/CardLab ( 2116): BOUND cn.hydrogen.probe.left bounds=[21, 89, 614, 568]
+10-23 00:22:49.571 I/CardLab ( 2078): PARENT uid=10054 token=android.view.ViewRootImpl$W@a9008b68 left=[21, 89, 614, 568] right=[645, 89, 614, 568]
+10-23 00:22:49.571 I/CardLab ( 2078): APK cn.hydrogen.probe.right SHA256=41b88cbfac73cbc97ce9d6911394ade59449c6cc564e1ac592444254f9c5bd9b
+10-23 00:22:49.571 I/CardLab ( 2078): 导入 cn.hydrogen.probe.right
+10-23 00:22:49.581 I/CardLab ( 2078): IMPORT cn.hydrogen.probe.right result=1
+10-23 00:22:49.641 I/CardProbe( 2116): cn.hydrogen.probe.left PAUSE
+10-23 00:22:49.791 I/CardLab ( 2150): REGISTER cn.hydrogen.probe.right activity=cn.hydrogen.probe.ProbeActivity token=android.os.BinderProxy@a8fad400 uid=10054
+10-23 00:22:49.801 I/CardProbe( 2150): cn.hydrogen.probe.right CREATE uid=10054
+10-23 00:22:49.801 I/CardProbe( 2150): cn.hydrogen.probe.right RESUME
+10-23 00:22:49.821 I/CardLab ( 2150): BOUND cn.hydrogen.probe.right bounds=[645, 89, 614, 568]
+10-23 00:22:51.241 I/CardProbe( 2150): cn.hydrogen.probe.right PAUSE
+10-23 00:22:51.251 I/CardProbe( 2116): cn.hydrogen.probe.left RESUME
+10-23 00:22:51.261 I/CardProbe( 2116): cn.hydrogen.probe.left counter=1
+10-23 00:22:52.081 I/CardProbe( 2116): cn.hydrogen.probe.left PAUSE
+10-23 00:22:52.081 I/CardProbe( 2150): cn.hydrogen.probe.right RESUME
+10-23 00:22:52.091 I/CardProbe( 2150): cn.hydrogen.probe.right counter=1
+10-23 00:22:52.921 I/CardProbe( 2150): cn.hydrogen.probe.right PAUSE
+10-23 00:22:52.931 I/CardProbe( 2116): cn.hydrogen.probe.left RESUME
+10-23 00:22:52.941 I/CardProbe( 2116): cn.hydrogen.probe.left counter=2
+10-23 00:22:54.041 I/CardProbe( 2116): cn.hydrogen.probe.left PAUSE
+10-23 00:22:54.061 I/CardLab ( 2116): REGISTER cn.hydrogen.probe.left activity=cn.hydrogen.probe.DetailActivity token=android.os.BinderProxy@a9015b38 uid=10054
+
+$ adb shell su 2000 screencap -p /data/local/tmp/probe-daadc66fc6db488c9c0eb940f59fb6bb-probe-second-activity.png
+
+$ adb pull /data/local/tmp/probe-daadc66fc6db488c9c0eb940f59fb6bb-probe-second-activity.png D:\SSlunw\py\CHEJI\HydrogenLauncher\experiments\card-runtime\evidence\probe-second-activity.png
+/data/local/tmp/probe-daadc66fc6db488c9c0eb940f59fb6bb-probe-second-activity.png: 1 file pulled, 0 skipped. 17.7 MB/s (56685 bytes in 0.003s)
+
+$ adb shell su 2000 input tap 325 375
+WARNING: linker: libdvm.so has text relocations. This is wasting memory and is a security risk. Please fix.
+
+$ adb shell su 2000 input tap 950 174
+WARNING: linker: libdvm.so has text relocations. This is wasting memory and is a security risk. Please fix.
+
+$ adb logcat -d -v time -s CardLab:I CardProbe:I AndroidRuntime:E *:S
+--------- beginning of /dev/log/system
+--------- beginning of /dev/log/main
+10-23 00:22:47.501 I/CardLab ( 2078): RUN probe-daadc66fc6db488c9c0eb940f59fb6bb
+10-23 00:22:47.641 I/CardLab ( 2078): PARENT uid=10054 token=android.view.ViewRootImpl$W@a9008b68 left=[21, 89, 614, 568] right=[645, 89, 614, 568]
+10-23 00:22:48.711 I/CardLab ( 2078): PARENT uid=10054 token=android.view.ViewRootImpl$W@a9008b68 left=[21, 89, 614, 568] right=[645, 89, 614, 568]
+10-23 00:22:48.711 I/CardLab ( 2078): APK cn.hydrogen.probe.left SHA256=b38143c406c5c40e93c6d2e8595f234d97458847fd711497e88b1293d449eff9
+10-23 00:22:48.711 I/CardLab ( 2078): 导入 cn.hydrogen.probe.left
+10-23 00:22:48.731 I/CardLab ( 2078): IMPORT cn.hydrogen.probe.left result=1
+10-23 00:22:48.901 I/CardLab ( 2116): REGISTER cn.hydrogen.probe.left activity=cn.hydrogen.probe.ProbeActivity token=android.os.BinderProxy@a8facc10 uid=10054
+10-23 00:22:48.911 I/CardProbe( 2116): cn.hydrogen.probe.left CREATE uid=10054
+10-23 00:22:48.911 I/CardProbe( 2116): cn.hydrogen.probe.left RESUME
+10-23 00:22:48.911 I/CardLab ( 2116): BOUND cn.hydrogen.probe.left bounds=[21, 89, 614, 568]
+10-23 00:22:49.571 I/CardLab ( 2078): PARENT uid=10054 token=android.view.ViewRootImpl$W@a9008b68 left=[21, 89, 614, 568] right=[645, 89, 614, 568]
+10-23 00:22:49.571 I/CardLab ( 2078): APK cn.hydrogen.probe.right SHA256=41b88cbfac73cbc97ce9d6911394ade59449c6cc564e1ac592444254f9c5bd9b
+10-23 00:22:49.571 I/CardLab ( 2078): 导入 cn.hydrogen.probe.right
+10-23 00:22:49.581 I/CardLab ( 2078): IMPORT cn.hydrogen.probe.right result=1
+10-23 00:22:49.641 I/CardProbe( 2116): cn.hydrogen.probe.left PAUSE
+10-23 00:22:49.791 I/CardLab ( 2150): REGISTER cn.hydrogen.probe.right activity=cn.hydrogen.probe.ProbeActivity token=android.os.BinderProxy@a8fad400 uid=10054
+10-23 00:22:49.801 I/CardProbe( 2150): cn.hydrogen.probe.right CREATE uid=10054
+10-23 00:22:49.801 I/CardProbe( 2150): cn.hydrogen.probe.right RESUME
+10-23 00:22:49.821 I/CardLab ( 2150): BOUND cn.hydrogen.probe.right bounds=[645, 89, 614, 568]
+10-23 00:22:51.241 I/CardProbe( 2150): cn.hydrogen.probe.right PAUSE
+10-23 00:22:51.251 I/CardProbe( 2116): cn.hydrogen.probe.left RESUME
+10-23 00:22:51.261 I/CardProbe( 2116): cn.hydrogen.probe.left counter=1
+10-23 00:22:52.081 I/CardProbe( 2116): cn.hydrogen.probe.left PAUSE
+10-23 00:22:52.081 I/CardProbe( 2150): cn.hydrogen.probe.right RESUME
+10-23 00:22:52.091 I/CardProbe( 2150): cn.hydrogen.probe.right counter=1
+10-23 00:22:52.921 I/CardProbe( 2150): cn.hydrogen.probe.right PAUSE
+10-23 00:22:52.931 I/CardProbe( 2116): cn.hydrogen.probe.left RESUME
+10-23 00:22:52.941 I/CardProbe( 2116): cn.hydrogen.probe.left counter=2
+10-23 00:22:54.041 I/CardProbe( 2116): cn.hydrogen.probe.left PAUSE
+10-23 00:22:54.061 I/CardLab ( 2116): REGISTER cn.hydrogen.probe.left activity=cn.hydrogen.probe.DetailActivity token=android.os.BinderProxy@a9015b38 uid=10054
+10-23 00:22:55.021 I/CardProbe( 2116): cn.hydrogen.probe.left RESUME
+10-23 00:22:55.711 I/CardProbe( 2116): cn.hydrogen.probe.left PAUSE
+10-23 00:22:55.711 I/CardProbe( 2150): cn.hydrogen.probe.right RESUME
+10-23 00:22:55.711 I/CardProbe( 2150): cn.hydrogen.probe.right counter=2
+
+$ adb shell su 2000 input tap 325 270
+WARNING: linker: libdvm.so has text relocations. This is wasting memory and is a security risk. Please fix.
+
+$ adb shell su 2000 screencap -p /data/local/tmp/probe-daadc66fc6db488c9c0eb940f59fb6bb-probe-dialog.png
+
+$ adb pull /data/local/tmp/probe-daadc66fc6db488c9c0eb940f59fb6bb-probe-dialog.png D:\SSlunw\py\CHEJI\HydrogenLauncher\experiments\card-runtime\evidence\probe-dialog.png
+/data/local/tmp/probe-daadc66fc6db488c9c0eb940f59fb6bb-probe-dialog.png: 1 file pulled, 0 skipped. 45.7 MB/s (57639 bytes in 0.001s)
+
+$ adb shell su 2000 input keyevent 4
+WARNING: linker: libdvm.so has text relocations. This is wasting memory and is a security risk. Please fix.
+
+$ adb shell su 2000 input tap 325 314
+WARNING: linker: libdvm.so has text relocations. This is wasting memory and is a security risk. Please fix.
+
+$ adb shell su 2000 input text left123
+WARNING: linker: libdvm.so has text relocations. This is wasting memory and is a security risk. Please fix.
+
+$ adb shell su 2000 screencap -p /data/local/tmp/probe-daadc66fc6db488c9c0eb940f59fb6bb-probe-input-left.png
+
+$ adb pull /data/local/tmp/probe-daadc66fc6db488c9c0eb940f59fb6bb-probe-input-left.png D:\SSlunw\py\CHEJI\HydrogenLauncher\experiments\card-runtime\evidence\probe-input-left.png
+/data/local/tmp/probe-daadc66fc6db488c9c0eb940f59fb6bb-probe-input-left.png: 1 file pulled, 0 skipped. 37.2 MB/s (60105 bytes in 0.002s)
+
+$ adb shell su 2000 input tap 950 314
+WARNING: linker: libdvm.so has text relocations. This is wasting memory and is a security risk. Please fix.
+
+$ adb shell su 2000 input text right456
+WARNING: linker: libdvm.so has text relocations. This is wasting memory and is a security risk. Please fix.
+
+$ adb shell su 2000 screencap -p /data/local/tmp/probe-daadc66fc6db488c9c0eb940f59fb6bb-probe-input-right.png
+
+$ adb pull /data/local/tmp/probe-daadc66fc6db488c9c0eb940f59fb6bb-probe-input-right.png D:\SSlunw\py\CHEJI\HydrogenLauncher\experiments\card-runtime\evidence\probe-input-right.png
+/data/local/tmp/probe-daadc66fc6db488c9c0eb940f59fb6bb-probe-input-right.png: 1 file pulled, 0 skipped. 23.6 MB/s (59822 bytes in 0.002s)
+
+$ adb shell su 2000 input tap 325 450
+WARNING: linker: libdvm.so has text relocations. This is wasting memory and is a security risk. Please fix.
+
+$ adb shell su 2000 input tap 950 450
+WARNING: linker: libdvm.so has text relocations. This is wasting memory and is a security risk. Please fix.
+
+$ adb shell su 2000 screencap -p /data/local/tmp/probe-daadc66fc6db488c9c0eb940f59fb6bb-probe-final.png
+
+$ adb pull /data/local/tmp/probe-daadc66fc6db488c9c0eb940f59fb6bb-probe-final.png D:\SSlunw\py\CHEJI\HydrogenLauncher\experiments\card-runtime\evidence\probe-final.png
+/data/local/tmp/probe-daadc66fc6db488c9c0eb940f59fb6bb-probe-final.png: 1 file pulled, 0 skipped. 38.0 MB/s (60196 bytes in 0.002s)
+
+$ adb logcat -d -v time -s CardLab:I CardProbe:I AndroidRuntime:E *:S
+--------- beginning of /dev/log/system
+--------- beginning of /dev/log/main
+10-23 00:22:47.501 I/CardLab ( 2078): RUN probe-daadc66fc6db488c9c0eb940f59fb6bb
+10-23 00:22:47.641 I/CardLab ( 2078): PARENT uid=10054 token=android.view.ViewRootImpl$W@a9008b68 left=[21, 89, 614, 568] right=[645, 89, 614, 568]
+10-23 00:22:48.711 I/CardLab ( 2078): PARENT uid=10054 token=android.view.ViewRootImpl$W@a9008b68 left=[21, 89, 614, 568] right=[645, 89, 614, 568]
+10-23 00:22:48.711 I/CardLab ( 2078): APK cn.hydrogen.probe.left SHA256=b38143c406c5c40e93c6d2e8595f234d97458847fd711497e88b1293d449eff9
+10-23 00:22:48.711 I/CardLab ( 2078): 导入 cn.hydrogen.probe.left
+10-23 00:22:48.731 I/CardLab ( 2078): IMPORT cn.hydrogen.probe.left result=1
+10-23 00:22:48.901 I/CardLab ( 2116): REGISTER cn.hydrogen.probe.left activity=cn.hydrogen.probe.ProbeActivity token=android.os.BinderProxy@a8facc10 uid=10054
+10-23 00:22:48.911 I/CardProbe( 2116): cn.hydrogen.probe.left CREATE uid=10054
+10-23 00:22:48.911 I/CardProbe( 2116): cn.hydrogen.probe.left RESUME
+10-23 00:22:48.911 I/CardLab ( 2116): BOUND cn.hydrogen.probe.left bounds=[21, 89, 614, 568]
+10-23 00:22:49.571 I/CardLab ( 2078): PARENT uid=10054 token=android.view.ViewRootImpl$W@a9008b68 left=[21, 89, 614, 568] right=[645, 89, 614, 568]
+10-23 00:22:49.571 I/CardLab ( 2078): APK cn.hydrogen.probe.right SHA256=41b88cbfac73cbc97ce9d6911394ade59449c6cc564e1ac592444254f9c5bd9b
+10-23 00:22:49.571 I/CardLab ( 2078): 导入 cn.hydrogen.probe.right
+10-23 00:22:49.581 I/CardLab ( 2078): IMPORT cn.hydrogen.probe.right result=1
+10-23 00:22:49.641 I/CardProbe( 2116): cn.hydrogen.probe.left PAUSE
+10-23 00:22:49.791 I/CardLab ( 2150): REGISTER cn.hydrogen.probe.right activity=cn.hydrogen.probe.ProbeActivity token=android.os.BinderProxy@a8fad400 uid=10054
+10-23 00:22:49.801 I/CardProbe( 2150): cn.hydrogen.probe.right CREATE uid=10054
+10-23 00:22:49.801 I/CardProbe( 2150): cn.hydrogen.probe.right RESUME
+10-23 00:22:49.821 I/CardLab ( 2150): BOUND cn.hydrogen.probe.right bounds=[645, 89, 614, 568]
+10-23 00:22:51.241 I/CardProbe( 2150): cn.hydrogen.probe.right PAUSE
+10-23 00:22:51.251 I/CardProbe( 2116): cn.hydrogen.probe.left RESUME
+10-23 00:22:51.261 I/CardProbe( 2116): cn.hydrogen.probe.left counter=1
+10-23 00:22:52.081 I/CardProbe( 2116): cn.hydrogen.probe.left PAUSE
+10-23 00:22:52.081 I/CardProbe( 2150): cn.hydrogen.probe.right RESUME
+10-23 00:22:52.091 I/CardProbe( 2150): cn.hydrogen.probe.right counter=1
+10-23 00:22:52.921 I/CardProbe( 2150): cn.hydrogen.probe.right PAUSE
+10-23 00:22:52.931 I/CardProbe( 2116): cn.hydrogen.probe.left RESUME
+10-23 00:22:52.941 I/CardProbe( 2116): cn.hydrogen.probe.left counter=2
+10-23 00:22:54.041 I/CardProbe( 2116): cn.hydrogen.probe.left PAUSE
+10-23 00:22:54.061 I/CardLab ( 2116): REGISTER cn.hydrogen.probe.left activity=cn.hydrogen.probe.DetailActivity token=android.os.BinderProxy@a9015b38 uid=10054
+10-23 00:22:55.021 I/CardProbe( 2116): cn.hydrogen.probe.left RESUME
+10-23 00:22:55.711 I/CardProbe( 2116): cn.hydrogen.probe.left PAUSE
+10-23 00:22:55.711 I/CardProbe( 2150): cn.hydrogen.probe.right RESUME
+10-23 00:22:55.711 I/CardProbe( 2150): cn.hydrogen.probe.right counter=2
+10-23 00:22:56.541 I/CardProbe( 2150): cn.hydrogen.probe.right PAUSE
+10-23 00:22:56.541 I/CardProbe( 2116): cn.hydrogen.probe.left RESUME
+10-23 00:22:59.811 I/CardProbe( 2116): cn.hydrogen.probe.left PAUSE
+10-23 00:22:59.811 I/CardProbe( 2150): cn.hydrogen.probe.right RESUME
+10-23 00:23:01.521 I/CardProbe( 2150): cn.hydrogen.probe.right PAUSE
+10-23 00:23:01.521 I/CardProbe( 2116): cn.hydrogen.probe.left TOUCH action=0 count=1 x=292.0 y=117.0
+10-23 00:23:01.521 I/CardProbe( 2116): cn.hydrogen.probe.left RESUME
+10-23 00:23:01.521 I/CardProbe( 2116): cn.hydrogen.probe.left TOUCH action=1 count=1 x=292.0 y=117.0
+10-23 00:23:02.271 I/CardProbe( 2116): cn.hydrogen.probe.left PAUSE
+10-23 00:23:02.271 I/CardProbe( 2150): cn.hydrogen.probe.right TOUCH action=0 count=1 x=293.0 y=117.0
+10-23 00:23:02.271 I/CardProbe( 2150): cn.hydrogen.probe.right RESUME
+10-23 00:23:02.271 I/CardProbe( 2150): cn.hydrogen.probe.right TOUCH action=1 count=1 x=293.0 y=117.0
+
+$ adb shell su 2000 dumpsys window windows
+WINDOW MANAGER WINDOWS (dumpsys window windows)
+  Window #9 Window{a9241ca0 u0 SearchPanel}:
+    mDisplayId=0 mSession=Session{a92749c0 1603:u0a10007} mClient=android.os.BinderProxy@a91f7268
+    mOwnerUid=10007 mShowToOwnerOnly=false package=com.android.systemui appop=NONE
+    mAttrs=WM.LayoutParams{(0,0)(fillxfill) gr=#800053 sim=#31 ty=2024 fl=#1820100 fmt=-3 wanim=0x10301f5}
+    Requested w=1280 h=672 mLayoutSeq=27
+    mBaseLayer=211000 mSubLayer=0 mAnimLayer=211000+0=211000 mLastLayer=0
+    mToken=WindowToken{a9218d10 null}
+    mRootToken=WindowToken{a9218d10 null}
+    mViewVisibility=0x8 mHaveFrame=true mObscured=false
+    mSeq=0 mSystemUiVisibility=0x0
+    mGivenContentInsets=[0,0][0,0] mGivenVisibleInsets=[0,0][0,0]
+    mConfiguration=null
+    mHasSurface=false mShownFrame=[0.0,0.0][0.0,0.0] isReadyForDisplay()=false
+    mFrame=[0,0][1280,720] last=[0,0][0,0]
+    mSystemDecorRect=[0,0][0,0] last=[0,0][0,0]
+    Frames: containing=[0,0][1280,720] parent=[0,0][1280,720]
+        display=[0,0][1280,720] overscan=[0,0][1280,720]
+        content=[0,25][1280,672] visible=[0,25][1280,672]
+        decor=[0,0][1280,720]
+    Cur insets: overscan=[0,0][0,0] content=[0,25][0,48] visible=[0,25][0,48]
+    Lst insets: overscan=[0,0][0,0] content=[0,0][0,0] visible=[0,0][0,0]
+    WindowStateAnimator{a9261040 SearchPanel}:
+      mShownAlpha=0.0 mAlpha=1.0 mLastAlpha=0.0
+  Window #8 Window{a91ed738 u0 NavigationBar}:
+    mDisplayId=0 mSession=Session{a92749c0 1603:u0a10007} mClient=android.os.BinderProxy@a9261870
+    mOwnerUid=10007 mShowToOwnerOnly=false package=com.android.systemui appop=NONE
+    mAttrs=WM.LayoutParams{(0,0)(fillxfill) sim=#20 ty=2019 fl=#1840068 fmt=-3}
+    Requested w=1280 h=48 mLayoutSeq=92
+    mBaseLayer=201000 mSubLayer=0 mAnimLayer=201000+0=201000 mLastLayer=201000
+    mToken=WindowToken{a9218d10 null}
+    mRootToken=WindowToken{a9218d10 null}
+    mViewVisibility=0x0 mHaveFrame=true mObscured=false
+    mSeq=0 mSystemUiVisibility=0x0
+    mGivenContentInsets=[0,0][0,0] mGivenVisibleInsets=[0,0][0,0]
+    mConfiguration={1.0 310mcc260mnc en_US ldltr sw720dp w1280dp h647dp 160dpi lrg long land finger qwerty/v/v tball/v s.6}
+    mHasSurface=true mShownFrame=[0.0,672.0][1280.0,720.0] isReadyForDisplay()=true
+    mFrame=[0,672][1280,720] last=[0,672][1280,720]
+    mSystemDecorRect=[0,0][1280,48] last=[0,0][1280,48]
+    Frames: containing=[0,672][1280,720] parent=[0,672][1280,720]
+        display=[0,672][1280,720] overscan=[0,672][1280,720]
+        content=[0,672][1280,720] visible=[0,672][1280,720]
+        decor=[0,0][0,0]
+    Cur insets: overscan=[0,0][0,0] content=[0,0][0,0] visible=[0,0][0,0]
+    Lst insets: overscan=[0,0][0,0] content=[0,0][0,0] visible=[0,0][0,0]
+    WindowStateAnimator{a925ce70 NavigationBar}:
+      mAnimating=false mLocalAnimating=false mAnimationIsEntrance=true mAnimation=null
+      mSurface=Surface(name=NavigationBar)
+      mDrawState=HAS_DRAWN mLastHidden=false
+      Surface: shown=true layer=201000 alpha=1.0 rect=(0.0,672.0) 1280.0 x 48.0
+  Window #7 Window{a9279760 u0 StatusBar}:
+    mDisplayId=0 mSession=Session{a92749c0 1603:u0a10007} mClient=android.os.BinderProxy@a91fc0a0
+    mOwnerUid=10007 mShowToOwnerOnly=false package=com.android.systemui appop=NONE
+    mAttrs=WM.LayoutParams{(0,0)(fillx25) gr=#37 sim=#20 ty=2000 fl=#1840048 fmt=-3}
+    Requested w=1280 h=25 mLayoutSeq=92
+    mBaseLayer=161000 mSubLayer=0 mAnimLayer=161000+0=161000 mLastLayer=161000
+    mToken=WindowToken{a9218d10 null}
+    mRootToken=WindowToken{a9218d10 null}
+    mViewVisibility=0x0 mHaveFrame=true mObscured=false
+    mSeq=0 mSystemUiVisibility=0x0
+    mPolicyVisibility=false mPolicyVisibilityAfterAnim=false mAppOpVisibility=true mAttachedHidden=false
+    mGivenContentInsets=[0,0][0,0] mGivenVisibleInsets=[0,0][0,0]
+    mConfiguration={1.0 310mcc260mnc en_US ldltr sw720dp w1280dp h647dp 160dpi lrg long land finger qwerty/v/v tball/v s.6}
+    mHasSurface=true mShownFrame=[0.0,0.0][1280.0,25.0] isReadyForDisplay()=false
+    mFrame=[0,0][1280,25] last=[0,0][1280,25]
+    mSystemDecorRect=[0,0][1280,25] last=[0,0][1280,25]
+    Frames: containing=[0,0][1280,720] parent=[0,0][1280,720]
+        display=[0,0][1280,720] overscan=[0,0][1280,672]
+        content=[0,0][1280,25] visible=[0,0][1280,25]
+        decor=[0,0][0,0]
+    Cur insets: overscan=[0,0][0,0] content=[0,0][0,0] visible=[0,0][0,0]
+    Lst insets: overscan=[0,0][0,0] content=[0,0][0,0] visible=[0,0][0,0]
+    WindowStateAnimator{a9261a18 StatusBar}:
+      mSurface=Surface(name=StatusBar)
+      mDrawState=HAS_DRAWN mLastHidden=true
+      Surface: shown=false layer=161000 alpha=1.0 rect=(0.0,0.0) 1280.0 x 25.0
+  Window #6 Window{a92158a0 u0 KeyguardScrim}:
+    mDisplayId=0 mSession=Session{a90fc3a0 1549:1000} mClient=android.view.ViewRootImpl$W@a91ad7f8
+    mOwnerUid=1000 mShowToOwnerOnly=false package=android appop=NONE
+    mAttrs=WM.LayoutParams{(0,0)(fillxfill) sim=#10 ty=2029 fl=#110900 fmt=-3 or=5 vsysui=0x3610000}
+    Requested w=1280 h=672 mLayoutSeq=3
+    mBaseLayer=121000 mSubLayer=0 mAnimLayer=121000+0=121000 mLastLayer=0
+    mToken=WindowToken{a9218d10 null}
+    mRootToken=WindowToken{a9218d10 null}
+    mViewVisibility=0x8 mHaveFrame=true mObscured=false
+    mSeq=0 mSystemUiVisibility=0x3610000
+    mGivenContentInsets=[0,0][0,0] mGivenVisibleInsets=[0,0][0,0]
+    mConfiguration=null
+    mHasSurface=false mShownFrame=[0.0,0.0][0.0,0.0] isReadyForDisplay()=false
+    mFrame=[0,0][1280,720] last=[0,0][0,0]
+    mSystemDecorRect=[0,0][0,0] last=[0,0][0,0]
+    Frames: containing=[0,0][1280,720] parent=[0,0][1280,720]
+        display=[0,0][1280,720] overscan=[0,0][1280,720]
+        content=[0,0][1280,720] visible=[0,0][1280,720]
+        decor=[0,0][1280,720]
+    Cur insets: overscan=[0,0][0,0] content=[0,0][0,0] visible=[0,0][0,0]
+    Lst insets: overscan=[0,0][0,0] content=[0,0][0,0] visible=[0,0][0,0]
+    WindowStateAnimator{a91c0228 KeyguardScrim}:
+      mShownAlpha=0.0 mAlpha=1.0 mLastAlpha=0.0
+  Window #5 Window{a92eec58 u0 CardLab/cn.hydrogen.probe.right}:
+    mDisplayId=0 mSession=Session{a9175d80 2150:u0a10054} mClient=android.os.BinderProxy@a90f1fb0
+    mOwnerUid=10054 mShowToOwnerOnly=true package=cn.hydrogen.cardlab appop=NONE
+    mAttrs=WM.LayoutParams{(645,89)(614x568) gr=#33 sim=#120 ty=1 fl=#1810120 pfl=0x8 fmt=-3}
+    Requested w=614 h=568 mLayoutSeq=92
+    mBaseLayer=21000 mSubLayer=0 mAnimLayer=21025+0=21025 mLastLayer=21025
+    mToken=AppWindowToken{a92c3a28 token=Token{a92573a8 ActivityRecord{a92680d8 u0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P02$Standard00 t4}}}
+    mRootToken=AppWindowToken{a92c3a28 token=Token{a92573a8 ActivityRecord{a92680d8 u0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P02$Standard00 t4}}}
+    mAppToken=AppWindowToken{a92c3a28 token=Token{a92573a8 ActivityRecord{a92680d8 u0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P02$Standard00 t4}}}
+    mViewVisibility=0x0 mHaveFrame=true mObscured=false
+    mSeq=0 mSystemUiVisibility=0x0
+    mGivenContentInsets=[0,0][0,0] mGivenVisibleInsets=[0,0][0,0]
+    mConfiguration={1.0 310mcc260mnc en_US ldltr sw720dp w1280dp h647dp 160dpi lrg long land finger qwerty/v/v tball/v s.6}
+    mHasSurface=true mShownFrame=[645.0,89.0][1259.0,657.0] isReadyForDisplay()=true
+    mFrame=[645,89][1259,657] last=[645,89][1259,657]
+    mSystemDecorRect=[0,0][614,568] last=[0,0][614,568]
+    Frames: containing=[0,0][1280,672] parent=[0,0][1280,672]
+        display=[0,0][1280,672] overscan=[0,0][1280,720]
+        content=[645,89][1259,657] visible=[645,89][1259,657]
+        decor=[0,25][1280,672]
+    Cur insets: overscan=[0,0][0,0] content=[0,0][0,0] visible=[0,0][0,0]
+    Lst insets: overscan=[0,0][0,0] content=[0,0][0,0] visible=[0,0][0,0]
+    WindowStateAnimator{a92ad250 CardLab/cn.hydrogen.probe.right}:
+      mSurface=Surface(name=CardLab/cn.hydrogen.probe.right)
+      mDrawState=HAS_DRAWN mLastHidden=false
+      Surface: shown=true layer=21025 alpha=1.0 rect=(645.0,89.0) 614.0 x 568.0
+  Window #4 Window{a933fdf8 u0 SurfaceView}:
+    mDisplayId=0 mSession=Session{a9175d80 2150:u0a10054} mClient=android.os.BinderProxy@a9031f58
+    mOwnerUid=10054 mShowToOwnerOnly=true package=cn.hydrogen.cardlab appop=NONE
+    mAttrs=WM.LayoutParams{(12,244)(590x316) gr=#800033 ty=1001 fl=#4218 pfl=0x40 fmt=4}
+    Requested w=590 h=316 mLayoutSeq=92
+    mAttachedWindow=Window{a92eec58 u0 CardLab/cn.hydrogen.probe.right} mLayoutAttached=true
+    mBaseLayer=21000 mSubLayer=-2 mAnimLayer=21020+0=21020 mLastLayer=21020
+    mToken=WindowToken{a911e700 android.os.BinderProxy@a90f1fb0}
+    mRootToken=AppWindowToken{a92c3a28 token=Token{a92573a8 ActivityRecord{a92680d8 u0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P02$Standard00 t4}}}
+    mAppToken=AppWindowToken{a92c3a28 token=Token{a92573a8 ActivityRecord{a92680d8 u0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P02$Standard00 t4}}}
+    mViewVisibility=0x0 mHaveFrame=true mObscured=false
+    mSeq=0 mSystemUiVisibility=0x0
+    mGivenContentInsets=[0,0][0,0] mGivenVisibleInsets=[0,0][0,0]
+    mConfiguration={1.0 310mcc260mnc en_US ldltr sw720dp w1280dp h647dp 160dpi lrg long land finger qwerty/v/v tball/v s.6}
+    mHasSurface=true mShownFrame=[657.0,333.0][1247.0,649.0] isReadyForDisplay()=true
+    mFrame=[657,333][1247,649] last=[657,333][1247,649]
+    mSystemDecorRect=[0,0][590,316] last=[0,0][590,316]
+    Frames: containing=[645,89][1259,657] parent=[645,89][1259,657]
+        display=[-10000,-10000][10000,10000] overscan=[-10000,-10000][10000,10000]
+        content=[657,333][1247,649] visible=[657,333][1247,649]
+        decor=[0,0][1280,672]
+    Cur insets: overscan=[0,0][0,0] content=[0,0][0,0] visible=[0,0][0,0]
+    Lst insets: overscan=[0,0][0,0] content=[0,0][0,0] visible=[0,0][0,0]
+    WindowStateAnimator{a923b750 SurfaceView}:
+      mSurface=Surface(name=SurfaceView)
+      mDrawState=HAS_DRAWN mLastHidden=false
+      Surface: shown=true layer=21020 alpha=1.0 rect=(657.0,333.0) 590.0 x 316.0
+  Window #3 Window{a92a56e8 u0 CardLab/cn.hydrogen.probe.left}:
+    mDisplayId=0 mSession=Session{a911a658 2116:u0a10054} mClient=android.os.BinderProxy@a90a24a0
+    mOwnerUid=10054 mShowToOwnerOnly=true package=cn.hydrogen.cardlab appop=NONE
+    mAttrs=WM.LayoutParams{(21,89)(614x568) gr=#33 sim=#120 ty=1 fl=#1810120 pfl=0x8 fmt=-3}
+    Requested w=614 h=568 mLayoutSeq=92
+    mBaseLayer=21000 mSubLayer=0 mAnimLayer=21015+0=21015 mLastLayer=21015
+    mToken=AppWindowToken{a91fd868 token=Token{a902a1d8 ActivityRecord{a90e82c0 u0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P01$Standard00 t3}}}
+    mRootToken=AppWindowToken{a91fd868 token=Token{a902a1d8 ActivityRecord{a90e82c0 u0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P01$Standard00 t3}}}
+    mAppToken=AppWindowToken{a91fd868 token=Token{a902a1d8 ActivityRecord{a90e82c0 u0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P01$Standard00 t3}}}
+    mViewVisibility=0x0 mHaveFrame=true mObscured=false
+    mSeq=0 mSystemUiVisibility=0x0
+    mGivenContentInsets=[0,0][0,0] mGivenVisibleInsets=[0,0][0,0]
+    mConfiguration={1.0 310mcc260mnc en_US ldltr sw720dp w1280dp h647dp 160dpi lrg long land finger qwerty/v/v tball/v s.6}
+    mHasSurface=true mShownFrame=[21.0,89.0][635.0,657.0] isReadyForDisplay()=true
+    mFrame=[21,89][635,657] last=[21,89][635,657]
+    mSystemDecorRect=[0,0][614,568] last=[0,0][614,568]
+    Frames: containing=[0,0][1280,672] parent=[0,0][1280,672]
+        display=[0,0][1280,672] overscan=[0,0][1280,720]
+        content=[21,89][635,657] visible=[21,89][635,657]
+        decor=[0,25][1280,672]
+    Cur insets: overscan=[0,0][0,0] content=[0,0][0,0] visible=[0,0][0,0]
+    Lst insets: overscan=[0,0][0,0] content=[0,0][0,0] visible=[0,0][0,0]
+    WindowStateAnimator{a92b22f8 CardLab/cn.hydrogen.probe.left}:
+      mSurface=Surface(name=CardLab/cn.hydrogen.probe.left)
+      mDrawState=HAS_DRAWN mLastHidden=false
+      Surface: shown=true layer=21015 alpha=1.0 rect=(21.0,89.0) 614.0 x 568.0
+  Window #2 Window{a92c1948 u0 SurfaceView}:
+    mDisplayId=0 mSession=Session{a911a658 2116:u0a10054} mClient=android.os.BinderProxy@a9068ee8
+    mOwnerUid=10054 mShowToOwnerOnly=true package=cn.hydrogen.cardlab appop=NONE
+    mAttrs=WM.LayoutParams{(12,244)(590x316) gr=#800033 ty=1001 fl=#4218 pfl=0x40 fmt=4}
+    Requested w=590 h=316 mLayoutSeq=92
+    mAttachedWindow=Window{a92a56e8 u0 CardLab/cn.hydrogen.probe.left} mLayoutAttached=true
+    mBaseLayer=21000 mSubLayer=-2 mAnimLayer=21010+0=21010 mLastLayer=21010
+    mToken=WindowToken{a910c530 android.os.BinderProxy@a90a24a0}
+    mRootToken=AppWindowToken{a91fd868 token=Token{a902a1d8 ActivityRecord{a90e82c0 u0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P01$Standard00 t3}}}
+    mAppToken=AppWindowToken{a91fd868 token=Token{a902a1d8 ActivityRecord{a90e82c0 u0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P01$Standard00 t3}}}
+    mViewVisibility=0x0 mHaveFrame=true mObscured=false
+    mSeq=0 mSystemUiVisibility=0x0
+    mGivenContentInsets=[0,0][0,0] mGivenVisibleInsets=[0,0][0,0]
+    mConfiguration={1.0 310mcc260mnc en_US ldltr sw720dp w1280dp h647dp 160dpi lrg long land finger qwerty/v/v tball/v s.6}
+    mHasSurface=true mShownFrame=[33.0,333.0][623.0,649.0] isReadyForDisplay()=true
+    mFrame=[33,333][623,649] last=[33,333][623,649]
+    mSystemDecorRect=[0,0][590,316] last=[0,0][590,316]
+    Frames: containing=[21,89][635,657] parent=[21,89][635,657]
+        display=[-10000,-10000][10000,10000] overscan=[-10000,-10000][10000,10000]
+        content=[33,333][623,649] visible=[33,333][623,649]
+        decor=[0,0][1280,672]
+    Cur insets: overscan=[0,0][0,0] content=[0,0][0,0] visible=[0,0][0,0]
+    Lst insets: overscan=[0,0][0,0] content=[0,0][0,0] visible=[0,0][0,0]
+    WindowStateAnimator{a92afa88 SurfaceView}:
+      mSurface=Surface(name=SurfaceView)
+      mDrawState=HAS_DRAWN mLastHidden=false
+      Surface: shown=true layer=21010 alpha=1.0 rect=(33.0,333.0) 590.0 x 316.0
+  Window #1 Window{a90f7f20 u0 cn.hydrogen.cardlab/cn.hydrogen.cardlab.LabActivity}:
+    mDisplayId=0 mSession=Session{a923d6d0 2078:u0a10054} mClient=android.os.BinderProxy@a90cc390
+    mOwnerUid=10054 mShowToOwnerOnly=true package=cn.hydrogen.cardlab appop=NONE
+    mAttrs=WM.LayoutParams{(0,0)(fillxfill) sim=#120 ty=1 fl=#1810500 pfl=0x8 wanim=0x10302a1}
+    Requested w=1280 h=672 mLayoutSeq=92
+    mBaseLayer=21000 mSubLayer=0 mAnimLayer=21005+0=21005 mLastLayer=21005
+    mToken=AppWindowToken{a92dce28 token=Token{a9250608 ActivityRecord{a907df40 u0 cn.hydrogen.cardlab/.LabActivity t2}}}
+    mRootToken=AppWindowToken{a92dce28 token=Token{a9250608 ActivityRecord{a907df40 u0 cn.hydrogen.cardlab/.LabActivity t2}}}
+    mAppToken=AppWindowToken{a92dce28 token=Token{a9250608 ActivityRecord{a907df40 u0 cn.hydrogen.cardlab/.LabActivity t2}}}
+    mViewVisibility=0x0 mHaveFrame=true mObscured=false
+    mSeq=0 mSystemUiVisibility=0x0
+    mGivenContentInsets=[0,0][0,0] mGivenVisibleInsets=[0,0][0,0]
+    mConfiguration={1.0 310mcc260mnc en_US ldltr sw720dp w1280dp h647dp 160dpi lrg long land finger qwerty/v/v tball/v s.6}
+    mHasSurface=true mShownFrame=[0.0,0.0][1280.0,672.0] isReadyForDisplay()=true
+    mFrame=[0,0][1280,672] last=[0,0][1280,672]
+    mSystemDecorRect=[0,0][1280,672] last=[0,0][1280,672]
+    Frames: containing=[0,0][1280,672] parent=[0,0][1280,672]
+        display=[0,0][1280,672] overscan=[0,0][1280,720]
+        content=[0,0][1280,672] visible=[0,0][1280,672]
+        decor=[0,0][1280,672]
+    Cur insets: overscan=[0,0][0,0] content=[0,0][0,0] visible=[0,0][0,0]
+    Lst insets: overscan=[0,0][0,0] content=[0,0][0,0] visible=[0,0][0,0]
+    WindowStateAnimator{a92e72d0 cn.hydrogen.cardlab/cn.hydrogen.cardlab.LabActivity}:
+      mSurface=Surface(name=cn.hydrogen.cardlab/cn.hydrogen.cardlab.LabActivity)
+      mDrawState=HAS_DRAWN mLastHidden=false
+      Surface: shown=true layer=21005 alpha=1.0 rect=(0.0,0.0) 1280.0 x 672.0
+  Window #0 Window{a9240ab8 u0 com.android.systemui.ImageWallpaper}:
+    mDisplayId=0 mSession=Session{a92749c0 1603:u0a10007} mClient=android.os.BinderProxy@a9268988
+    mOwnerUid=10007 mShowToOwnerOnly=true package=null appop=NONE
+    mAttrs=WM.LayoutParams{(0,0)(2069x1280) gr=#800033 ty=2013 fl=#318 fmt=2 wanim=0x10301f4}
+    Requested w=2069 h=1280 mLayoutSeq=8
+    mIsImWindow=false mIsWallpaper=true mIsFloatingLayer=true mWallpaperVisible=false
+    mBaseLayer=21000 mSubLayer=0 mAnimLayer=21000+0=21000 mLastLayer=0
+    mToken=WindowToken{a9270250 android.os.Binder@a926f3b8}
+    mRootToken=WindowToken{a9270250 android.os.Binder@a926f3b8}
+    mViewVisibility=0x0 mHaveFrame=true mObscured=true
+    mSeq=0 mSystemUiVisibility=0x0
+    Offsets x=-395 y=-280
+    mGivenContentInsets=[0,0][0,0] mGivenVisibleInsets=[0,0][0,0]
+    mConfiguration={1.0 ?mcc?mnc en_US ldltr sw720dp w1280dp h647dp 160dpi lrg long land finger qwerty/v/v tball/v s.5}
+    mHasSurface=true mShownFrame=[-395.0,-280.0][1674.0,1000.0] isReadyForDisplay()=false
+    mFrame=[0,0][2069,1280] last=[0,0][2069,1280]
+    mSystemDecorRect=[395,280][1675,952] last=[395,280][1675,952]
+    Frames: containing=[0,0][1280,720] parent=[0,0][1280,720]
+        display=[-10000,-10000][10000,10000] overscan=[-10000,-10000][10000,10000]
+        content=[0,0][2069,1280] visible=[0,0][2069,1280]
+        decor=[0,0][1280,672]
+    Cur insets: overscan=[0,0][0,0] content=[0,0][0,0] visible=[0,0][0,0]
+    Lst insets: overscan=[0,0][0,0] content=[0,0][0,0] visible=[0,0][0,0]
+    WindowStateAnimator{a9285db8 com.android.systemui.ImageWallpaper}:
+      mSurface=Surface(name=com.android.systemui.ImageWallpaper)
+      mDrawState=READY_TO_SHOW mLastHidden=true
+      Surface: shown=false layer=21005 alpha=0.0 rect=(-395.0,-280.0) 2069.0 x 1280.0
+      mShownAlpha=1.0 mAlpha=1.0 mLastAlpha=0.0
+    mOrientationChanging=true mAppFreezing=false mTurnOnScreen=false
+    mWallpaperX=0.5 mWallpaperY=0.5
+
+  mCurConfiguration={1.0 310mcc260mnc en_US ldltr sw720dp w1280dp h647dp 160dpi lrg long land finger qwerty/v/v tball/v s.6}
+  mCurrentFocus=Window{a92eec58 u0 CardLab/cn.hydrogen.probe.right}
+  mFocusedApp=AppWindowToken{a92c3a28 token=Token{a92573a8 ActivityRecord{a92680d8 u0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P02$Standard00 t4}}}
+  mInTouchMode=true mLayoutSeq=92
+  mLastDisplayFreezeDuration=+332ms due to Window{a92592f8 u0 android/com.android.internal.app.ResolverActivity}
+  mSystemDecorLayer=161000 mScreenRect=[0,0][1280,720]
+  mWallpaperTarget=null
+  mLastWallpaperX=-1.0 mLastWallpaperY=-1.0
+  mSystemBooted=true mDisplayEnabled=true
+  mTransactionSequence=132
+  mDisplayFrozen=false windows=false client=false apps=0 waitingForConfig=false
+  mRotation=0 mAltOrientation=false
+  mLastWindowForcedOrientation=-1 mForcedAppOrientation=0
+  mDeferredRotationPauseCount=0
+  mWindowAnimationScale=1.0 mTransitionWindowAnimationScale=1.0 mAnimatorDurationScale=1.0
+  mTraversalScheduled=false
+  mStartingIconInTransition=false mSkipAppTransitionAnimation=false
+  mLayoutToAnim:
+ mNextAppTransition=0xffffffff  mAppTransitionState=APP_STATE_IDLE
+
+$ adb shell su 2000 dumpsys activity activities
+ACTIVITY MANAGER ACTIVITIES (dumpsys activity activities)
+  Stack #1:
+    Task id #4
+    * TaskRecord{a9255768 #4 A=cn.hydrogen.cardlab.task.P02 U=0 sz=1}
+      numActivities=1 rootWasReset=false userId=0 mTaskType=0 numFullscreen=0 mOnTopOfHome=false
+      affinity=cn.hydrogen.cardlab.task.P02
+      intent={flg=0x10800000 cmp=cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P02$Standard00}
+      realActivity=cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P02$Standard00
+      Activities=[ActivityRecord{a92680d8 u0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P02$Standard00 t4}]
+      askedCompatMode=false
+      lastThumbnail=null lastDescription=null
+      lastActiveTime=108031 (inactive for 0s)
+      * Hist #0: ActivityRecord{a92680d8 u0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P02$Standard00 t4}
+          packageName=cn.hydrogen.cardlab processName=cn.hydrogen.cardlab:PluginP02
+          launchedFromUid=10054 launchedFromPackage=cn.hydrogen.cardlab userId=0
+          app=ProcessRecord{a928f8f8 2150:cn.hydrogen.cardlab:PluginP02/u0a54}
+          Intent { flg=0x10800000 cmp=cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P02$Standard00 (has extras) }
+          frontOfTask=true task=TaskRecord{a9255768 #4 A=cn.hydrogen.cardlab.task.P02 U=0 sz=1}
+          taskAffinity=cn.hydrogen.cardlab.task.P02
+          realActivity=cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P02$Standard00
+          baseDir=/data/app/cn.hydrogen.cardlab-1.apk
+          dataDir=/data/data/cn.hydrogen.cardlab
+          stateNotNeeded=false componentSpecified=true mActivityType=0
+          compat={160dpi always-compat} labelRes=0x7f020001 icon=0x0 theme=0x7f030000
+          config={1.0 310mcc260mnc en_US ldltr sw720dp w1280dp h647dp 160dpi lrg long land finger qwerty/v/v tball/v s.6}
+          launchFailed=false launchCount=0 lastLaunchTime=-13s596ms
+          haveState=false icicle=null
+          state=RESUMED stopped=false delayedResume=false finishing=false
+          keysPaused=false inHistory=true visible=true sleeping=false idle=true
+          fullscreen=false noDisplay=false immersive=false launchMode=0
+          frozenBeforeDestroy=false thumbnailNeeded=false forceNewConfig=false
+          mActivityType=APPLICATION_ACTIVITY_TYPE
+          thumbHolder: a9255768 bm=null desc=null
+          waitingVisible=false nowVisible=true lastVisibleTime=-13s96ms
+    Task id #3
+    * TaskRecord{a9290dd8 #3 A=cn.hydrogen.cardlab.task.P01 U=0 sz=1}
+      numActivities=1 rootWasReset=false userId=0 mTaskType=0 numFullscreen=0 mOnTopOfHome=false
+      affinity=cn.hydrogen.cardlab.task.P01
+      intent={flg=0x10800000 cmp=cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P01$Standard00}
+      realActivity=cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P01$Standard00
+      Activities=[ActivityRecord{a90e82c0 u0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P01$Standard00 t3}]
+      askedCompatMode=false
+      lastThumbnail=android.graphics.Bitmap@a9302a78 lastDescription=null
+      lastActiveTime=108008 (inactive for 1s)
+      * Hist #0: ActivityRecord{a90e82c0 u0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P01$Standard00 t3}
+          packageName=cn.hydrogen.cardlab processName=cn.hydrogen.cardlab:PluginP01
+          launchedFromUid=10054 launchedFromPackage=cn.hydrogen.cardlab userId=0
+          app=ProcessRecord{a926a6e8 2116:cn.hydrogen.cardlab:PluginP01/u0a54}
+          Intent { flg=0x10800000 cmp=cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P01$Standard00 (has extras) }
+          frontOfTask=true task=TaskRecord{a9290dd8 #3 A=cn.hydrogen.cardlab.task.P01 U=0 sz=1}
+          taskAffinity=cn.hydrogen.cardlab.task.P01
+          realActivity=cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P01$Standard00
+          baseDir=/data/app/cn.hydrogen.cardlab-1.apk
+          dataDir=/data/data/cn.hydrogen.cardlab
+          stateNotNeeded=false componentSpecified=true mActivityType=0
+          compat={160dpi always-compat} labelRes=0x7f020001 icon=0x0 theme=0x7f030000
+          config={1.0 310mcc260mnc en_US ldltr sw720dp w1280dp h647dp 160dpi lrg long land finger qwerty/v/v tball/v s.6}
+          launchFailed=false launchCount=0 lastLaunchTime=-14s456ms
+          haveState=true icicle=Bundle[mParcelledData.dataSize=204]
+          state=STOPPED stopped=true delayedResume=false finishing=false
+          keysPaused=false inHistory=true visible=true sleeping=false idle=true
+          fullscreen=false noDisplay=false immersive=false launchMode=0
+          frozenBeforeDestroy=false thumbnailNeeded=false forceNewConfig=false
+          mActivityType=APPLICATION_ACTIVITY_TYPE
+          thumbHolder: a9290dd8 bm=android.graphics.Bitmap@a9302a78 desc=null
+          waitingVisible=false nowVisible=true lastVisibleTime=-13s930ms
+    Task id #2
+    * TaskRecord{a92d6ec0 #2 A=cn.hydrogen.cardlab U=0 sz=1}
+      numActivities=1 rootWasReset=false userId=0 mTaskType=0 numFullscreen=1 mOnTopOfHome=true
+      affinity=cn.hydrogen.cardlab
+      intent={flg=0x10000000 cmp=cn.hydrogen.cardlab/.LabActivity}
+      realActivity=cn.hydrogen.cardlab/.LabActivity
+      Activities=[ActivityRecord{a907df40 u0 cn.hydrogen.cardlab/.LabActivity t2}]
+      askedCompatMode=false
+      lastThumbnail=android.graphics.Bitmap@a934fce0 lastDescription=null
+      lastActiveTime=94514 (inactive for 14s)
+      * Hist #0: ActivityRecord{a907df40 u0 cn.hydrogen.cardlab/.LabActivity t2}
+          packageName=cn.hydrogen.cardlab processName=cn.hydrogen.cardlab
+          launchedFromUid=2000 launchedFromPackage=null userId=0
+          app=ProcessRecord{a925b248 2078:cn.hydrogen.cardlab/u0a54}
+          Intent { flg=0x10000000 cmp=cn.hydrogen.cardlab/.LabActivity (has extras) }
+          frontOfTask=true task=TaskRecord{a92d6ec0 #2 A=cn.hydrogen.cardlab U=0 sz=1}
+          taskAffinity=cn.hydrogen.cardlab
+          realActivity=cn.hydrogen.cardlab/.LabActivity
+          baseDir=/data/app/cn.hydrogen.cardlab-1.apk
+          dataDir=/data/data/cn.hydrogen.cardlab
+          stateNotNeeded=false componentSpecified=true mActivityType=0
+          compat={160dpi always-compat} labelRes=0x0 icon=0x0 theme=0x10300f1
+          config={1.0 310mcc260mnc en_US ldltr sw720dp w1280dp h647dp 160dpi lrg long land finger qwerty/v/v tball/v s.6}
+          launchFailed=false launchCount=0 lastLaunchTime=-15s763ms
+          haveState=true icicle=Bundle[mParcelledData.dataSize=204]
+          state=STOPPED stopped=true delayedResume=false finishing=false
+          keysPaused=false inHistory=true visible=true sleeping=false idle=true
+          fullscreen=true noDisplay=false immersive=false launchMode=0
+          frozenBeforeDestroy=false thumbnailNeeded=false forceNewConfig=false
+          mActivityType=APPLICATION_ACTIVITY_TYPE
+          thumbHolder: a92d6ec0 bm=android.graphics.Bitmap@a934fce0 desc=null
+          waitingVisible=false nowVisible=true lastVisibleTime=-14s763ms
+
+    Running activities (most recent first):
+      TaskRecord{a9255768 #4 A=cn.hydrogen.cardlab.task.P02 U=0 sz=1}
+        Run #2: ActivityRecord{a92680d8 u0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P02$Standard00 t4}
+      TaskRecord{a9290dd8 #3 A=cn.hydrogen.cardlab.task.P01 U=0 sz=1}
+        Run #1: ActivityRecord{a90e82c0 u0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P01$Standard00 t3}
+      TaskRecord{a92d6ec0 #2 A=cn.hydrogen.cardlab U=0 sz=1}
+        Run #0: ActivityRecord{a907df40 u0 cn.hydrogen.cardlab/.LabActivity t2}
+
+    mResumedActivity: ActivityRecord{a92680d8 u0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P02$Standard00 t4}
+    mLastPausedActivity: ActivityRecord{a90e82c0 u0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P01$Standard00 t3}
+
+  mFocusedActivity: ActivityRecord{a92680d8 u0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P02$Standard00 t4}
+  mDismissKeyguardOnNextActivity=false
+  mFocusedStack=ActivityStack{a9233ba8 stackId=1, 3 tasks} mStackState=STACK_STATE_HOME_IN_BACK
+  mSleepTimeout=false
+  mCurTaskId=4
+  mUserStackInFront={}
+
+  Recent tasks:
+  * Recent #0: TaskRecord{a9255768 #4 A=cn.hydrogen.cardlab.task.P02 U=0 sz=1}
+    numActivities=1 rootWasReset=false userId=0 mTaskType=0 numFullscreen=0 mOnTopOfHome=false
+    affinity=cn.hydrogen.cardlab.task.P02
+    intent={flg=0x10800000 cmp=cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P02$Standard00}
+    realActivity=cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P02$Standard00
+    Activities=[ActivityRecord{a92680d8 u0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P02$Standard00 t4}]
+    askedCompatMode=false
+    lastThumbnail=null lastDescription=null
+    lastActiveTime=108031 (inactive for 0s)
+  * Recent #1: TaskRecord{a9290dd8 #3 A=cn.hydrogen.cardlab.task.P01 U=0 sz=1}
+    numActivities=1 rootWasReset=false userId=0 mTaskType=0 numFullscreen=0 mOnTopOfHome=false
+    affinity=cn.hydrogen.cardlab.task.P01
+    intent={flg=0x10800000 cmp=cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P01$Standard00}
+    realActivity=cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P01$Standard00
+    Activities=[ActivityRecord{a90e82c0 u0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P01$Standard00 t3}]
+    askedCompatMode=false
+    lastThumbnail=android.graphics.Bitmap@a9302a78 lastDescription=null
+    lastActiveTime=108008 (inactive for 1s)
+  * Recent #2: TaskRecord{a92d6ec0 #2 A=cn.hydrogen.cardlab U=0 sz=1}
+    numActivities=1 rootWasReset=false userId=0 mTaskType=0 numFullscreen=1 mOnTopOfHome=true
+    affinity=cn.hydrogen.cardlab
+    intent={flg=0x10000000 cmp=cn.hydrogen.cardlab/.LabActivity}
+    realActivity=cn.hydrogen.cardlab/.LabActivity
+    Activities=[ActivityRecord{a907df40 u0 cn.hydrogen.cardlab/.LabActivity t2}]
+    askedCompatMode=false
+    lastThumbnail=android.graphics.Bitmap@a934fce0 lastDescription=null
+    lastActiveTime=94514 (inactive for 14s)
+  * Recent #3: TaskRecord{a9235378 #1 I=android/com.android.internal.app.ResolverActivity U=0 sz=0}
+    intent={act=android.intent.action.MAIN cat=[android.intent.category.HOME] flg=0x10800000 cmp=android/com.android.internal.app.ResolverActivity}
+    realActivity=android/com.android.internal.app.ResolverActivity
+    Activities=[]
+    askedCompatMode=false
+    lastThumbnail=android.graphics.Bitmap@a9300360 lastDescription=null
+    lastActiveTime=93224 (inactive for 15s)
+
+$ adb shell su 2000 dumpsys package cn.hydrogen.cardlab
+Activity Resolver Table:
+  Non-Data Actions:
+      android.intent.action.MAIN:
+        a927af10 cn.hydrogen.cardlab/.LabActivity filter a927b078
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.LAUNCHER"
+        a9299f80 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P00$Standard00 filter a92ae398
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92e8f60 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P00$SingleInstance00 filter a9295ce0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a91d0a08 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P00$SingleInstance01 filter a91d0b60
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a91f7990 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P00$SingleInstance02 filter a91fcab8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92416b0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P00$SingleInstance03 filter a92a1308
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92d4930 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P00$SingleTask00 filter a92d4a68
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a927c630 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P00$SingleTask01 filter a925a010
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9263568 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P00$SingleTask02 filter a92636b8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9266608 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P00$SingleTask03 filter a925f3e0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9291250 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P00$SingleTop00 filter a92ae648
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92ae7f8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P00$SingleTop01 filter a92a2e28
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92a5168 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P00$SingleTop02 filter a92d3778
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9250370 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P00$SingleTop03 filter a92504a0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92a6920 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P00$Standard00 filter a92c2678
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92c27e0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P00$SingleInstance00 filter a92d30c0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a926c068 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P00$SingleInstance01 filter a9290e70
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92b3d88 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P00$SingleInstance02 filter a92b3ee8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92d0ce8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P00$SingleInstance03 filter a923b0c8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a923e908 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P00$SingleTask00 filter a924efc0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a923e9d0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P00$SingleTask01 filter a923e9f8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a929c3a8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P00$SingleTask02 filter a929c4e8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a927d6a0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P00$SingleTask03 filter a928d4c8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92c28d8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P00$SingleTop00 filter a92c2a30
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a91ce770 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P00$SingleTop01 filter a92d3270
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a917f8e0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P00$SingleTop02 filter a917fa38
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a91fd7c0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P00$SingleTop03 filter a9291650
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a91fd948 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P01$Standard00 filter a924de20
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9247510 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P01$SingleInstance00 filter a9268558
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9268730 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P01$SingleInstance01 filter a925ed70
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a91fd218 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P01$SingleInstance02 filter a91fd4d8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a920f230 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P01$SingleInstance03 filter a929f460
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a929f610 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P01$SingleTask00 filter a92d6808
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a91cf360 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P01$SingleTask01 filter a924ab10
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a924b5c0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P01$SingleTask02 filter a92557f0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92559c8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P01$SingleTask03 filter a9291ca0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92af9e0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P01$SingleTop00 filter a9295a70
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9180ad8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P01$SingleTop01 filter a9265f28
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92660c0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P01$SingleTop02 filter a92afd38
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a91eded0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P01$SingleTop03 filter a9236300
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92c31b8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P01$Standard00 filter a925ac90
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a925ae28 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P01$SingleInstance00 filter a923dd90
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a91fff88 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P01$SingleInstance01 filter a923a880
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a923aa40 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P01$SingleInstance02 filter a928d1f0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a928e1c8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P01$SingleInstance03 filter a9258f10
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92590e8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P01$SingleTask00 filter a92591b0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92966d0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P01$SingleTask01 filter a927e420
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a927e5f8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P01$SingleTask02 filter a92b4ba0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92df550 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P01$SingleTask03 filter a92d8188
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92d8348 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P01$SingleTop00 filter a917f118
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a927b698 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P01$SingleTop01 filter a927b910
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a91803a0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P01$SingleTop02 filter a9252528
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9252700 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P01$SingleTop03 filter a926bdd8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92d74b0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P02$Standard00 filter a91f6a98
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a91f6c70 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P02$SingleInstance00 filter a92ac788
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92822c8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P02$SingleInstance01 filter a92ac0e0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92ac2b8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P02$SingleInstance02 filter a92a9220
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92a93f8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P02$SingleInstance03 filter a925f958
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a929be20 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P02$SingleTask00 filter a929c0a8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92de020 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P02$SingleTask01 filter a923abb8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a923af08 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P02$SingleTask02 filter a9229280
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9180678 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P02$SingleTask03 filter a91808e8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a924d3d0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P02$SingleTop00 filter a924d650
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92aabe0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P02$SingleTop01 filter a92fb9f0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92fbbb0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P02$SingleTop02 filter a9228548
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9228708 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P02$SingleTop03 filter a9248848
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9248a20 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P02$Standard00 filter a922a580
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a922a758 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P02$SingleInstance00 filter a92392f8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92394d0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P02$SingleInstance01 filter a92394f8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9256d48 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P02$SingleInstance02 filter a9256fe0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a927cb30 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P02$SingleInstance03 filter a927cdc8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a929eff0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P02$SingleTask00 filter a929f280
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9290a38 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P02$SingleTask01 filter a928f6b8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a928f850 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P02$SingleTask02 filter a927ef88
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a927f148 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P02$SingleTask03 filter a927dfb8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a927e150 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P02$SingleTop00 filter a92a95e8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92a97c0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P02$SingleTop01 filter a9226c90
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9226e50 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P02$SingleTop02 filter a9229f88
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a922a160 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P02$SingleTop03 filter a9237d00
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92ab050 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P03$Standard00 filter a92ab338
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92d0f78 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P03$SingleInstance00 filter a92d1208
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92e8070 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P03$SingleInstance01 filter a92e8300
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a928f2e8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P03$SingleInstance02 filter a928f578
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9238208 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P03$SingleInstance03 filter a9238498
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9239fb0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P03$SingleTask00 filter a923a238
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9256918 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P03$SingleTask01 filter a9256ba0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9290488 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P03$SingleTask02 filter a9290710
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a927d038 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P03$SingleTask03 filter a927d2c0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92d4160 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P03$SingleTop00 filter a92d43e0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a927d968 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P03$SingleTop01 filter a927dbd0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a927dda8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P03$SingleTop02 filter a92ad790
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92ad928 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P03$SingleTop03 filter a92adba8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a929d7a0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P03$Standard00 filter a929da30
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a917f3d8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P03$SingleInstance00 filter a917f670
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9291df8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P03$SingleInstance01 filter a9292090
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9292268 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P03$SingleInstance02 filter a9269b48
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9269d20 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P03$SingleInstance03 filter a9182120
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a91822b8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P03$SingleTask00 filter a9182548
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a928d7a8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P03$SingleTask01 filter a928da38
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a928dc10 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P03$SingleTask02 filter a91813b0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9181588 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P03$SingleTask03 filter a9281c30
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9281e08 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P03$SingleTop00 filter a9282098
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a917fcf0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P03$SingleTop01 filter a917ff80
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a923b258 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P03$SingleTop02 filter a923b4d0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a923b6a8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P03$SingleTop03 filter a92b12e0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92acdd8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P04$Standard00 filter a9297ac8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9297c78 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P04$SingleInstance00 filter a9297f08
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92de2c0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P04$SingleInstance01 filter a92de550
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92de728 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P04$SingleInstance02 filter a929c830
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a929ca08 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P04$SingleInstance03 filter a929cc98
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92a4668 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P04$SingleTask00 filter a92a48f0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92a4ac8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P04$SingleTask01 filter a922b2b0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a922b460 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P04$SingleTask02 filter a922b6e8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92d1900 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P04$SingleTask03 filter a92d1b88
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92d1d60 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P04$SingleTop00 filter a924a138
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a924a2e0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P04$SingleTop01 filter a924a560
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a924a738 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P04$SingleTop02 filter a924bb28
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a924bd00 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P04$SingleTop03 filter a924bf80
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9228a80 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P04$Standard00 filter a9228d10
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9228ee8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P04$SingleInstance00 filter a917e870
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a917ea48 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P04$SingleInstance01 filter a917ece0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9229690 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P04$SingleInstance02 filter a9229928
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9229b00 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P04$SingleInstance03 filter a9239608
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92397b8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P04$SingleTask00 filter a9239a48
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9239c20 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P04$SingleTask01 filter a922a990
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a922ab68 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P04$SingleTask02 filter a922adf8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a922afd0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P04$SingleTask03 filter a92ab8b0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92aba88 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P04$SingleTop00 filter a92abd18
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a91cf700 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P04$SingleTop01 filter a91cf990
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a91cfb68 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P04$SingleTop02 filter a91cfdf8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92e85e0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P04$SingleTop03 filter a92e8870
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92814a0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P05$Standard00 filter a92817d0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92819a8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P05$SingleInstance00 filter a929e4e8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a929e6c0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P05$SingleInstance01 filter a929e950
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a929eb28 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P05$SingleInstance02 filter a929edb8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a928e8f0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P05$SingleInstance03 filter a928eb80
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a928ed58 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P05$SingleTask00 filter a928efe0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a924e220 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P05$SingleTask01 filter a924e4a8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a924e680 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P05$SingleTask02 filter a924e908
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a924eae0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P05$SingleTask03 filter a929a160
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a929a2f8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P05$SingleTop00 filter a929a578
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a929a750 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P05$SingleTop01 filter a929a9d0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a929aba8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P05$SingleTop02 filter a92ef058
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92ef230 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P05$SingleTop03 filter a92ef4b0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92ef688 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P05$Standard00 filter a92ef918
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92efaf0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P05$SingleInstance00 filter a92efd88
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92be8b8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P05$SingleInstance01 filter a92beb50
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92bed28 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P05$SingleInstance02 filter a92befc0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92bf198 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P05$SingleInstance03 filter a92bf430
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9280198 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P05$SingleTask00 filter a9280428
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9280600 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P05$SingleTask01 filter a9280890
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9280a68 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P05$SingleTask02 filter a9280cf8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9280ed0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P05$SingleTask03 filter a929b050
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a929b228 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P05$SingleTop00 filter a929b4b8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a929b690 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P05$SingleTop01 filter a929b920
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a929baf8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P05$SingleTop02 filter a92f6218
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92f63c8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P05$SingleTop03 filter a92f6658
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92f6ed0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P06$Standard00 filter a92490d0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9249290 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P06$SingleInstance00 filter a9249520
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92496f8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P06$SingleInstance01 filter a9249988
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9249b60 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P06$SingleInstance02 filter a9249df0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9249fc8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P06$SingleInstance03 filter a92b5140
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92b5318 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P06$SingleTask00 filter a92b55a0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92b5778 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P06$SingleTask01 filter a92b5a00
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92b5bd8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P06$SingleTask02 filter a92b5e60
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92b6038 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P06$SingleTask03 filter a92b62c0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9253e98 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P06$SingleTop00 filter a9254118
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92542f0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P06$SingleTop01 filter a9254570
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9254748 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P06$SingleTop02 filter a92549c8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9254ba0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P06$SingleTop03 filter a9254e20
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9254ff8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P06$Standard00 filter a9255288
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9255460 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P06$SingleInstance00 filter a9293b88
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9293d60 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P06$SingleInstance01 filter a9293ff8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92941d0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P06$SingleInstance02 filter a9294468
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9294640 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P06$SingleInstance03 filter a92948d8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9294ab0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P06$SingleTask00 filter a9294d40
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9294f18 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P06$SingleTask01 filter a92951a8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9295350 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P06$SingleTask02 filter a92f3e20
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92f3ff8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P06$SingleTask03 filter a92f4288
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92f4460 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P06$SingleTop00 filter a92f46f0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92f48c8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P06$SingleTop01 filter a92f4b58
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92f4d30 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P06$SingleTop02 filter a92f4fc0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92f5198 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P06$SingleTop03 filter a92f5428
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92f5ca0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P07$Standard00 filter a92f5fd0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92f61a8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P07$SingleInstance00 filter a92bf810
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92bf9e8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P07$SingleInstance01 filter a92bfc78
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92bfe50 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P07$SingleInstance02 filter a92c00e0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92c02b8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P07$SingleInstance03 filter a92c0548
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92c0720 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P07$SingleTask00 filter a92c09a8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92c0b80 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P07$SingleTask01 filter a92c0e08
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92c0fe0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P07$SingleTask02 filter a92c1268
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92c1440 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P07$SingleTask03 filter a92c16c8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92c18a0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P07$SingleTop00 filter a92c1b20
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92c1cf8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P07$SingleTop01 filter a92c1f78
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92c2150 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P07$SingleTop02 filter a92f0c58
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92f0e30 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P07$SingleTop03 filter a92f10b0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92f1288 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P07$Standard00 filter a92f1518
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92f16f0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P07$SingleInstance00 filter a92f1988
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92f1b60 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P07$SingleInstance01 filter a92f1df8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92f1fd0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P07$SingleInstance02 filter a92f2268
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92f2440 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P07$SingleInstance03 filter a92f26d8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92f28b0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P07$SingleTask00 filter a92f2b40
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92f31e8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P07$SingleTask01 filter a92f3478
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92f3650 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P07$SingleTask02 filter a92f38e0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92e4a68 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P07$SingleTask03 filter a92e4cf8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92e4ed0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P07$SingleTop00 filter a92e5160
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92e5338 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P07$SingleTop01 filter a92e55c8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92e57a0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P07$SingleTop02 filter a92e5a30
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92e5c08 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P07$SingleTop03 filter a92e5e98
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92e67a8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P08$Standard00 filter a92e6ad8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92e6cb0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P08$SingleInstance00 filter a92e6f40
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92e7118 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P08$SingleInstance01 filter a92e73a8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92e7580 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P08$SingleInstance02 filter a92e7810
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92e79e8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P08$SingleInstance03 filter a92e7c78
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92f7640 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P08$SingleTask00 filter a92f78c8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92f7aa0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P08$SingleTask01 filter a92f7d28
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92f7f00 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P08$SingleTask02 filter a92f8188
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92f8360 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P08$SingleTask03 filter a92f85e8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92f87c0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P08$SingleTop00 filter a92f8a40
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92f8c18 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P08$SingleTop01 filter a92f8e98
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92f9070 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P08$SingleTop02 filter a92f92f0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92f94c8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P08$SingleTop03 filter a92f9748
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92f9920 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P08$Standard00 filter a92f9bb0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92f9d88 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P08$SingleInstance00 filter a92fa020
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92fa1f8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P08$SingleInstance01 filter a92fa490
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92fa668 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P08$SingleInstance02 filter a92fa900
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92faad8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P08$SingleInstance03 filter a92fad70
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92faf48 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P08$SingleTask00 filter a92fb1d8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92fb3b0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P08$SingleTask01 filter a92ea040
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92ea1e8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P08$SingleTask02 filter a92ea478
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92ea650 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P08$SingleTask03 filter a92ea8e0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92eaab8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P08$SingleTop00 filter a92ead48
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92eaf20 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P08$SingleTop01 filter a92eb1b0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92eb388 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P08$SingleTop02 filter a92eb618
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92eb7f0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$Dialog$P08$SingleTop03 filter a92eba80
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+      com.morgoo.droidplugin.ACTION_SHORTCUT_PROXY:
+        a9296b08 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ShortcutProxyActivity filter a9257308
+          Action: "com.morgoo.droidplugin.ACTION_SHORTCUT_PROXY"
+          Category: "android.intent.category.DEFAULT"
+
+Service Resolver Table:
+  Non-Data Actions:
+      android.intent.action.MAIN:
+        a9211d30 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ServiceStub$StubP00$P00 filter a9211e18
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9292c98 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ServiceStub$StubP01$P00 filter a92a0aa8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a9237ed8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ServiceStub$StubP02$P00 filter a9238d00
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92b14b8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ServiceStub$StubP03$P00 filter a92b1710
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92e8a48 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ServiceStub$StubP04$P00 filter a92e8ca0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92f6830 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ServiceStub$StubP05$P00 filter a92f6a88
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92f5600 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ServiceStub$StubP06$P00 filter a92f5858
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92e6070 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ServiceStub$StubP07$P00 filter a92e62c8
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+        a92ebc58 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ServiceStub$StubP08$P00 filter a92ebeb0
+          Action: "android.intent.action.MAIN"
+          Category: "com.morgoo.droidplugin.category.PROXY_STUB"
+
+Permissions:
+  Permission [cn.hydrogen.cardlab.CONTROL] (a92ee7c8):
+    sourcePackage=cn.hydrogen.cardlab
+    uid=10054 gids=[] type=0 prot=signature
+    packageSetting=PackageSetting{a903e800 cn.hydrogen.cardlab/10054}
+    perm=Permission{a92a4e58 cn.hydrogen.cardlab.CONTROL}
+
+Registered ContentProviders:
+  cn.hydrogen.cardlab/com.morgoo.droidplugin.PluginServiceProvider:
+    Provider{a9286c58 cn.hydrogen.cardlab/com.morgoo.droidplugin.PluginServiceProvider}
+  cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ContentProviderStub$StubP08:
+    Provider{a92ebff0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ContentProviderStub$StubP08}
+  cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ContentProviderStub$StubP07:
+    Provider{a92e64a0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ContentProviderStub$StubP07}
+  cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ContentProviderStub$StubP06:
+    Provider{a92f5998 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ContentProviderStub$StubP06}
+  cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ContentProviderStub$StubP05:
+    Provider{a92f6bc8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ContentProviderStub$StubP05}
+  cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ContentProviderStub$StubP04:
+    Provider{a9281198 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ContentProviderStub$StubP04}
+  cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ContentProviderStub$StubP03:
+    Provider{a92acad0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ContentProviderStub$StubP03}
+  cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ContentProviderStub$StubP02:
+    Provider{a9238e40 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ContentProviderStub$StubP02}
+  cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ContentProviderStub$StubP01:
+    Provider{a92a0bd0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ContentProviderStub$StubP01}
+  cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ContentProviderStub$StubP00:
+    Provider{a91ce418 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ContentProviderStub$StubP00}
+  cn.hydrogen.cardlab/.CardBridge:
+    Provider{a92af408 cn.hydrogen.cardlab/.CardBridge}
+
+ContentProvider Authorities:
+  [cn.hydrogen.cardlab.plugin.servicemanager]:
+    Provider{a9286c58 cn.hydrogen.cardlab/com.morgoo.droidplugin.PluginServiceProvider}
+      applicationInfo=ApplicationInfo{a92776b0 cn.hydrogen.cardlab}
+  [cn.hydrogen.cardlab.droidplugin_stub_P00]:
+    Provider{a91ce418 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ContentProviderStub$StubP00}
+      applicationInfo=ApplicationInfo{a92776b0 cn.hydrogen.cardlab}
+  [cn.hydrogen.cardlab.droidplugin_stub_P02]:
+    Provider{a9238e40 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ContentProviderStub$StubP02}
+      applicationInfo=ApplicationInfo{a92776b0 cn.hydrogen.cardlab}
+  [cn.hydrogen.cardlab.droidplugin_stub_P01]:
+    Provider{a92a0bd0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ContentProviderStub$StubP01}
+      applicationInfo=ApplicationInfo{a92776b0 cn.hydrogen.cardlab}
+  [cn.hydrogen.cardlab.droidplugin_stub_P04]:
+    Provider{a9281198 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ContentProviderStub$StubP04}
+      applicationInfo=ApplicationInfo{a92776b0 cn.hydrogen.cardlab}
+  [cn.hydrogen.cardlab.droidplugin_stub_P03]:
+    Provider{a92acad0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ContentProviderStub$StubP03}
+      applicationInfo=ApplicationInfo{a92776b0 cn.hydrogen.cardlab}
+  [cn.hydrogen.cardlab.droidplugin_stub_P05]:
+    Provider{a92f6bc8 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ContentProviderStub$StubP05}
+      applicationInfo=ApplicationInfo{a92776b0 cn.hydrogen.cardlab}
+  [cn.hydrogen.cardlab.droidplugin_stub_P06]:
+    Provider{a92f5998 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ContentProviderStub$StubP06}
+      applicationInfo=ApplicationInfo{a92776b0 cn.hydrogen.cardlab}
+  [cn.hydrogen.cardlab.droidplugin_stub_P07]:
+    Provider{a92e64a0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ContentProviderStub$StubP07}
+      applicationInfo=ApplicationInfo{a92776b0 cn.hydrogen.cardlab}
+  [cn.hydrogen.cardlab.droidplugin_stub_P08]:
+    Provider{a92ebff0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ContentProviderStub$StubP08}
+      applicationInfo=ApplicationInfo{a92776b0 cn.hydrogen.cardlab}
+  [cn.hydrogen.cardlab.bridge]:
+    Provider{a92af408 cn.hydrogen.cardlab/.CardBridge}
+      applicationInfo=ApplicationInfo{a92776b0 cn.hydrogen.cardlab}
+
+Key Set Manager:
+  [cn.hydrogen.cardlab]
+      Signing KeySets: 6
+
+Packages:
+  Package [cn.hydrogen.cardlab] (a903e800):
+    userId=10054 gids=[3003, 1028, 1015]
+    pkg=Package{a92695c8 cn.hydrogen.cardlab}
+    codePath=/data/app/cn.hydrogen.cardlab-1.apk
+    resourcePath=/data/app/cn.hydrogen.cardlab-1.apk
+    nativeLibraryPath=/data/app-lib/cn.hydrogen.cardlab-1
+    versionCode=1 targetSdk=22
+    versionName=0.1-experiment
+    applicationInfo=ApplicationInfo{a92776b0 cn.hydrogen.cardlab}
+    flags=[ DEBUGGABLE HAS_CODE ALLOW_CLEAR_USER_DATA ]
+    dataDir=/data/data/cn.hydrogen.cardlab
+    supportsScreens=[small, medium, large, xlarge, resizeable, anyDensity]
+    timeStamp=2026-10-23 00:22:46
+    firstInstallTime=2026-10-22 23:49:03
+    lastUpdateTime=2026-10-23 00:22:46
+    signatures=PackageSignatures{a903e8c8 [a903bb70]}
+    permissionsFixed=true haveGids=true installStatus=1
+    pkgFlags=[ DEBUGGABLE HAS_CODE ALLOW_CLEAR_USER_DATA ]
+    User 0:  installed=true blocked=false stopped=false notLaunched=false enabled=0
+    grantedPermissions:
+      android.permission.REORDER_TASKS
+      android.permission.READ_EXTERNAL_STORAGE
+      android.permission.WRITE_EXTERNAL_STORAGE
+      android.permission.INTERNET
+      android.permission.ACCESS_FINE_LOCATION
+      android.permission.ACCESS_WIFI_STATE
+      android.permission.ACCESS_COARSE_LOCATION
+      cn.hydrogen.cardlab.CONTROL
+      android.permission.WAKE_LOCK
+      android.permission.ACCESS_NETWORK_STATE
+      android.permission.MODIFY_AUDIO_SETTINGS
+
+$ adb shell su 2000 pm list packages
+WARNING: linker: libdvm.so has text relocations. This is wasting memory and is a security risk. Please fix.
+package:com.android.soundrecorder
+package:com.android.sdksetup
+package:com.android.launcher
+package:com.android.defcontainer
+package:com.android.smoketest
+package:com.android.quicksearchbox
+package:com.android.contacts
+package:com.android.inputmethod.latin
+package:com.android.phone
+package:com.android.calculator2
+package:com.android.proxyhandler
+package:com.android.htmlviewer
+package:com.android.emulator.connectivity.test
+package:com.android.providers.calendar
+package:cn.hydrogen.launcher
+package:com.android.inputdevices
+package:com.android.customlocale2
+package:com.android.calendar
+package:com.android.browser
+package:com.android.music
+package:com.android.netspeed
+package:cn.hydrogen.cardlab
+package:com.android.widgetpreview
+package:com.example.android.livecubes
+package:com.android.providers.downloads.ui
+package:com.android.providers.userdictionary
+package:com.android.documentsui
+package:com.android.inputmethod.pinyin
+package:com.android.sharedstoragebackup
+package:com.android.vpndialogs
+package:com.android.mms
+package:cn.hydrogen.launcher.test
+package:com.android.pacprocessor
+package:com.android.providers.media
+package:com.android.certinstaller
+package:com.example.android.apis
+package:com.android.printspooler
+package:com.android.fallback
+package:com.android.gesture.builder
+package:com.android.gallery
+package:android
+package:com.android.settings
+package:com.android.providers.contacts
+package:com.android.protips
+package:com.android.externalstorage
+package:com.android.dreams.basic
+package:com.android.development_settings
+package:com.example.android.softkeyboard
+package:com.android.exchange
+package:com.android.systemui
+package:com.android.wallpaper.livepicker
+package:com.android.speechrecorder
+package:com.android.keychain
+package:com.android.emulator.gps.test
+package:com.android.packageinstaller
+package:com.android.development
+package:com.android.smoketest.tests
+package:com.android.providers.telephony
+package:com.svox.pico
+package:com.android.camera
+package:jp.co.omronsoft.openwnn
+package:com.android.email
+package:com.android.dialer
+package:com.android.deskclock
+package:com.android.location.fused
+package:com.android.backupconfirm
+package:com.android.providers.settings
+package:com.android.keyguard
+package:com.android.shell
+package:com.android.providers.downloads
+
+$ adb shell su 2000 input tap 543 56
+WARNING: linker: libdvm.so has text relocations. This is wasting memory and is a security risk. Please fix.
+
+$ adb shell su 2000 dumpsys window windows
+WINDOW MANAGER WINDOWS (dumpsys window windows)
+  Window #5 Window{a9241ca0 u0 SearchPanel}:
+    mDisplayId=0 mSession=Session{a92749c0 1603:u0a10007} mClient=android.os.BinderProxy@a91f7268
+    mOwnerUid=10007 mShowToOwnerOnly=false package=com.android.systemui appop=NONE
+    mAttrs=WM.LayoutParams{(0,0)(fillxfill) gr=#800053 sim=#31 ty=2024 fl=#1820100 fmt=-3 wanim=0x10301f5}
+    Requested w=1280 h=672 mLayoutSeq=27
+    mBaseLayer=211000 mSubLayer=0 mAnimLayer=211000+0=211000 mLastLayer=0
+    mToken=WindowToken{a9218d10 null}
+    mRootToken=WindowToken{a9218d10 null}
+    mViewVisibility=0x8 mHaveFrame=true mObscured=false
+    mSeq=0 mSystemUiVisibility=0x0
+    mGivenContentInsets=[0,0][0,0] mGivenVisibleInsets=[0,0][0,0]
+    mConfiguration=null
+    mHasSurface=false mShownFrame=[0.0,0.0][0.0,0.0] isReadyForDisplay()=false
+    mFrame=[0,0][1280,720] last=[0,0][0,0]
+    mSystemDecorRect=[0,0][0,0] last=[0,0][0,0]
+    Frames: containing=[0,0][1280,720] parent=[0,0][1280,720]
+        display=[0,0][1280,720] overscan=[0,0][1280,720]
+        content=[0,25][1280,672] visible=[0,25][1280,672]
+        decor=[0,0][1280,720]
+    Cur insets: overscan=[0,0][0,0] content=[0,25][0,48] visible=[0,25][0,48]
+    Lst insets: overscan=[0,0][0,0] content=[0,0][0,0] visible=[0,0][0,0]
+    WindowStateAnimator{a9261040 SearchPanel}:
+      mShownAlpha=0.0 mAlpha=1.0 mLastAlpha=0.0
+  Window #4 Window{a91ed738 u0 NavigationBar}:
+    mDisplayId=0 mSession=Session{a92749c0 1603:u0a10007} mClient=android.os.BinderProxy@a9261870
+    mOwnerUid=10007 mShowToOwnerOnly=false package=com.android.systemui appop=NONE
+    mAttrs=WM.LayoutParams{(0,0)(fillxfill) sim=#20 ty=2019 fl=#1840068 fmt=-3}
+    Requested w=1280 h=48 mLayoutSeq=110
+    mBaseLayer=201000 mSubLayer=0 mAnimLayer=201000+0=201000 mLastLayer=201000
+    mToken=WindowToken{a9218d10 null}
+    mRootToken=WindowToken{a9218d10 null}
+    mViewVisibility=0x0 mHaveFrame=true mObscured=false
+    mSeq=0 mSystemUiVisibility=0x0
+    mGivenContentInsets=[0,0][0,0] mGivenVisibleInsets=[0,0][0,0]
+    mConfiguration={1.0 310mcc260mnc en_US ldltr sw720dp w1280dp h647dp 160dpi lrg long land finger qwerty/v/v tball/v s.6}
+    mHasSurface=true mShownFrame=[0.0,672.0][1280.0,720.0] isReadyForDisplay()=true
+    mFrame=[0,672][1280,720] last=[0,672][1280,720]
+    mSystemDecorRect=[0,0][1280,48] last=[0,0][1280,48]
+    Frames: containing=[0,672][1280,720] parent=[0,672][1280,720]
+        display=[0,672][1280,720] overscan=[0,672][1280,720]
+        content=[0,672][1280,720] visible=[0,672][1280,720]
+        decor=[0,0][0,0]
+    Cur insets: overscan=[0,0][0,0] content=[0,0][0,0] visible=[0,0][0,0]
+    Lst insets: overscan=[0,0][0,0] content=[0,0][0,0] visible=[0,0][0,0]
+    WindowStateAnimator{a925ce70 NavigationBar}:
+      mAnimating=false mLocalAnimating=false mAnimationIsEntrance=true mAnimation=null
+      mSurface=Surface(name=NavigationBar)
+      mDrawState=HAS_DRAWN mLastHidden=false
+      Surface: shown=true layer=201000 alpha=1.0 rect=(0.0,672.0) 1280.0 x 48.0
+  Window #3 Window{a9279760 u0 StatusBar}:
+    mDisplayId=0 mSession=Session{a92749c0 1603:u0a10007} mClient=android.os.BinderProxy@a91fc0a0
+    mOwnerUid=10007 mShowToOwnerOnly=false package=com.android.systemui appop=NONE
+    mAttrs=WM.LayoutParams{(0,0)(fillx25) gr=#37 sim=#20 ty=2000 fl=#1840048 fmt=-3}
+    Requested w=1280 h=25 mLayoutSeq=110
+    mBaseLayer=161000 mSubLayer=0 mAnimLayer=161000+0=161000 mLastLayer=161000
+    mToken=WindowToken{a9218d10 null}
+    mRootToken=WindowToken{a9218d10 null}
+    mViewVisibility=0x0 mHaveFrame=true mObscured=false
+    mSeq=0 mSystemUiVisibility=0x0
+    mPolicyVisibility=false mPolicyVisibilityAfterAnim=false mAppOpVisibility=true mAttachedHidden=false
+    mGivenContentInsets=[0,0][0,0] mGivenVisibleInsets=[0,0][0,0]
+    mConfiguration={1.0 310mcc260mnc en_US ldltr sw720dp w1280dp h647dp 160dpi lrg long land finger qwerty/v/v tball/v s.6}
+    mHasSurface=true mShownFrame=[0.0,0.0][1280.0,25.0] isReadyForDisplay()=false
+    mFrame=[0,0][1280,25] last=[0,0][1280,25]
+    mSystemDecorRect=[0,0][1280,25] last=[0,0][1280,25]
+    Frames: containing=[0,0][1280,720] parent=[0,0][1280,720]
+        display=[0,0][1280,720] overscan=[0,0][1280,672]
+        content=[0,0][1280,25] visible=[0,0][1280,25]
+        decor=[0,0][0,0]
+    Cur insets: overscan=[0,0][0,0] content=[0,0][0,0] visible=[0,0][0,0]
+    Lst insets: overscan=[0,0][0,0] content=[0,0][0,0] visible=[0,0][0,0]
+    WindowStateAnimator{a9261a18 StatusBar}:
+      mSurface=Surface(name=StatusBar)
+      mDrawState=HAS_DRAWN mLastHidden=true
+      Surface: shown=false layer=161000 alpha=1.0 rect=(0.0,0.0) 1280.0 x 25.0
+  Window #2 Window{a92158a0 u0 KeyguardScrim}:
+    mDisplayId=0 mSession=Session{a90fc3a0 1549:1000} mClient=android.view.ViewRootImpl$W@a91ad7f8
+    mOwnerUid=1000 mShowToOwnerOnly=false package=android appop=NONE
+    mAttrs=WM.LayoutParams{(0,0)(fillxfill) sim=#10 ty=2029 fl=#110900 fmt=-3 or=5 vsysui=0x3610000}
+    Requested w=1280 h=672 mLayoutSeq=3
+    mBaseLayer=121000 mSubLayer=0 mAnimLayer=121000+0=121000 mLastLayer=0
+    mToken=WindowToken{a9218d10 null}
+    mRootToken=WindowToken{a9218d10 null}
+    mViewVisibility=0x8 mHaveFrame=true mObscured=false
+    mSeq=0 mSystemUiVisibility=0x3610000
+    mGivenContentInsets=[0,0][0,0] mGivenVisibleInsets=[0,0][0,0]
+    mConfiguration=null
+    mHasSurface=false mShownFrame=[0.0,0.0][0.0,0.0] isReadyForDisplay()=false
+    mFrame=[0,0][1280,720] last=[0,0][0,0]
+    mSystemDecorRect=[0,0][0,0] last=[0,0][0,0]
+    Frames: containing=[0,0][1280,720] parent=[0,0][1280,720]
+        display=[0,0][1280,720] overscan=[0,0][1280,720]
+        content=[0,0][1280,720] visible=[0,0][1280,720]
+        decor=[0,0][1280,720]
+    Cur insets: overscan=[0,0][0,0] content=[0,0][0,0] visible=[0,0][0,0]
+    Lst insets: overscan=[0,0][0,0] content=[0,0][0,0] visible=[0,0][0,0]
+    WindowStateAnimator{a91c0228 KeyguardScrim}:
+      mShownAlpha=0.0 mAlpha=1.0 mLastAlpha=0.0
+  Window #1 Window{a924b368 u0 android/com.android.internal.app.ResolverActivity}:
+    mDisplayId=0 mSession=Session{a91f5290 1680:1000} mClient=android.os.BinderProxy@a9001f50
+    mOwnerUid=1000 mShowToOwnerOnly=true package=android appop=NONE
+    mAttrs=WM.LayoutParams{(0,0)(wrapxwrap) sim=#120 ty=1 fl=#820002 pfl=0x8 fmt=-2 wanim=0x10302a2}
+    Requested w=704 h=276 mLayoutSeq=110
+    mBaseLayer=21000 mSubLayer=0 mAnimLayer=21005+0=21005 mLastLayer=21005
+    mToken=AppWindowToken{a9211ee0 token=Token{a924f248 ActivityRecord{a9307550 u0 android/com.android.internal.app.ResolverActivity t5}}}
+    mRootToken=AppWindowToken{a9211ee0 token=Token{a924f248 ActivityRecord{a9307550 u0 android/com.android.internal.app.ResolverActivity t5}}}
+    mAppToken=AppWindowToken{a9211ee0 token=Token{a924f248 ActivityRecord{a9307550 u0 android/com.android.internal.app.ResolverActivity t5}}}
+    mViewVisibility=0x0 mHaveFrame=true mObscured=false
+    mSeq=0 mSystemUiVisibility=0x0
+    mGivenContentInsets=[0,0][0,0] mGivenVisibleInsets=[0,0][0,0]
+    mConfiguration={1.0 310mcc260mnc en_US ldltr sw720dp w1280dp h647dp 160dpi lrg long land finger qwerty/v/v tball/v s.6}
+    mHasSurface=true mShownFrame=[288.0,198.0][992.0,474.0] isReadyForDisplay()=true
+    mFrame=[288,198][992,474] last=[288,198][992,474]
+    mSystemDecorRect=[0,0][704,276] last=[0,0][704,276]
+    Frames: containing=[0,0][1280,672] parent=[0,0][1280,672]
+        display=[0,0][1280,672] overscan=[0,0][1280,672]
+        content=[288,198][992,474] visible=[288,198][992,474]
+        decor=[0,25][1280,672]
+    Cur insets: overscan=[0,0][0,0] content=[0,0][0,0] visible=[0,0][0,0]
+    Lst insets: overscan=[0,0][0,0] content=[0,0][0,0] visible=[0,0][0,0]
+    WindowStateAnimator{a92cea08 android/com.android.internal.app.ResolverActivity}:
+      mAnimating=false mLocalAnimating=false mAnimationIsEntrance=true mAnimation=null
+      mSurface=Surface(name=android/com.android.internal.app.ResolverActivity)
+      mDrawState=HAS_DRAWN mLastHidden=false
+      Surface: shown=true layer=21005 alpha=1.0 rect=(288.0,198.0) 704.0 x 276.0
+  Window #0 Window{a9240ab8 u0 com.android.systemui.ImageWallpaper}:
+    mDisplayId=0 mSession=Session{a92749c0 1603:u0a10007} mClient=android.os.BinderProxy@a9268988
+    mOwnerUid=10007 mShowToOwnerOnly=true package=null appop=NONE
+    mAttrs=WM.LayoutParams{(0,0)(2069x1280) gr=#800033 ty=2013 fl=#318 fmt=2 wanim=0x10301f4}
+    Requested w=2069 h=1280 mLayoutSeq=8
+    mIsImWindow=false mIsWallpaper=true mIsFloatingLayer=true mWallpaperVisible=false
+    mBaseLayer=21000 mSubLayer=0 mAnimLayer=21000+0=21000 mLastLayer=0
+    mToken=WindowToken{a9270250 android.os.Binder@a926f3b8}
+    mRootToken=WindowToken{a9270250 android.os.Binder@a926f3b8}
+    mViewVisibility=0x0 mHaveFrame=true mObscured=false
+    mSeq=0 mSystemUiVisibility=0x0
+    Offsets x=-395 y=-280
+    mGivenContentInsets=[0,0][0,0] mGivenVisibleInsets=[0,0][0,0]
+    mConfiguration={1.0 ?mcc?mnc en_US ldltr sw720dp w1280dp h647dp 160dpi lrg long land finger qwerty/v/v tball/v s.5}
+    mHasSurface=true mShownFrame=[-395.0,-280.0][1674.0,1000.0] isReadyForDisplay()=false
+    mFrame=[0,0][2069,1280] last=[0,0][2069,1280]
+    mSystemDecorRect=[395,280][1675,952] last=[395,280][1675,952]
+    Frames: containing=[0,0][1280,720] parent=[0,0][1280,720]
+        display=[-10000,-10000][10000,10000] overscan=[-10000,-10000][10000,10000]
+        content=[0,0][2069,1280] visible=[0,0][2069,1280]
+        decor=[0,0][1280,672]
+    Cur insets: overscan=[0,0][0,0] content=[0,0][0,0] visible=[0,0][0,0]
+    Lst insets: overscan=[0,0][0,0] content=[0,0][0,0] visible=[0,0][0,0]
+    WindowStateAnimator{a9285db8 com.android.systemui.ImageWallpaper}:
+      mSurface=Surface(name=com.android.systemui.ImageWallpaper)
+      mDrawState=READY_TO_SHOW mLastHidden=true
+      Surface: shown=false layer=21005 alpha=0.0 rect=(-395.0,-280.0) 2069.0 x 1280.0
+      mShownAlpha=1.0 mAlpha=1.0 mLastAlpha=0.0
+    mOrientationChanging=true mAppFreezing=false mTurnOnScreen=false
+    mWallpaperX=0.5 mWallpaperY=0.5
+
+  mCurConfiguration={1.0 310mcc260mnc en_US ldltr sw720dp w1280dp h647dp 160dpi lrg long land finger qwerty/v/v tball/v s.6}
+  mCurrentFocus=Window{a924b368 u0 android/com.android.internal.app.ResolverActivity}
+  mFocusedApp=AppWindowToken{a9211ee0 token=Token{a924f248 ActivityRecord{a9307550 u0 android/com.android.internal.app.ResolverActivity t5}}}
+  mInTouchMode=true mLayoutSeq=110
+  mLastDisplayFreezeDuration=+332ms due to Window{a92592f8 u0 android/com.android.internal.app.ResolverActivity}
+  mSystemDecorLayer=161000 mScreenRect=[0,0][1280,720]
+  mWallpaperTarget=null
+  mLastWallpaperX=-1.0 mLastWallpaperY=-1.0
+  mSystemBooted=true mDisplayEnabled=true
+  mTransactionSequence=155
+  mDisplayFrozen=false windows=false client=false apps=0 waitingForConfig=false
+  mRotation=0 mAltOrientation=false
+  mLastWindowForcedOrientation=-1 mForcedAppOrientation=-1
+  mDeferredRotationPauseCount=0
+  mWindowAnimationScale=1.0 mTransitionWindowAnimationScale=1.0 mAnimatorDurationScale=1.0
+  mTraversalScheduled=false
+  mStartingIconInTransition=false mSkipAppTransitionAnimation=false
+  mLayoutToAnim:
+ mNextAppTransition=0xffffffff  mAppTransitionState=APP_STATE_IDLE

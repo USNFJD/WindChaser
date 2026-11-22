@@ -1,0 +1,1 @@
+package cn.hydrogen.launcher;final class UnifiedInitService{static boolean ready=true;static boolean admitted(){return ready;}}

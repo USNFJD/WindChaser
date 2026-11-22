@@ -1,0 +1,121 @@
+{
+  "platform": "JVM Android test stubs, not Android/commercial engine execution",
+  "scenarios": [
+    {
+      "scenario": "coalesce",
+      "output": "PASS concurrent QQ users share one live request\r\nPASS process existence cannot grant readiness\r\nPASS one valid interface proof completes both users\r\nPASS explicit recheck requires a new nonce\r\nRESULT coalesce checks=4 PASS (production coordinator/helpers, JVM stubs)\r\n"
+    },
+    {
+      "scenario": "timeout",
+      "output": "PASS no premature missing-interface result\r\nPASS missing interface expires once for all waiters\r\nPASS a probe never creates a companion UI or service\r\nRESULT timeout checks=3 PASS (production coordinator/helpers, JVM stubs)\r\n"
+    },
+    {
+      "scenario": "invalid-replies",
+      "output": "PASS wrong nonce ignored\r\nPASS wrong package ignored\r\nPASS wrong issuance ignored\r\nPASS a response without a live Binder is not ready\r\nRESULT invalid-replies checks=4 PASS (production coordinator/helpers, JVM stubs)\r\n"
+    },
+    {
+      "scenario": "binder-death",
+      "output": "PASS verified native interface admitted\r\nPASS Binder death revokes cached proof\r\nPASS Binder death does not force an Activity into foreground\r\nRESULT binder-death checks=3 PASS (production coordinator/helpers, JVM stubs)\r\n"
+    },
+    {
+      "scenario": "sequence-gates",
+      "output": "PASS proven interface can be protected\r\nPASS automatic initialization owns all card and binding admission\r\nPASS card subscriptions do not race startup\r\nPASS already starting target receives no second probe or launch\r\nRESULT sequence-gates checks=4 PASS (production coordinator/helpers, JVM stubs)\r\n"
+    },
+    {
+      "scenario": "all-ready",
+      "output": "PASS both live interfaces skip all startup screens\r\nPASS all-ready path completes and releases admission\r\nPASS all-ready path removes its watchdog ticket\r\nRESULT all-ready checks=3 PASS (production coordinator/helpers, JVM stubs)\r\n"
+    },
+    {
+      "scenario": "qq-ready-map-cold",
+      "output": "PASS only unready map opens\r\nPASS repeated service start cannot launch an in-flight target again\r\nPASS map cannot directly return HOME before remaining QQ readiness check\r\nPASS ready QQ is skipped and service returns HOME after map\r\nRESULT qq-ready-map-cold checks=4 PASS (production coordinator/helpers, JVM stubs)\r\n"
+    },
+    {
+      "scenario": "qq-cold-map-ready",
+      "output": "PASS only unready QQ opens first\r\nPASS ready map is not relaunched after QQ finishes\r\nPASS service returns home when remaining target was skipped\r\nRESULT qq-cold-map-ready checks=3 PASS (production coordinator/helpers, JVM stubs)\r\n"
+    },
+    {
+      "scenario": "probe-foreign",
+      "output": "PASS wait for real interface probe before launch decision\r\nPASS changed power, foreground or switch cancels pending automatic launch\r\nRESULT probe-foreign checks=2 PASS (production coordinator/helpers, JVM stubs)\r\n"
+    },
+    {
+      "scenario": "probe-screen-off",
+      "output": "PASS wait for real interface probe before launch decision\r\nPASS changed power, foreground or switch cancels pending automatic launch\r\nRESULT probe-screen-off checks=2 PASS (production coordinator/helpers, JVM stubs)\r\n"
+    },
+    {
+      "scenario": "probe-disabled",
+      "output": "PASS wait for real interface probe before launch decision\r\nPASS changed power, foreground or switch cancels pending automatic launch\r\nRESULT probe-disabled checks=2 PASS (production coordinator/helpers, JVM stubs)\r\n"
+    },
+    {
+      "scenario": "first-frame",
+      "output": "PASS focus alone does not start before first draw\r\nPASS first completed draw plus focus starts one sequence\r\nPASS no fixed 800ms wait\r\nPASS repeat focus/resume cannot duplicate startup\r\nRESULT first-frame checks=4 PASS (production coordinator/helpers, JVM stubs)\r\n"
+    },
+    {
+      "scenario": "frame-focus",
+      "output": "PASS draw without focus cannot start companions\r\nPASS lost focus before posted admission is respected\r\nPASS focus after draw triggers immediately once\r\nRESULT frame-focus checks=3 PASS (production coordinator/helpers, JVM stubs)\r\n"
+    },
+    {
+      "scenario": "frame-closed",
+      "output": "PASS closed host or disabled automatic startup never launches companions\r\nRESULT frame-closed checks=1 PASS (production coordinator/helpers, JVM stubs)\r\n"
+    },
+    {
+      "scenario": "frame-disabled",
+      "output": "PASS closed host or disabled automatic startup never launches companions\r\nRESULT frame-disabled checks=1 PASS (production coordinator/helpers, JVM stubs)\r\n"
+    },
+    {
+      "scenario": "resume-recheck",
+      "output": "PASS initial live proof accepted\r\nPASS resumed host does not reuse an old readiness flag\r\nPASS fresh real reply restores warm control connection\r\nRESULT resume-recheck checks=3 PASS (production coordinator/helpers, JVM stubs)\r\n"
+    },
+    {
+      "scenario": "late-proof",
+      "output": "PASS expired nonce cannot resurrect stale native readiness\r\nPASS current nonce restores readiness\r\nRESULT late-proof checks=2 PASS (production coordinator/helpers, JVM stubs)\r\n"
+    },
+    {
+      "scenario": "qq-runtime-state",
+      "output": "PASS running QQ is queried through its real public state interface\r\nPASS lyrics or cached metadata alone do not prove control readiness\r\nPASS fresh playback state produces a positive native interface proof\r\nPASS successful query cancels its timeout\r\nPASS readiness helper never opens an application\r\nRESULT qq-runtime-state checks=5 PASS (production coordinator/helpers, JVM stubs)\r\n"
+    },
+    {
+      "scenario": "qq-runtime-timeout",
+      "output": "PASS running QQ is queried through its real public state interface\r\nPASS lyrics or cached metadata alone do not prove control readiness\r\nPASS alive QQ without a state reply is not marked ready\r\nPASS readiness helper never opens an application\r\nRESULT qq-runtime-timeout checks=4 PASS (production coordinator/helpers, JVM stubs)\r\n"
+    },
+    {
+      "scenario": "map-native-readiness",
+      "output": "PASS surface objects without native HMI readiness are insufficient\r\nPASS native HMI and two attached original surfaces are ready\r\nPASS one surface cannot stand in for both render channels\r\nPASS unrecoverable detached UI is not ready\r\nPASS destroying activity cannot be reused\r\nRESULT map-native-readiness checks=5 PASS (production coordinator/helpers, JVM stubs)\r\n"
+    },
+    {
+      "scenario": "kitkat-cold-negative",
+      "output": "PASS proven absent KitKat process skips a pointless timeout\r\nPASS restricted modern process list cannot prove a cold app\r\nPASS process information never grants positive interface readiness\r\nRESULT kitkat-cold-negative checks=3 PASS (production coordinator/helpers, JVM stubs)\r\n"
+    },
+    {
+      "scenario": "package-change-pending",
+      "output": "PASS package change cancels each old pending request exactly once\r\nPASS late old-package proof cannot restore a replaced interface\r\nPASS package change creates a fresh live probe\r\nPASS new package proof restores map connection\r\nRESULT package-change-pending checks=4 PASS (production coordinator/helpers, JVM stubs)\r\n"
+    },
+    {
+      "scenario": "service-destroy-owner",
+      "output": "PASS startup service owns exclusive initialization\r\nPASS unexpected service destruction releases exclusive admission\r\nPASS service destruction preserves independent return watchdog\r\nPASS cleanup never repeats the current application launch\r\nRESULT service-destroy-owner checks=4 PASS (production coordinator/helpers, JVM stubs)\r\n"
+    },
+    {
+      "scenario": "recovery-after-timeout",
+      "output": "PASS automatic recovery stops after a finite retry window\r\nPASS missing native interface remains unavailable\r\nPASS explicit card reentry can start a new readiness check\r\nPASS map recovery request exists after retry exhaustion\r\nPASS late native readiness reconnects without restarting the app\r\nPASS readiness recovery never opens a companion UI\r\nRESULT recovery-after-timeout checks=6 PASS (production coordinator/helpers, JVM stubs)\r\n"
+    },
+    {
+      "scenario": "qq-aux-process",
+      "output": "PASS auxiliary process registers no competing readiness receiver\r\nPASS main process still installs both probe and native state listeners\r\nPASS process filtering does not start any application\r\nRESULT qq-aux-process checks=3 PASS (production coordinator/helpers, JVM stubs)\r\n"
+    },
+    {
+      "scenario": "background-binding",
+      "output": "PASS hidden desktop cannot connect a card\r\nPASS verified background service protection survives leaving the desktop\r\nPASS automatic startup still owns background binding admission\r\nRESULT background-binding checks=3 PASS (production coordinator/helpers, JVM stubs)\r\n"
+    },
+    {
+      "scenario": "warm-recovery",
+      "output": "PASS missing QQ and map interfaces each receive one public-service warmup\r\nPASS background recovery never opens a startup screen\r\nPASS repeated page recovery cannot repeat an in-flight warmup within thirty seconds\r\nPASS paused host stops recovery warmups\r\nRESULT warm-recovery checks=4 PASS (production coordinator/helpers, JVM stubs)\r\n"
+    },
+    {
+      "scenario": "warm-ready-gates",
+      "output": "PASS already ready interfaces receive no prewarm or foreground launch\r\nPASS exclusive startup blocks independent recovery warmups\r\nRESULT warm-ready-gates checks=2 PASS (production coordinator/helpers, JVM stubs)\r\n"
+    },
+    {
+      "scenario": "warm-sequence-race",
+      "output": "PASS first-frame automatic sequence takes ownership\r\nPASS queued cold-interface warmup yields to automatic startup\r\nRESULT warm-sequence-race checks=2 PASS (production coordinator/helpers, JVM stubs)\r\n"
+    }
+  ]
+}

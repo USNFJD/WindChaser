@@ -1,0 +1,1 @@
+package com.autonavi.amapauto.jni.protocol; public final class AndroidProtocolExe {public static boolean ready;public static boolean getReadyStatus(){return ready;}}

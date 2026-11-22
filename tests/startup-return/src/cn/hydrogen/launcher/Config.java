@@ -1,0 +1,1 @@
+package cn.hydrogen.launcher;import android.content.Context;public class Config {public static final String MUSIC="com.tencent.qqmusiccar";public static String musicPackage=MUSIC,mapPackage="com.autonavi.amapauto";public Config(Context c){}public boolean b(String k,boolean d){return fixture.Env.enabled;}public String pkg(boolean music){return music?musicPackage:mapPackage;}}

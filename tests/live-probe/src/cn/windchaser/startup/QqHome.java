@@ -1,0 +1,1 @@
+package cn.windchaser.startup;public class QqHome {static boolean ready=true;static boolean contentReady(){return ready;}}

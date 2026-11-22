@@ -1,0 +1,14 @@
+apply plugin: 'com.android.library'
+android {
+    namespace 'com.morgoo.droidplugin'
+    compileSdk 35
+    defaultConfig {
+        minSdk 17
+        buildConfigField 'String', 'AUTHORITY_NAME', '"cn.windchaser.unified.droidplugin_stub"'
+        manifestPlaceholders = [authorityName:'cn.windchaser.unified.droidplugin_stub']
+    }
+    buildFeatures { aidl true; buildConfig true }
+    compileOptions { sourceCompatibility JavaVersion.VERSION_1_8; targetCompatibility JavaVersion.VERSION_1_8 }
+    lint { abortOnError true }
+}
+dependencies { compileOnly fileTree(dir:'lib',include:['*.jar']) }

@@ -1,0 +1,30 @@
+{
+  "scope": "Static inspection of actual production defaults and fallback references; not live GPS/weather execution",
+  "passed": 13,
+  "checks": [
+    "default label is Beijing",
+    "default administrative names are Beijing with no invented district",
+    "default coordinates match verified Beijing geocoding result",
+    "previous city coordinates are absent from default data",
+    "missing and invalid saved-city fallbacks use new default",
+    "location timeout and unavailable-permission paths retain configured default fallback",
+    "Zhenning remains a separate valid searchable city",
+    "Zhenning search cannot return Beijing default by accident",
+    "weather settings labels consistently use Beijing",
+    "README functional description shows Beijing default",
+    "release build AndroidTest compile and lint passed",
+    "startup flow unchanged: app/src/main/java/cn/hydrogen/launcher/StartupSequenceService.java",
+    "startup flow unchanged: experiments/dual-splash/src/cn/windchaser/startup/DualSplash.java"
+  ],
+  "default": {
+    "label": "北京市",
+    "lat": 39.9075,
+    "lon": 116.39723,
+    "place": {
+      "province": "北京市",
+      "city": "北京市",
+      "county": ""
+    }
+  },
+  "custom_saved_cities_preserved": true
+}

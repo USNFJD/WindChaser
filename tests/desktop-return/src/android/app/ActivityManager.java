@@ -1,0 +1,1 @@
+package android.app;public class ActivityManager{public int moved=-1,count;public boolean denied;public void moveTaskToFront(int id,int flags){if(denied)throw new SecurityException("fixture");moved=id;count++;}}

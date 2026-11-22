@@ -1,0 +1,1 @@
+package android.graphics;public class Paint {public enum Style{FILL,STROKE}public enum Join{ROUND}public enum Cap{ROUND}public Paint(int f){}public void setStyle(Style s){}public void setColor(int c){}public void setStrokeWidth(float w){}public void setStrokeJoin(Join j){}public void setStrokeCap(Cap c){}}

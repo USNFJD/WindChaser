@@ -1,0 +1,23 @@
+Memory optimizations: real Android UI/bitmap/service execution; synthetic QQ metadata.
+PASS pixel plans keep crops inside source and final allocation inside measured bounds
+PASS real region decode preserves center crop at 200x200
+PASS real fit-center decode keeps source aspect ratio
+PASS center mode keeps original pixels instead of scaling entire source
+PASS same-settings render reuses both home pages and their music controls
+PASS repeated home-page switches reuse controls and leave hidden grid data unchanged
+PASS actual style change still rebuilds measured layout
+PASS music session shares one bridge and cover and uses application context
+PASS all paused clients stop tick and one resume restarts it
+PASS wallpaper keeps only a bitmap matching its actual 300x180 layout
+PASS settings/file/device/weather backgrounds reuse measured default view and ignore custom wallpaper
+PASS same-size default backgrounds share live pixels without owning each other's lifetime
+PASS startup artwork and QQ home redraw reuse resources while bounds changes still update geometry
+PASS disposed wallpaper rejects late decode and releases drawable references
+PASS floating controller joins existing session instead of creating a second receiver
+PASS one native-style state event updates desktop and floating controller
+PASS one cached cover decode serves desktop and floating art at their measured dimensions
+PASS hidden music page does not retain a separate cover reference
+PASS closing floating controller leaves desktop session and controls alive
+PASS destroying desktop clears page tree without stopping active floating music
+PASS last client close unregisters state receiver and releases shared cover
+RESULT memory checks=21 passed=21 failed=0 assertions=940

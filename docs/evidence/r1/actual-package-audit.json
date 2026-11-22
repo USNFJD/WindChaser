@@ -1,0 +1,69 @@
+{
+  "dual_splash_before_artwork_unchanged": true,
+  "companion_build_audit": [
+    {
+      "package": "map",
+      "base_apk_sha256": "1acbf564a83dfba711954361d229292c4f58772a0a4c97a6645b041aa47dfafb",
+      "apk_sha256": "64054aa148fe4a12b661e402acb1f095840fff90d36e8f2426889aaff312553d",
+      "bytes": 82288341,
+      "changed_entries": [
+        "classes.dex"
+      ],
+      "native_count": 60,
+      "manifest_ui_resources_native_binaries_unchanged": true,
+      "physical_car_verified": false,
+      "commercial_engine_runtime_tested": false
+    },
+    {
+      "package": "qq",
+      "base_apk_sha256": "1a33d6f6d640b134b33f5d5bdc0b1080c06b96d554362f7a29eb684f39341733",
+      "apk_sha256": "876dc2fb4df59a502d0b18ba4f774f9590c7a3dbe6a2f00fd204a8afddb03fce",
+      "bytes": 20095435,
+      "changed_entries": [
+        "classes3.dex"
+      ],
+      "native_count": 44,
+      "manifest_ui_resources_native_binaries_unchanged": true,
+      "physical_car_verified": false,
+      "commercial_engine_runtime_tested": false
+    }
+  ],
+  "independent_archive_audit": [
+    {
+      "file": "QQMusicCar-2.1.1.1-WindChaser-R1.apk",
+      "identical_archive_entry_names": true,
+      "protected_entries_checked": 2400,
+      "changed_protected_entries": [],
+      "changed_payload_entries": [
+        "classes3.dex"
+      ],
+      "changed_payload_expected": true
+    },
+    {
+      "file": "AmapAuto-6.5.0.601323-WindChaser-R1.apk",
+      "identical_archive_entry_names": true,
+      "protected_entries_checked": 1640,
+      "changed_protected_entries": [],
+      "changed_payload_entries": [
+        "classes.dex"
+      ],
+      "changed_payload_expected": true
+    }
+  ],
+  "qq_business_class_comparison": {
+    "input_core_classes": 19587,
+    "output_core_classes": 19587,
+    "changed_core_classes": [],
+    "extra_core_classes": [],
+    "all_unchanged": true
+  },
+  "map_business_class_comparison": {
+    "classes_before": 6230,
+    "classes_after": 6230,
+    "changed": [],
+    "added": []
+  },
+  "git_head": "77cc52182840437a7715ec8e5e362d590cec6a6e",
+  "no_commit_created": true,
+  "no_remote_operations_performed": true
+}

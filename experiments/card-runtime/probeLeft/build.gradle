@@ -1,0 +1,8 @@
+plugins { id 'com.android.application' }
+android {
+    namespace 'cn.hydrogen.probe'
+    compileSdk 35
+    defaultConfig { applicationId 'cn.hydrogen.probe.left'; minSdk 19; targetSdk 19; versionCode 1; versionName '1.0'; manifestPlaceholders = [probeLabel:'Left probe'] }
+    sourceSets { main { manifest.srcFile '../probe/AndroidManifest.xml'; java.srcDirs = ['../probe/java'] } }
+    compileOptions { sourceCompatibility JavaVersion.VERSION_1_8; targetCompatibility JavaVersion.VERSION_1_8 }
+}

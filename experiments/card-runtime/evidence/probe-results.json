@@ -1,0 +1,24 @@
+{
+  "run_id": "probe-daadc66fc6db488c9c0eb940f59fb6bb",
+  "serial": "emulator-5584",
+  "sdk": 19,
+  "shell_identity": "uid=2000(shell) gid=2000(shell)",
+  "adbd_identity": "uid=0(root) gid=0(root)",
+  "host_apk_sha256": "96d022c48d15e86f64367da74da7886ea932a79dce41a1fc940ad910c2325ab1",
+  "checks": {
+    "independent_clicks": true,
+    "left_surface_updates": true,
+    "right_surface_updates": true,
+    "touch_resumes_left": true,
+    "touch_resumes_right": true,
+    "second_activity_returns_and_other_card_works": true,
+    "no_java_crash_in_run": true,
+    "probes_not_system_installed": true,
+    "dialogs_and_text_input": "screenshots require visual inspection; not auto-passed",
+    "software_keyboard_verified": false,
+    "exit_removes_guest_windows": true
+  },
+  "original_amap_qq_verified": false,
+  "whole_screen_scaling_verified": false,
+  "physical_unrooted_car_verified": false
+}

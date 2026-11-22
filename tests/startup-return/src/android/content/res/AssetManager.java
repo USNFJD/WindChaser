@@ -1,0 +1,1 @@
+package android.content.res;import java.io.*;public class AssetManager {String pkg;public AssetManager(String p){pkg=p;}public InputStream open(String name)throws IOException{return new ByteArrayInputStream(("{\"protocol\":1,\"package\":\""+pkg+"\"}").getBytes("UTF-8"));}}

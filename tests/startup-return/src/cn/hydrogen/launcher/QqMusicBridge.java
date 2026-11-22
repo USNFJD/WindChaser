@@ -1,0 +1,1 @@
+package cn.hydrogen.launcher;import android.content.*;public class QqMusicBridge{public static Intent subscriptionIntent(){return new Intent("com.tencent.qqmusiccar.action").setComponent(new ComponentName(Config.MUSIC,"com.tencent.qqmusiccar.app.reciver.BroadcastReceiverCenterForThird")).putExtra("action",100);}}

@@ -1,0 +1,35 @@
+{
+  "apks": [
+    {
+      "file": "AmapAuto-6.5.0.601323-WindChaser-R1.apk",
+      "sha256": "64054aa148fe4a12b661e402acb1f095840fff90d36e8f2426889aaff312553d",
+      "bytes": 82288341,
+      "api19SignatureVerified": true,
+      "zipaligned": true,
+      "certificate": "8b4f8e84026a5ac5ad75b4a0f34d21bd81957e4fb38dd80b7fe0c1537e66e7d8",
+      "debuggable": false
+    },
+    {
+      "file": "QQMusicCar-2.1.1.1-WindChaser-R1.apk",
+      "sha256": "876dc2fb4df59a502d0b18ba4f774f9590c7a3dbe6a2f00fd204a8afddb03fce",
+      "bytes": 20095435,
+      "api19SignatureVerified": true,
+      "zipaligned": true,
+      "certificate": "8b4f8e84026a5ac5ad75b4a0f34d21bd81957e4fb38dd80b7fe0c1537e66e7d8",
+      "debuggable": false
+    },
+    {
+      "file": "WindChaser-1.0.1-R1.apk",
+      "sha256": "30d673bdb01b1b9448f9049771207d917bd196192078ccb1169aff300288c730",
+      "bytes": 4832462,
+      "api19SignatureVerified": true,
+      "zipaligned": true,
+      "certificate": "8b4f8e84026a5ac5ad75b4a0f34d21bd81957e4fb38dd80b7fe0c1537e66e7d8",
+      "debuggable": false
+    }
+  ],
+  "readme_installation_notice": true,
+  "readme_functions_only": true,
+  "source_hashes_match": true,
+  "default_city": "北京市"
+}

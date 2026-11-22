@@ -1,0 +1,1 @@
+package cn.windchaser.startup;public class DualSplash {static final String PERMISSION="fixture.signature";static boolean interfaceForeground(){return true;}static boolean contentInitialized(){return true;}}

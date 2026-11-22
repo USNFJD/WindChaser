@@ -1,0 +1,1 @@
+package com.tencent.qqmusicplayerprocess.service;public interface b extends android.os.IInterface{int o3()throws Exception;}

@@ -1,0 +1,29 @@
+[
+  {
+    "file": "WindChaser-1.0.1-R1.apk",
+    "package": "cn.hydrogen.launcher",
+    "versionCode": 32,
+    "versionName": "1.0.1",
+    "bytes": 4848923,
+    "sha256": "f759ee94c44212c31c3e5dee6bfe32f0903f54afec8adc48667a02646057eddf",
+    "certificate": "8b4f8e84026a5ac5ad75b4a0f34d21bd81957e4fb38dd80b7fe0c1537e66e7d8"
+  },
+  {
+    "file": "AmapAuto-6.5.0.601323-WindChaser-R1.apk",
+    "package": "com.autonavi.amapauto",
+    "versionCode": 15000001,
+    "versionName": "6.5.0.601323",
+    "bytes": 82292437,
+    "sha256": "3147975ebb6338ad9c83a265206fc76afbcfd4748821fa93d158d8137f70e502",
+    "certificate": "8b4f8e84026a5ac5ad75b4a0f34d21bd81957e4fb38dd80b7fe0c1537e66e7d8"
+  },
+  {
+    "file": "QQMusicCar-2.1.1.1-WindChaser-R1.apk",
+    "package": "com.tencent.qqmusiccar",
+    "versionCode": 48,
+    "versionName": "2.1.1.1",
+    "bytes": 20095435,
+    "sha256": "4deae6ffff26ffb7dd3324068c00902e7d206e5f83dba7704e3b5169e06c2ff5",
+    "certificate": "8b4f8e84026a5ac5ad75b4a0f34d21bd81957e4fb38dd80b7fe0c1537e66e7d8"
+  }
+]

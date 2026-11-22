@@ -1,0 +1,61 @@
+--------- beginning of /dev/log/system
+10-22 23:50:08.081 E/AndroidRuntime( 2028): FATAL EXCEPTION: main
+10-22 23:50:08.081 E/AndroidRuntime( 2028): Process: cn.hydrogen.cardlab:PluginP01, PID: 2028
+10-22 23:50:08.081 E/AndroidRuntime( 2028): java.lang.RuntimeException: Unable to instantiate activity ComponentInfo{cn.hydrogen.probe.left/cn.hydrogen.probe.leftcn.hydrogen.probe.ProbeActivity}: java.lang.ClassNotFoundException: Didn't find class "cn.hydrogen.probe.leftcn.hydrogen.probe.ProbeActivity" on path: DexPathList[[zip file "/data/data/cn.hydrogen.cardlab/Plugin/cn.hydrogen.probe.left/apk/base-1.apk"],nativeLibraryDirectories=[/data/data/cn.hydrogen.cardlab/Plugin/cn.hydrogen.probe.left/lib, /system/lib]]
+10-22 23:50:08.081 E/AndroidRuntime( 2028): 	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2121)
+10-22 23:50:08.081 E/AndroidRuntime( 2028): 	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:2245)
+10-22 23:50:08.081 E/AndroidRuntime( 2028): 	at android.app.ActivityThread.access$800(ActivityThread.java:135)
+10-22 23:50:08.081 E/AndroidRuntime( 2028): 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1196)
+10-22 23:50:08.081 E/AndroidRuntime( 2028): 	at android.os.Handler.dispatchMessage(Handler.java:102)
+10-22 23:50:08.081 E/AndroidRuntime( 2028): 	at android.os.Looper.loop(Looper.java:136)
+10-22 23:50:08.081 E/AndroidRuntime( 2028): 	at android.app.ActivityThread.main(ActivityThread.java:5017)
+10-22 23:50:08.081 E/AndroidRuntime( 2028): 	at java.lang.reflect.Method.invokeNative(Native Method)
+10-22 23:50:08.081 E/AndroidRuntime( 2028): 	at java.lang.reflect.Method.invoke(Method.java:515)
+10-22 23:50:08.081 E/AndroidRuntime( 2028): 	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:779)
+10-22 23:50:08.081 E/AndroidRuntime( 2028): 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:595)
+10-22 23:50:08.081 E/AndroidRuntime( 2028): 	at dalvik.system.NativeStart.main(Native Method)
+10-22 23:50:08.081 E/AndroidRuntime( 2028): Caused by: java.lang.ClassNotFoundException: Didn't find class "cn.hydrogen.probe.leftcn.hydrogen.probe.ProbeActivity" on path: DexPathList[[zip file "/data/data/cn.hydrogen.cardlab/Plugin/cn.hydrogen.probe.left/apk/base-1.apk"],nativeLibraryDirectories=[/data/data/cn.hydrogen.cardlab/Plugin/cn.hydrogen.probe.left/lib, /system/lib]]
+10-22 23:50:08.081 E/AndroidRuntime( 2028): 	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:56)
+10-22 23:50:08.081 E/AndroidRuntime( 2028): 	at java.lang.ClassLoader.loadClass(ClassLoader.java:497)
+10-22 23:50:08.081 E/AndroidRuntime( 2028): 	at com.morgoo.droidplugin.core.PluginClassLoader.loadClass(PluginClassLoader.java:74)
+10-22 23:50:08.081 E/AndroidRuntime( 2028): 	at java.lang.ClassLoader.loadClass(ClassLoader.java:457)
+10-22 23:50:08.081 E/AndroidRuntime( 2028): 	at android.app.Instrumentation.newActivity(Instrumentation.java:1061)
+10-22 23:50:08.081 E/AndroidRuntime( 2028): 	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2112)
+10-22 23:50:08.081 E/AndroidRuntime( 2028): 	... 11 more
+--------- beginning of /dev/log/main
+10-23 00:02:50.841 I/CardLab ( 3355): REGISTER cn.hydrogen.probe.left activity=cn.hydrogen.probe.DetailActivity token=android.os.BinderProxy@a8fbd090 uid=10054
+10-23 00:04:20.751 I/CardLab ( 3731): RUN probe-4961787f740a4a3aabae049943e30283
+10-23 00:04:20.831 I/CardLab ( 3731): PARENT uid=10054 token=android.view.ViewRootImpl$W@a8fda258 left=[21, 89, 614, 568] right=[645, 89, 614, 568]
+10-23 00:04:21.501 I/CardLab ( 3731): PARENT uid=10054 token=android.view.ViewRootImpl$W@a8fda258 left=[21, 89, 614, 568] right=[645, 89, 614, 568]
+10-23 00:04:21.501 I/CardLab ( 3731): APK cn.hydrogen.probe.left SHA256=b38143c406c5c40e93c6d2e8595f234d97458847fd711497e88b1293d449eff9
+10-23 00:04:21.501 I/CardLab ( 3731): 导入 cn.hydrogen.probe.left
+10-23 00:04:21.531 I/CardLab ( 3731): IMPORT cn.hydrogen.probe.left result=1
+10-23 00:04:21.731 I/CardLab ( 3769): REGISTER cn.hydrogen.probe.left activity=cn.hydrogen.probe.ProbeActivity token=android.os.BinderProxy@a8f8ca00 uid=10054
+10-23 00:04:21.741 I/CardLab ( 3769): BOUND cn.hydrogen.probe.left bounds=[21, 89, 614, 568]
+10-23 00:04:22.281 I/CardLab ( 3731): PARENT uid=10054 token=android.view.ViewRootImpl$W@a8fda258 left=[21, 89, 614, 568] right=[645, 89, 614, 568]
+10-23 00:04:22.281 I/CardLab ( 3731): APK cn.hydrogen.probe.right SHA256=41b88cbfac73cbc97ce9d6911394ade59449c6cc564e1ac592444254f9c5bd9b
+10-23 00:04:22.281 I/CardLab ( 3731): 导入 cn.hydrogen.probe.right
+10-23 00:04:22.291 I/CardLab ( 3731): IMPORT cn.hydrogen.probe.right result=1
+10-23 00:04:22.411 I/CardLab ( 3805): REGISTER cn.hydrogen.probe.right activity=cn.hydrogen.probe.ProbeActivity token=android.os.BinderProxy@a8f82c18 uid=10054
+10-23 00:04:22.411 I/CardLab ( 3805): BOUND cn.hydrogen.probe.right bounds=[645, 89, 614, 568]
+10-23 00:04:26.521 I/CardLab ( 3769): REGISTER cn.hydrogen.probe.left activity=cn.hydrogen.probe.DetailActivity token=android.os.BinderProxy@a8ff3a90 uid=10054
+10-23 00:05:29.521 I/CardLab ( 4084): RUN abi-guard-amap
+10-23 00:05:29.591 I/CardLab ( 4084): PARENT uid=10054 token=android.view.ViewRootImpl$W@a9044b98 left=[21, 89, 614, 568] right=[645, 89, 614, 568]
+10-23 00:05:29.591 I/CardLab ( 4084): PARENT uid=10054 token=android.view.ViewRootImpl$W@a9044b98 left=[21, 89, 614, 568] right=[645, 89, 614, 568]
+10-23 00:05:29.821 I/CardLab ( 4084): APK com.autonavi.amapauto SHA256=7daa40731d4f1bf2b1e521280bc031e5892c48f9092d918ded12da963b7c3950
+10-23 00:05:29.861 E/CardLab ( 4084): import failed
+10-23 00:05:29.861 E/CardLab ( 4084): java.lang.IllegalStateException: APK native ABI=[armeabi-v7a], device=x86/unknown；当前环境无法验证
+10-23 00:05:29.861 E/CardLab ( 4084): 	at cn.hydrogen.cardlab.LabActivity.lambda$importApk$14$cn-hydrogen-cardlab-LabActivity(LabActivity.java:138)
+10-23 00:05:29.861 E/CardLab ( 4084): 	at cn.hydrogen.cardlab.LabActivity$$ExternalSyntheticLambda7.run(D8$$SyntheticClass:0)
+10-23 00:05:29.861 E/CardLab ( 4084): 	at java.lang.Thread.run(Thread.java:841)
+10-23 00:05:29.861 I/CardLab ( 4084): 失败: java.lang.IllegalStateException: APK native ABI=[armeabi-v7a], device=x86/unknown；当前环境无法验证
+10-23 00:05:32.571 I/CardLab ( 4139): RUN abi-guard-qq
+10-23 00:05:32.651 I/CardLab ( 4139): PARENT uid=10054 token=android.view.ViewRootImpl$W@a8fcd598 left=[21, 89, 614, 568] right=[645, 89, 614, 568]
+10-23 00:05:32.651 I/CardLab ( 4139): PARENT uid=10054 token=android.view.ViewRootImpl$W@a8fcd598 left=[21, 89, 614, 568] right=[645, 89, 614, 568]
+10-23 00:05:32.711 I/CardLab ( 4139): APK com.tencent.qqmusiccar SHA256=0c8e4abf05741c81e14c06c2aaba5996c846a5c6abbe741ae79e9d0bc016459f
+10-23 00:05:32.741 E/CardLab ( 4139): import failed
+10-23 00:05:32.741 E/CardLab ( 4139): java.lang.IllegalStateException: APK native ABI=[armeabi-v7a], device=x86/unknown；当前环境无法验证
+10-23 00:05:32.741 E/CardLab ( 4139): 	at cn.hydrogen.cardlab.LabActivity.lambda$importApk$14$cn-hydrogen-cardlab-LabActivity(LabActivity.java:138)
+10-23 00:05:32.741 E/CardLab ( 4139): 	at cn.hydrogen.cardlab.LabActivity$$ExternalSyntheticLambda7.run(D8$$SyntheticClass:0)
+10-23 00:05:32.741 E/CardLab ( 4139): 	at java.lang.Thread.run(Thread.java:841)
+10-23 00:05:32.741 I/CardLab ( 4139): 失败: java.lang.IllegalStateException: APK native ABI=[armeabi-v7a], device=x86/unknown；当前环境无法验证

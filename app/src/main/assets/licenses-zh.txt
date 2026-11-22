@@ -1,0 +1,50 @@
+追风桌面 · 开源组件与许可说明
+
+本页为中文阅读说明。各组件的版权声明、许可条件及完整原文可通过下方“查看许可原文”按钮阅读，随安装包保留。中文说明不替代原许可条款。
+
+一、加密与网络连接
+
+Conscrypt Android 2.5.3
+用途：为旧版 Android 提供现代 TLS 加密连接。
+许可：Apache License 2.0。
+允许按许可使用、修改和再分发；分发时应保留许可及适用的版权声明、修改说明和通知。该许可含相应专利授权，不提供商标授权，组件按原样提供。
+项目：https://github.com/google/conscrypt/tree/2.5.3
+
+Conscrypt 随附的 BoringSSL、OpenSSL 及其他来源代码，按其各自声明和许可提供。Netty 与 Apache Harmony 的相关声明也保留在原文中，不能用 Conscrypt 的许可概括所有第三方代码。
+
+二、天气与地理信息
+
+Open-Meteo 天气数据、GeoNames 地理名称
+许可：知识共享署名 4.0 国际许可（CC BY 4.0）。
+在遵守署名、许可链接和修改说明等要求的前提下，可以分享和改编。天气为数据服务提供的估计值；桌面显示数据来源。
+天气许可：https://open-meteo.com/en/licence
+地名说明：https://www.geonames.org/about.html
+
+三、证书
+
+ISRG Root X1
+用途：验证 HTTPS 服务端证书的公开信任锚。
+证书与相关声明来源：https://letsencrypt.org/certificates/
+
+DigiCert Global Root G2
+用途：为旧安卓系统验证 QQ音乐封面 CDN 的 HTTPS 证书链。
+公开根证书来源：https://cacerts.digicert.com/DigiCertGlobalRootG2.crt.pem
+SHA-256（DER）：CB3CCBB76031E5E0138F8DD39A23F9DE47FFC35E43C1144CEA27D46A5AB1CB5F
+
+四、实验应用容器
+
+DroidPlugin 与工程中的实验容器适配
+用途：在本整合实验包中提供私有应用运行环境；不代表 QQ音乐或高德已在所有系统上完整兼容。
+随附 GNU 宽通用公共许可证（LGPL）第 3 版及 GNU 通用公共许可证（GPL）第 3 版文本，具体适用范围和版权声明见原文及对应源码。
+再分发受这些许可约束的组件或修改版时，应遵守适用的源码提供、许可保留、修改说明及其他要求；相应权利不因本中文说明而减少。
+交付的完整工程包含对应源码、修改和许可文件，位于 experiments/card-runtime/。
+
+五、其他说明
+
+第三方组件按其许可提供，不保证适用于所有车机固件。QQ音乐、高德地图等商业应用不包含在桌面开源组件内，其商标、账号、应用许可与服务条款由各自权利人管理。
+
+如需核对完整版权或具体再分发条件，请查看随附许可原文与完整工程中的声明文件。
+
+六、AndroidHiddenApiBypass 6.1
+
+作者：LSPosed / AndroidHiddenApiBypass 项目。用途：新版 Android 平台接口兼容。采用 Apache License 2.0；许可原文随本应用提供。未授予 Root 或系统权限。

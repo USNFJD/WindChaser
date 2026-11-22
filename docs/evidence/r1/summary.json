@@ -1,0 +1,6 @@
+{
+  "platform": "JVM Android test stubs; not Android/commercial engine execution",
+  "scenarios": 75,
+  "assertions": 283,
+  "all_passed": true
+}

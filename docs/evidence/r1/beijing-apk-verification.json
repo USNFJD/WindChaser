@@ -1,0 +1,13 @@
+{
+  "file": "WindChaser-1.0.1-R1.apk",
+  "package": "cn.hydrogen.launcher",
+  "versionCode": 31,
+  "versionName": "1.0.1",
+  "bytes": 4832462,
+  "sha256": "30d673bdb01b1b9448f9049771207d917bd196192078ccb1169aff300288c730",
+  "certificate": "8b4f8e84026a5ac5ad75b4a0f34d21bd81957e4fb38dd80b7fe0c1537e66e7d8",
+  "zipaligned": true,
+  "api19SignatureVerified": true,
+  "debuggable": false,
+  "testFixturesExcluded": true
+}

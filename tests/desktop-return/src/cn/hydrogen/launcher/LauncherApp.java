@@ -1,0 +1,1 @@
+package cn.hydrogen.launcher;final class LauncherApp{static void record(String m,Throwable t){}}

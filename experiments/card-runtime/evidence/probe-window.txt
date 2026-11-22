@@ -1,0 +1,281 @@
+WINDOW MANAGER WINDOWS (dumpsys window windows)
+  Window #9 Window{a9241ca0 u0 SearchPanel}:
+    mDisplayId=0 mSession=Session{a92749c0 1603:u0a10007} mClient=android.os.BinderProxy@a91f7268
+    mOwnerUid=10007 mShowToOwnerOnly=false package=com.android.systemui appop=NONE
+    mAttrs=WM.LayoutParams{(0,0)(fillxfill) gr=#800053 sim=#31 ty=2024 fl=#1820100 fmt=-3 wanim=0x10301f5}
+    Requested w=1280 h=672 mLayoutSeq=27
+    mBaseLayer=211000 mSubLayer=0 mAnimLayer=211000+0=211000 mLastLayer=0
+    mToken=WindowToken{a9218d10 null}
+    mRootToken=WindowToken{a9218d10 null}
+    mViewVisibility=0x8 mHaveFrame=true mObscured=false
+    mSeq=0 mSystemUiVisibility=0x0
+    mGivenContentInsets=[0,0][0,0] mGivenVisibleInsets=[0,0][0,0]
+    mConfiguration=null
+    mHasSurface=false mShownFrame=[0.0,0.0][0.0,0.0] isReadyForDisplay()=false
+    mFrame=[0,0][1280,720] last=[0,0][0,0]
+    mSystemDecorRect=[0,0][0,0] last=[0,0][0,0]
+    Frames: containing=[0,0][1280,720] parent=[0,0][1280,720]
+        display=[0,0][1280,720] overscan=[0,0][1280,720]
+        content=[0,25][1280,672] visible=[0,25][1280,672]
+        decor=[0,0][1280,720]
+    Cur insets: overscan=[0,0][0,0] content=[0,25][0,48] visible=[0,25][0,48]
+    Lst insets: overscan=[0,0][0,0] content=[0,0][0,0] visible=[0,0][0,0]
+    WindowStateAnimator{a9261040 SearchPanel}:
+      mShownAlpha=0.0 mAlpha=1.0 mLastAlpha=0.0
+  Window #8 Window{a91ed738 u0 NavigationBar}:
+    mDisplayId=0 mSession=Session{a92749c0 1603:u0a10007} mClient=android.os.BinderProxy@a9261870
+    mOwnerUid=10007 mShowToOwnerOnly=false package=com.android.systemui appop=NONE
+    mAttrs=WM.LayoutParams{(0,0)(fillxfill) sim=#20 ty=2019 fl=#1840068 fmt=-3}
+    Requested w=1280 h=48 mLayoutSeq=92
+    mBaseLayer=201000 mSubLayer=0 mAnimLayer=201000+0=201000 mLastLayer=201000
+    mToken=WindowToken{a9218d10 null}
+    mRootToken=WindowToken{a9218d10 null}
+    mViewVisibility=0x0 mHaveFrame=true mObscured=false
+    mSeq=0 mSystemUiVisibility=0x0
+    mGivenContentInsets=[0,0][0,0] mGivenVisibleInsets=[0,0][0,0]
+    mConfiguration={1.0 310mcc260mnc en_US ldltr sw720dp w1280dp h647dp 160dpi lrg long land finger qwerty/v/v tball/v s.6}
+    mHasSurface=true mShownFrame=[0.0,672.0][1280.0,720.0] isReadyForDisplay()=true
+    mFrame=[0,672][1280,720] last=[0,672][1280,720]
+    mSystemDecorRect=[0,0][1280,48] last=[0,0][1280,48]
+    Frames: containing=[0,672][1280,720] parent=[0,672][1280,720]
+        display=[0,672][1280,720] overscan=[0,672][1280,720]
+        content=[0,672][1280,720] visible=[0,672][1280,720]
+        decor=[0,0][0,0]
+    Cur insets: overscan=[0,0][0,0] content=[0,0][0,0] visible=[0,0][0,0]
+    Lst insets: overscan=[0,0][0,0] content=[0,0][0,0] visible=[0,0][0,0]
+    WindowStateAnimator{a925ce70 NavigationBar}:
+      mAnimating=false mLocalAnimating=false mAnimationIsEntrance=true mAnimation=null
+      mSurface=Surface(name=NavigationBar)
+      mDrawState=HAS_DRAWN mLastHidden=false
+      Surface: shown=true layer=201000 alpha=1.0 rect=(0.0,672.0) 1280.0 x 48.0
+  Window #7 Window{a9279760 u0 StatusBar}:
+    mDisplayId=0 mSession=Session{a92749c0 1603:u0a10007} mClient=android.os.BinderProxy@a91fc0a0
+    mOwnerUid=10007 mShowToOwnerOnly=false package=com.android.systemui appop=NONE
+    mAttrs=WM.LayoutParams{(0,0)(fillx25) gr=#37 sim=#20 ty=2000 fl=#1840048 fmt=-3}
+    Requested w=1280 h=25 mLayoutSeq=92
+    mBaseLayer=161000 mSubLayer=0 mAnimLayer=161000+0=161000 mLastLayer=161000
+    mToken=WindowToken{a9218d10 null}
+    mRootToken=WindowToken{a9218d10 null}
+    mViewVisibility=0x0 mHaveFrame=true mObscured=false
+    mSeq=0 mSystemUiVisibility=0x0
+    mPolicyVisibility=false mPolicyVisibilityAfterAnim=false mAppOpVisibility=true mAttachedHidden=false
+    mGivenContentInsets=[0,0][0,0] mGivenVisibleInsets=[0,0][0,0]
+    mConfiguration={1.0 310mcc260mnc en_US ldltr sw720dp w1280dp h647dp 160dpi lrg long land finger qwerty/v/v tball/v s.6}
+    mHasSurface=true mShownFrame=[0.0,0.0][1280.0,25.0] isReadyForDisplay()=false
+    mFrame=[0,0][1280,25] last=[0,0][1280,25]
+    mSystemDecorRect=[0,0][1280,25] last=[0,0][1280,25]
+    Frames: containing=[0,0][1280,720] parent=[0,0][1280,720]
+        display=[0,0][1280,720] overscan=[0,0][1280,672]
+        content=[0,0][1280,25] visible=[0,0][1280,25]
+        decor=[0,0][0,0]
+    Cur insets: overscan=[0,0][0,0] content=[0,0][0,0] visible=[0,0][0,0]
+    Lst insets: overscan=[0,0][0,0] content=[0,0][0,0] visible=[0,0][0,0]
+    WindowStateAnimator{a9261a18 StatusBar}:
+      mSurface=Surface(name=StatusBar)
+      mDrawState=HAS_DRAWN mLastHidden=true
+      Surface: shown=false layer=161000 alpha=1.0 rect=(0.0,0.0) 1280.0 x 25.0
+  Window #6 Window{a92158a0 u0 KeyguardScrim}:
+    mDisplayId=0 mSession=Session{a90fc3a0 1549:1000} mClient=android.view.ViewRootImpl$W@a91ad7f8
+    mOwnerUid=1000 mShowToOwnerOnly=false package=android appop=NONE
+    mAttrs=WM.LayoutParams{(0,0)(fillxfill) sim=#10 ty=2029 fl=#110900 fmt=-3 or=5 vsysui=0x3610000}
+    Requested w=1280 h=672 mLayoutSeq=3
+    mBaseLayer=121000 mSubLayer=0 mAnimLayer=121000+0=121000 mLastLayer=0
+    mToken=WindowToken{a9218d10 null}
+    mRootToken=WindowToken{a9218d10 null}
+    mViewVisibility=0x8 mHaveFrame=true mObscured=false
+    mSeq=0 mSystemUiVisibility=0x3610000
+    mGivenContentInsets=[0,0][0,0] mGivenVisibleInsets=[0,0][0,0]
+    mConfiguration=null
+    mHasSurface=false mShownFrame=[0.0,0.0][0.0,0.0] isReadyForDisplay()=false
+    mFrame=[0,0][1280,720] last=[0,0][0,0]
+    mSystemDecorRect=[0,0][0,0] last=[0,0][0,0]
+    Frames: containing=[0,0][1280,720] parent=[0,0][1280,720]
+        display=[0,0][1280,720] overscan=[0,0][1280,720]
+        content=[0,0][1280,720] visible=[0,0][1280,720]
+        decor=[0,0][1280,720]
+    Cur insets: overscan=[0,0][0,0] content=[0,0][0,0] visible=[0,0][0,0]
+    Lst insets: overscan=[0,0][0,0] content=[0,0][0,0] visible=[0,0][0,0]
+    WindowStateAnimator{a91c0228 KeyguardScrim}:
+      mShownAlpha=0.0 mAlpha=1.0 mLastAlpha=0.0
+  Window #5 Window{a92eec58 u0 CardLab/cn.hydrogen.probe.right}:
+    mDisplayId=0 mSession=Session{a9175d80 2150:u0a10054} mClient=android.os.BinderProxy@a90f1fb0
+    mOwnerUid=10054 mShowToOwnerOnly=true package=cn.hydrogen.cardlab appop=NONE
+    mAttrs=WM.LayoutParams{(645,89)(614x568) gr=#33 sim=#120 ty=1 fl=#1810120 pfl=0x8 fmt=-3}
+    Requested w=614 h=568 mLayoutSeq=92
+    mBaseLayer=21000 mSubLayer=0 mAnimLayer=21025+0=21025 mLastLayer=21025
+    mToken=AppWindowToken{a92c3a28 token=Token{a92573a8 ActivityRecord{a92680d8 u0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P02$Standard00 t4}}}
+    mRootToken=AppWindowToken{a92c3a28 token=Token{a92573a8 ActivityRecord{a92680d8 u0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P02$Standard00 t4}}}
+    mAppToken=AppWindowToken{a92c3a28 token=Token{a92573a8 ActivityRecord{a92680d8 u0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P02$Standard00 t4}}}
+    mViewVisibility=0x0 mHaveFrame=true mObscured=false
+    mSeq=0 mSystemUiVisibility=0x0
+    mGivenContentInsets=[0,0][0,0] mGivenVisibleInsets=[0,0][0,0]
+    mConfiguration={1.0 310mcc260mnc en_US ldltr sw720dp w1280dp h647dp 160dpi lrg long land finger qwerty/v/v tball/v s.6}
+    mHasSurface=true mShownFrame=[645.0,89.0][1259.0,657.0] isReadyForDisplay()=true
+    mFrame=[645,89][1259,657] last=[645,89][1259,657]
+    mSystemDecorRect=[0,0][614,568] last=[0,0][614,568]
+    Frames: containing=[0,0][1280,672] parent=[0,0][1280,672]
+        display=[0,0][1280,672] overscan=[0,0][1280,720]
+        content=[645,89][1259,657] visible=[645,89][1259,657]
+        decor=[0,25][1280,672]
+    Cur insets: overscan=[0,0][0,0] content=[0,0][0,0] visible=[0,0][0,0]
+    Lst insets: overscan=[0,0][0,0] content=[0,0][0,0] visible=[0,0][0,0]
+    WindowStateAnimator{a92ad250 CardLab/cn.hydrogen.probe.right}:
+      mSurface=Surface(name=CardLab/cn.hydrogen.probe.right)
+      mDrawState=HAS_DRAWN mLastHidden=false
+      Surface: shown=true layer=21025 alpha=1.0 rect=(645.0,89.0) 614.0 x 568.0
+  Window #4 Window{a933fdf8 u0 SurfaceView}:
+    mDisplayId=0 mSession=Session{a9175d80 2150:u0a10054} mClient=android.os.BinderProxy@a9031f58
+    mOwnerUid=10054 mShowToOwnerOnly=true package=cn.hydrogen.cardlab appop=NONE
+    mAttrs=WM.LayoutParams{(12,244)(590x316) gr=#800033 ty=1001 fl=#4218 pfl=0x40 fmt=4}
+    Requested w=590 h=316 mLayoutSeq=92
+    mAttachedWindow=Window{a92eec58 u0 CardLab/cn.hydrogen.probe.right} mLayoutAttached=true
+    mBaseLayer=21000 mSubLayer=-2 mAnimLayer=21020+0=21020 mLastLayer=21020
+    mToken=WindowToken{a911e700 android.os.BinderProxy@a90f1fb0}
+    mRootToken=AppWindowToken{a92c3a28 token=Token{a92573a8 ActivityRecord{a92680d8 u0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P02$Standard00 t4}}}
+    mAppToken=AppWindowToken{a92c3a28 token=Token{a92573a8 ActivityRecord{a92680d8 u0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P02$Standard00 t4}}}
+    mViewVisibility=0x0 mHaveFrame=true mObscured=false
+    mSeq=0 mSystemUiVisibility=0x0
+    mGivenContentInsets=[0,0][0,0] mGivenVisibleInsets=[0,0][0,0]
+    mConfiguration={1.0 310mcc260mnc en_US ldltr sw720dp w1280dp h647dp 160dpi lrg long land finger qwerty/v/v tball/v s.6}
+    mHasSurface=true mShownFrame=[657.0,333.0][1247.0,649.0] isReadyForDisplay()=true
+    mFrame=[657,333][1247,649] last=[657,333][1247,649]
+    mSystemDecorRect=[0,0][590,316] last=[0,0][590,316]
+    Frames: containing=[645,89][1259,657] parent=[645,89][1259,657]
+        display=[-10000,-10000][10000,10000] overscan=[-10000,-10000][10000,10000]
+        content=[657,333][1247,649] visible=[657,333][1247,649]
+        decor=[0,0][1280,672]
+    Cur insets: overscan=[0,0][0,0] content=[0,0][0,0] visible=[0,0][0,0]
+    Lst insets: overscan=[0,0][0,0] content=[0,0][0,0] visible=[0,0][0,0]
+    WindowStateAnimator{a923b750 SurfaceView}:
+      mSurface=Surface(name=SurfaceView)
+      mDrawState=HAS_DRAWN mLastHidden=false
+      Surface: shown=true layer=21020 alpha=1.0 rect=(657.0,333.0) 590.0 x 316.0
+  Window #3 Window{a92a56e8 u0 CardLab/cn.hydrogen.probe.left}:
+    mDisplayId=0 mSession=Session{a911a658 2116:u0a10054} mClient=android.os.BinderProxy@a90a24a0
+    mOwnerUid=10054 mShowToOwnerOnly=true package=cn.hydrogen.cardlab appop=NONE
+    mAttrs=WM.LayoutParams{(21,89)(614x568) gr=#33 sim=#120 ty=1 fl=#1810120 pfl=0x8 fmt=-3}
+    Requested w=614 h=568 mLayoutSeq=92
+    mBaseLayer=21000 mSubLayer=0 mAnimLayer=21015+0=21015 mLastLayer=21015
+    mToken=AppWindowToken{a91fd868 token=Token{a902a1d8 ActivityRecord{a90e82c0 u0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P01$Standard00 t3}}}
+    mRootToken=AppWindowToken{a91fd868 token=Token{a902a1d8 ActivityRecord{a90e82c0 u0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P01$Standard00 t3}}}
+    mAppToken=AppWindowToken{a91fd868 token=Token{a902a1d8 ActivityRecord{a90e82c0 u0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P01$Standard00 t3}}}
+    mViewVisibility=0x0 mHaveFrame=true mObscured=false
+    mSeq=0 mSystemUiVisibility=0x0
+    mGivenContentInsets=[0,0][0,0] mGivenVisibleInsets=[0,0][0,0]
+    mConfiguration={1.0 310mcc260mnc en_US ldltr sw720dp w1280dp h647dp 160dpi lrg long land finger qwerty/v/v tball/v s.6}
+    mHasSurface=true mShownFrame=[21.0,89.0][635.0,657.0] isReadyForDisplay()=true
+    mFrame=[21,89][635,657] last=[21,89][635,657]
+    mSystemDecorRect=[0,0][614,568] last=[0,0][614,568]
+    Frames: containing=[0,0][1280,672] parent=[0,0][1280,672]
+        display=[0,0][1280,672] overscan=[0,0][1280,720]
+        content=[21,89][635,657] visible=[21,89][635,657]
+        decor=[0,25][1280,672]
+    Cur insets: overscan=[0,0][0,0] content=[0,0][0,0] visible=[0,0][0,0]
+    Lst insets: overscan=[0,0][0,0] content=[0,0][0,0] visible=[0,0][0,0]
+    WindowStateAnimator{a92b22f8 CardLab/cn.hydrogen.probe.left}:
+      mSurface=Surface(name=CardLab/cn.hydrogen.probe.left)
+      mDrawState=HAS_DRAWN mLastHidden=false
+      Surface: shown=true layer=21015 alpha=1.0 rect=(21.0,89.0) 614.0 x 568.0
+  Window #2 Window{a92c1948 u0 SurfaceView}:
+    mDisplayId=0 mSession=Session{a911a658 2116:u0a10054} mClient=android.os.BinderProxy@a9068ee8
+    mOwnerUid=10054 mShowToOwnerOnly=true package=cn.hydrogen.cardlab appop=NONE
+    mAttrs=WM.LayoutParams{(12,244)(590x316) gr=#800033 ty=1001 fl=#4218 pfl=0x40 fmt=4}
+    Requested w=590 h=316 mLayoutSeq=92
+    mAttachedWindow=Window{a92a56e8 u0 CardLab/cn.hydrogen.probe.left} mLayoutAttached=true
+    mBaseLayer=21000 mSubLayer=-2 mAnimLayer=21010+0=21010 mLastLayer=21010
+    mToken=WindowToken{a910c530 android.os.BinderProxy@a90a24a0}
+    mRootToken=AppWindowToken{a91fd868 token=Token{a902a1d8 ActivityRecord{a90e82c0 u0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P01$Standard00 t3}}}
+    mAppToken=AppWindowToken{a91fd868 token=Token{a902a1d8 ActivityRecord{a90e82c0 u0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P01$Standard00 t3}}}
+    mViewVisibility=0x0 mHaveFrame=true mObscured=false
+    mSeq=0 mSystemUiVisibility=0x0
+    mGivenContentInsets=[0,0][0,0] mGivenVisibleInsets=[0,0][0,0]
+    mConfiguration={1.0 310mcc260mnc en_US ldltr sw720dp w1280dp h647dp 160dpi lrg long land finger qwerty/v/v tball/v s.6}
+    mHasSurface=true mShownFrame=[33.0,333.0][623.0,649.0] isReadyForDisplay()=true
+    mFrame=[33,333][623,649] last=[33,333][623,649]
+    mSystemDecorRect=[0,0][590,316] last=[0,0][590,316]
+    Frames: containing=[21,89][635,657] parent=[21,89][635,657]
+        display=[-10000,-10000][10000,10000] overscan=[-10000,-10000][10000,10000]
+        content=[33,333][623,649] visible=[33,333][623,649]
+        decor=[0,0][1280,672]
+    Cur insets: overscan=[0,0][0,0] content=[0,0][0,0] visible=[0,0][0,0]
+    Lst insets: overscan=[0,0][0,0] content=[0,0][0,0] visible=[0,0][0,0]
+    WindowStateAnimator{a92afa88 SurfaceView}:
+      mSurface=Surface(name=SurfaceView)
+      mDrawState=HAS_DRAWN mLastHidden=false
+      Surface: shown=true layer=21010 alpha=1.0 rect=(33.0,333.0) 590.0 x 316.0
+  Window #1 Window{a90f7f20 u0 cn.hydrogen.cardlab/cn.hydrogen.cardlab.LabActivity}:
+    mDisplayId=0 mSession=Session{a923d6d0 2078:u0a10054} mClient=android.os.BinderProxy@a90cc390
+    mOwnerUid=10054 mShowToOwnerOnly=true package=cn.hydrogen.cardlab appop=NONE
+    mAttrs=WM.LayoutParams{(0,0)(fillxfill) sim=#120 ty=1 fl=#1810500 pfl=0x8 wanim=0x10302a1}
+    Requested w=1280 h=672 mLayoutSeq=92
+    mBaseLayer=21000 mSubLayer=0 mAnimLayer=21005+0=21005 mLastLayer=21005
+    mToken=AppWindowToken{a92dce28 token=Token{a9250608 ActivityRecord{a907df40 u0 cn.hydrogen.cardlab/.LabActivity t2}}}
+    mRootToken=AppWindowToken{a92dce28 token=Token{a9250608 ActivityRecord{a907df40 u0 cn.hydrogen.cardlab/.LabActivity t2}}}
+    mAppToken=AppWindowToken{a92dce28 token=Token{a9250608 ActivityRecord{a907df40 u0 cn.hydrogen.cardlab/.LabActivity t2}}}
+    mViewVisibility=0x0 mHaveFrame=true mObscured=false
+    mSeq=0 mSystemUiVisibility=0x0
+    mGivenContentInsets=[0,0][0,0] mGivenVisibleInsets=[0,0][0,0]
+    mConfiguration={1.0 310mcc260mnc en_US ldltr sw720dp w1280dp h647dp 160dpi lrg long land finger qwerty/v/v tball/v s.6}
+    mHasSurface=true mShownFrame=[0.0,0.0][1280.0,672.0] isReadyForDisplay()=true
+    mFrame=[0,0][1280,672] last=[0,0][1280,672]
+    mSystemDecorRect=[0,0][1280,672] last=[0,0][1280,672]
+    Frames: containing=[0,0][1280,672] parent=[0,0][1280,672]
+        display=[0,0][1280,672] overscan=[0,0][1280,720]
+        content=[0,0][1280,672] visible=[0,0][1280,672]
+        decor=[0,0][1280,672]
+    Cur insets: overscan=[0,0][0,0] content=[0,0][0,0] visible=[0,0][0,0]
+    Lst insets: overscan=[0,0][0,0] content=[0,0][0,0] visible=[0,0][0,0]
+    WindowStateAnimator{a92e72d0 cn.hydrogen.cardlab/cn.hydrogen.cardlab.LabActivity}:
+      mSurface=Surface(name=cn.hydrogen.cardlab/cn.hydrogen.cardlab.LabActivity)
+      mDrawState=HAS_DRAWN mLastHidden=false
+      Surface: shown=true layer=21005 alpha=1.0 rect=(0.0,0.0) 1280.0 x 672.0
+  Window #0 Window{a9240ab8 u0 com.android.systemui.ImageWallpaper}:
+    mDisplayId=0 mSession=Session{a92749c0 1603:u0a10007} mClient=android.os.BinderProxy@a9268988
+    mOwnerUid=10007 mShowToOwnerOnly=true package=null appop=NONE
+    mAttrs=WM.LayoutParams{(0,0)(2069x1280) gr=#800033 ty=2013 fl=#318 fmt=2 wanim=0x10301f4}
+    Requested w=2069 h=1280 mLayoutSeq=8
+    mIsImWindow=false mIsWallpaper=true mIsFloatingLayer=true mWallpaperVisible=false
+    mBaseLayer=21000 mSubLayer=0 mAnimLayer=21000+0=21000 mLastLayer=0
+    mToken=WindowToken{a9270250 android.os.Binder@a926f3b8}
+    mRootToken=WindowToken{a9270250 android.os.Binder@a926f3b8}
+    mViewVisibility=0x0 mHaveFrame=true mObscured=true
+    mSeq=0 mSystemUiVisibility=0x0
+    Offsets x=-395 y=-280
+    mGivenContentInsets=[0,0][0,0] mGivenVisibleInsets=[0,0][0,0]
+    mConfiguration={1.0 ?mcc?mnc en_US ldltr sw720dp w1280dp h647dp 160dpi lrg long land finger qwerty/v/v tball/v s.5}
+    mHasSurface=true mShownFrame=[-395.0,-280.0][1674.0,1000.0] isReadyForDisplay()=false
+    mFrame=[0,0][2069,1280] last=[0,0][2069,1280]
+    mSystemDecorRect=[395,280][1675,952] last=[395,280][1675,952]
+    Frames: containing=[0,0][1280,720] parent=[0,0][1280,720]
+        display=[-10000,-10000][10000,10000] overscan=[-10000,-10000][10000,10000]
+        content=[0,0][2069,1280] visible=[0,0][2069,1280]
+        decor=[0,0][1280,672]
+    Cur insets: overscan=[0,0][0,0] content=[0,0][0,0] visible=[0,0][0,0]
+    Lst insets: overscan=[0,0][0,0] content=[0,0][0,0] visible=[0,0][0,0]
+    WindowStateAnimator{a9285db8 com.android.systemui.ImageWallpaper}:
+      mSurface=Surface(name=com.android.systemui.ImageWallpaper)
+      mDrawState=READY_TO_SHOW mLastHidden=true
+      Surface: shown=false layer=21005 alpha=0.0 rect=(-395.0,-280.0) 2069.0 x 1280.0
+      mShownAlpha=1.0 mAlpha=1.0 mLastAlpha=0.0
+    mOrientationChanging=true mAppFreezing=false mTurnOnScreen=false
+    mWallpaperX=0.5 mWallpaperY=0.5
+
+  mCurConfiguration={1.0 310mcc260mnc en_US ldltr sw720dp w1280dp h647dp 160dpi lrg long land finger qwerty/v/v tball/v s.6}
+  mCurrentFocus=Window{a92eec58 u0 CardLab/cn.hydrogen.probe.right}
+  mFocusedApp=AppWindowToken{a92c3a28 token=Token{a92573a8 ActivityRecord{a92680d8 u0 cn.hydrogen.cardlab/com.morgoo.droidplugin.stub.ActivityStub$P02$Standard00 t4}}}
+  mInTouchMode=true mLayoutSeq=92
+  mLastDisplayFreezeDuration=+332ms due to Window{a92592f8 u0 android/com.android.internal.app.ResolverActivity}
+  mSystemDecorLayer=161000 mScreenRect=[0,0][1280,720]
+  mWallpaperTarget=null
+  mLastWallpaperX=-1.0 mLastWallpaperY=-1.0
+  mSystemBooted=true mDisplayEnabled=true
+  mTransactionSequence=132
+  mDisplayFrozen=false windows=false client=false apps=0 waitingForConfig=false
+  mRotation=0 mAltOrientation=false
+  mLastWindowForcedOrientation=-1 mForcedAppOrientation=0
+  mDeferredRotationPauseCount=0
+  mWindowAnimationScale=1.0 mTransitionWindowAnimationScale=1.0 mAnimatorDurationScale=1.0
+  mTraversalScheduled=false
+  mStartingIconInTransition=false mSkipAppTransitionAnimation=false
+  mLayoutToAnim:
+ mNextAppTransition=0xffffffff  mAppTransitionState=APP_STATE_IDLE

@@ -1,0 +1,22 @@
+{
+  "primary_return_delay_ms": {
+    "qq": 0,
+    "map": 500
+  },
+  "first_fallback_delay_ms": {
+    "qq": 650,
+    "map": 2350
+  },
+  "final_fallback_delay_ms": {
+    "qq": 3000,
+    "map": 10000
+  },
+  "origin": "original startup artwork ended, absolute offsets",
+  "total_companion_attempts_per_session": 3,
+  "launcher_service_and_long_timeouts_unchanged": false,
+  "default_3d_unchanged": true,
+  "production_java_scenarios_on_jvm_stubs": 75,
+  "assertions": 283,
+  "physical_car_verified": false,
+  "launcher_long_timeouts_unchanged": true
+}

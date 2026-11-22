@@ -1,0 +1,1 @@
+package android.view;import android.graphics.drawable.Drawable;public class Window {public View view=new View();public View getDecorView(){return view;}public void setBackgroundDrawable(Drawable d){}}

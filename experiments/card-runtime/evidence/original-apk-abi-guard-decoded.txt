@@ -1,0 +1,21 @@
+Windows adb logcat decoding: utf-8
+RUN abi-guard-amap
+10-23 00:05:29.591 I/CardLab ( 4084): PARENT uid=10054 token=android.view.ViewRootImpl$W@a9044b98 left=[21, 89, 614, 568] right=[645, 89, 614, 568]
+10-23 00:05:29.591 I/CardLab ( 4084): PARENT uid=10054 token=android.view.ViewRootImpl$W@a9044b98 left=[21, 89, 614, 568] right=[645, 89, 614, 568]
+10-23 00:05:29.821 I/CardLab ( 4084): APK com.autonavi.amapauto SHA256=7daa40731d4f1bf2b1e521280bc031e5892c48f9092d918ded12da963b7c3950
+10-23 00:05:29.861 E/CardLab ( 4084): import failed
+10-23 00:05:29.861 E/CardLab ( 4084): java.lang.IllegalStateException: APK native ABI=[armeabi-v7a], device=x86/unknown；当前环境无法验证
+10-23 00:05:29.861 E/CardLab ( 4084): 	at cn.hydrogen.cardlab.LabActivity.lambda$importApk$14$cn-hydrogen-cardlab-LabActivity(LabActivity.java:138)
+10-23 00:05:29.861 E/CardLab ( 4084): 	at cn.hydrogen.cardlab.LabActivity$$ExternalSyntheticLambda7.run(D8$$SyntheticClass:0)
+10-23 00:05:29.861 E/CardLab ( 4084): 	at java.lang.Thread.run(Thread.java:841)
+10-23 00:05:29.861 I/CardLab ( 4084): 失败: java.lang.IllegalStateException: APK native ABI=[armeabi-v7a], device=x86/unknown；当前环境无法验证
+10-23 00:05:32.571 I/CardLab ( 4139): RUN abi-guard-qq
+10-23 00:05:32.651 I/CardLab ( 4139): PARENT uid=10054 token=android.view.ViewRootImpl$W@a8fcd598 left=[21, 89, 614, 568] right=[645, 89, 614, 568]
+10-23 00:05:32.651 I/CardLab ( 4139): PARENT uid=10054 token=android.view.ViewRootImpl$W@a8fcd598 left=[21, 89, 614, 568] right=[645, 89, 614, 568]
+10-23 00:05:32.711 I/CardLab ( 4139): APK com.tencent.qqmusiccar SHA256=0c8e4abf05741c81e14c06c2aaba5996c846a5c6abbe741ae79e9d0bc016459f
+10-23 00:05:32.741 E/CardLab ( 4139): import failed
+10-23 00:05:32.741 E/CardLab ( 4139): java.lang.IllegalStateException: APK native ABI=[armeabi-v7a], device=x86/unknown；当前环境无法验证
+10-23 00:05:32.741 E/CardLab ( 4139): 	at cn.hydrogen.cardlab.LabActivity.lambda$importApk$14$cn-hydrogen-cardlab-LabActivity(LabActivity.java:138)
+10-23 00:05:32.741 E/CardLab ( 4139): 	at cn.hydrogen.cardlab.LabActivity$$ExternalSyntheticLambda7.run(D8$$SyntheticClass:0)
+10-23 00:05:32.741 E/CardLab ( 4139): 	at java.lang.Thread.run(Thread.java:841)
+10-23 00:05:32.741 I/CardLab ( 4139): 失败: java.lang.IllegalStateException: APK native ABI=[armeabi-v7a], device=x86/unknown；当前环境无法验证

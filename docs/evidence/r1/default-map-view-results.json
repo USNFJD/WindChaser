@@ -1,0 +1,29 @@
+{
+  "platform": "JVM Android test stubs, not commercial engine execution",
+  "scenarios": [
+    {
+      "scenario": "success",
+      "output": "PASS no request before original HMI readiness\r\nPASS original view action receives explicit 3D operation\r\nPASS dispatch without acknowledgement not persisted\r\nPASS duplicate readiness does not duplicate pending command\r\nPASS native success persists once\r\nPASS successful migration cancels retries\r\nPASS later readiness never forces selected view\r\nRESULT success checks=7 PASS (production helper, JVM stubs)\r\n"
+    },
+    {
+      "scenario": "saved",
+      "output": "PASS no request before original HMI readiness\r\nPASS saved one-time migration preserves later user selection\r\nRESULT saved checks=2 PASS (production helper, JVM stubs)\r\n"
+    },
+    {
+      "scenario": "failure",
+      "output": "PASS no request before original HMI readiness\r\nPASS original protocol failure does not escape helper\r\nPASS failed dispatch not persisted\r\nRESULT failure checks=3 PASS (production helper, JVM stubs)\r\n"
+    },
+    {
+      "scenario": "timeout",
+      "output": "PASS no request before original HMI readiness\r\nPASS original view action receives explicit 3D operation\r\nPASS dispatch without acknowledgement not persisted\r\nPASS failed and unrelated results do not persist\r\nPASS retry not early\r\nPASS missing native acknowledgement retries at most three times\r\nPASS timeout does not mark success\r\nPASS no unbounded startup work\r\nRESULT timeout checks=8 PASS (production helper, JVM stubs)\r\n"
+    },
+    {
+      "scenario": "manual",
+      "output": "PASS no request before original HMI readiness\r\nPASS original view action receives explicit 3D operation\r\nPASS dispatch without acknowledgement not persisted\r\nPASS manual 2D success cancels default retries\r\nRESULT manual checks=4 PASS (production helper, JVM stubs)\r\n"
+    },
+    {
+      "scenario": "not-ready",
+      "output": "PASS no request before original HMI readiness\r\nPASS original view action receives explicit 3D operation\r\nPASS dispatch without acknowledgement not persisted\r\nPASS HMI teardown cancels pending retry\r\nPASS next HMI readiness can retry unconfirmed initialization\r\nRESULT not-ready checks=5 PASS (production helper, JVM stubs)\r\n"
+    }
+  ]
+}

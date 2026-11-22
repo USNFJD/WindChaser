@@ -1,0 +1,9 @@
+pluginManagement { repositories { google(); mavenCentral(); gradlePluginPortal() } }
+dependencyResolutionManagement { repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS); repositories { google(); mavenCentral() } }
+rootProject.name = 'HydrogenLauncher'
+include ':app'
+include ':host', ':runtime', ':probeLeft', ':probeRight'
+project(':host').projectDir = file('experiments/card-runtime/host')
+project(':runtime').projectDir = file('experiments/card-runtime/upstream/project/Libraries/DroidPlugin')
+project(':probeLeft').projectDir = file('experiments/card-runtime/probeLeft')
+project(':probeRight').projectDir = file('experiments/card-runtime/probeRight')
